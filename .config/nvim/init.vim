@@ -112,7 +112,6 @@ let g:NERDTreeIgnore = ['node_modules']
 let NERDTreeStatusLine='NERDTree'
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-nnoremap <silent> <C-a> :NERDTreeToggle<CR>
 
 " Prettier
 let g:prettier#autoformat_config_present = 1
@@ -122,9 +121,10 @@ let g:prettier#autoformat_require_pragma = 0
 " Remaps
 let mapleader = " "
 
+nnoremap <silent> <C-a> :NERDTreeToggle<CR>
+nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>pv :Vex<CR>
 nnoremap <leader>pf :Files<CR>
-nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>kz :ZenMode<CR>
 
