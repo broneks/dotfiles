@@ -69,6 +69,7 @@ Plug 'ryanoasis/vim-devicons'
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'kdheepak/lazygit.nvim'
 
 " Comment out
 Plug 'tpope/vim-commentary'
@@ -80,7 +81,6 @@ call plug#end()
 
 let mapleader = " "
 
-" Coc
 " Zen mode
 lua << EOF
   require("zen-mode").setup {
@@ -91,7 +91,7 @@ lua << EOF
   }
 EOF
 
-nnoremap <leader>kz :ZenMode<CR>
+nnoremap <leader>zen :ZenMode<CR>
 
 " Theme
 let g:airline#extensions#coc#enabled = 0
@@ -274,4 +274,4 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>pv :Vex<CR>
 nnoremap <leader>pf :Files<CR>
-
+nnoremap <silent> <leader>G :LazyGit<CR>
