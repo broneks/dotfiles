@@ -57,7 +57,6 @@ Plug 'jparise/vim-graphql'
 
 " Theme
 Plug 'gruvbox-community/gruvbox'
-Plug 'rktjmp/lush.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'folke/zen-mode.nvim'
@@ -98,7 +97,7 @@ let g:airline#extensions#coc#enabled = 0
 let g:airline_section_x=''
 let g:airline_skip_empty_sections = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='base16_gruvbox_dark_soft'
+let g:airline_theme='base16_classic'
 
 if (has("termguicolors"))
   set termguicolors
@@ -275,3 +274,9 @@ nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>pv :Vex<CR>
 nnoremap <leader>pf :Files<CR>
 nnoremap <silent> <leader>G :LazyGit<CR>
+nnoremap Y y$
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
