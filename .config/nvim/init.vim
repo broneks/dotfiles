@@ -3,6 +3,7 @@ set number
 set relativenumber
 set tabstop=2
 set softtabstop=2
+set autoindent
 set nowrap
 set shiftwidth=2
 set expandtab
@@ -20,7 +21,6 @@ set incsearch
 set scrolloff=8
 set signcolumn=yes
 set cmdheight=2
-set suffixesadd=.js,.jsx,.ts,.tsx
 set splitright
 set splitbelow
 
@@ -37,7 +37,7 @@ call plug#begin("~/.vim/plugged")
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+  \ 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'scss', 'json', 'markdown', 'yaml', 'html'] }
 
 " Search
 Plug 'junegunn/fzf', {'do': { -> fzf#install() } }
@@ -51,9 +51,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'HerringtonDarkholme/yats.vim'
-
-" GraphQL
-Plug 'jparise/vim-graphql'
 
 " Theme
 Plug 'gruvbox-community/gruvbox'
@@ -90,8 +87,6 @@ lua << EOF
   }
 EOF
 
-nnoremap <leader>zen :ZenMode<CR>
-
 " Theme
 let g:airline#extensions#coc#enabled = 0
 let g:airline_section_x=''
@@ -116,7 +111,6 @@ let NERDTreeStatusLine='NERDTree'
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-nnoremap <silent> <C-a> :NERDTreeToggle<CR>
 
 " Prettier
 let g:prettier#autoformat_config_present = 1
@@ -125,7 +119,6 @@ let g:prettier#autoformat_require_pragma = 0
 
 " Coc
 let g:coc_global_extensions = ['coc-tsserver',
-\'coc-python',
 \ 'coc-pydocstring',
 \ 'coc-json',
 \ 'coc-html-css-support',
@@ -270,12 +263,15 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Remaps
+nnoremap <silent> <C-a> :NERDTreeToggle<CR>
+nnoremap <leader>zen :ZenMode<CR>
 nnoremap <C-p> :GFiles<CR>
+nnoremap <C-l> :Buffers<CR>
 nnoremap <leader>pv :Vex<CR>
 nnoremap <leader>pf :Files<CR>
 nnoremap <silent> <leader>G :LazyGit<CR>
+nnoremap <leader>ps :Rg<SPACE>
 nnoremap Y y$
-
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 nnoremap <leader>j :m .+1<CR>==
