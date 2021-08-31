@@ -23,6 +23,7 @@ set signcolumn=yes
 set cmdheight=2
 set splitright
 set splitbelow
+set background=dark
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
@@ -97,11 +98,24 @@ let g:airline_theme='base16_classic'
 if (has("termguicolors"))
   set termguicolors
 endif
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
 syntax enable
+
 colorscheme gruvbox
+let g:gruvbox_contrast_dark='hard'
+
 highlight Normal guibg=none
 highlight SignColumn guibg=none
-let g:gruvbox_contrast_dark='hard'
+highlight ColorColumn ctermbg=0 guibg=grey
+highlight CursorLineNR guibg=None
+highlight Normal guibg=none
+" highlight LineNr guifg=#5eacd3
+highlight netrwDir guifg=#5eacd3
+highlight qfFileName guifg=#aed75f
 
 " File tree
 let g:NERDTreeShowHidden = 1
