@@ -45,16 +45,14 @@ Plug 'junegunn/fzf', {'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jremmen/vim-ripgrep'
 
-" Javascript
-Plug 'pangloss/vim-javascript'
-
 " Typescript
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'HerringtonDarkholme/yats.vim'
 
 " Theme
-Plug 'gruvbox-community/gruvbox'
+" Plug 'gruvbox-community/gruvbox'
+Plug 'ajmwagar/vim-deus'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'folke/zen-mode.nvim'
@@ -62,7 +60,7 @@ Plug 'folke/zen-mode.nvim'
 " File tree
 Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -73,6 +71,7 @@ Plug 'tpope/vim-commentary'
 
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch':'release'}
+Plug 'neoclide/coc-eslint'
 
 call plug#end()
 
@@ -105,8 +104,8 @@ endif
 
 syntax enable
 
-colorscheme gruvbox
-let g:gruvbox_contrast_dark='hard'
+colorscheme deus 
+" let g:gruvbox_contrast_dark='hard'
 
 highlight Normal guibg=none
 highlight SignColumn guibg=none
@@ -140,6 +139,7 @@ let g:coc_global_extensions = ['coc-tsserver',
 \ 'coc-sql',
 \ 'coc-yaml']
 
+let g:coc_disable_transparent_cursor = 1
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -191,7 +191,7 @@ function! s:show_documentation()
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
-" autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
