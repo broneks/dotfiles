@@ -60,6 +60,8 @@ Plug 'folke/zen-mode.nvim'
 
 " File tree
 Plug 'scrooloose/nerdtree'
+" Plug 'lambdalisue/fern.vim'
+Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'preservim/nerdcommenter'
 
 " Git
@@ -82,7 +84,7 @@ let mapleader = " "
 lua << EOF
   require("zen-mode").setup {
     window = {
-      backdrop = 0.4,
+      backdrop = 0,
       width = 160,
     }
   }
@@ -130,6 +132,7 @@ let g:prettier#autoformat_require_pragma = 0
 
 " Remaps
 nnoremap <silent> <C-a> :NERDTreeToggle<CR>
+" nnoremap <silent> <C-a> :Fern . -drawer -toggle<CR>
 nnoremap <leader>zen :ZenMode<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-l> :Buffers<CR>
