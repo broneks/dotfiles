@@ -1,30 +1,39 @@
+set encoding=utf8
+
+" Visual
+set background=dark
 set noshowmode
-set scrolloff=8
 set number
 set relativenumber
+set scrolloff=8
+set signcolumn=yes
+set cmdheight=2
+
+" Text editing
+set expandtab
 set tabstop=2
 set softtabstop=2
-set autoindent
-set nowrap
 set shiftwidth=2
-set expandtab
+set autoindent
 set smartindent
-set encoding=utf8
+set nowrap
+
+" Search
 set nohlsearch
+set incsearch
+
+" Buffers
 set hidden
+set splitbelow
+set splitright
+
+" Experience
 set noerrorbells
 set noswapfile
 set nobackup
 set nowritebackup
 set undodir=~/.vim/undodir
 set undofile
-set incsearch
-set scrolloff=8
-set signcolumn=yes
-set cmdheight=2
-set splitright
-set splitbelow
-set background=dark
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
@@ -44,15 +53,12 @@ Plug 'prettier/vim-prettier', {
 " Search
 Plug 'junegunn/fzf', {'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'jremmen/vim-ripgrep'
 
 " Typescript
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-" Plug 'HerringtonDarkholme/yats.vim'
 
 " Theme
-" Plug 'gruvbox-community/gruvbox'
 Plug 'ajmwagar/vim-deus'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -60,7 +66,6 @@ Plug 'folke/zen-mode.nvim'
 
 " File tree
 Plug 'scrooloose/nerdtree'
-" Plug 'lambdalisue/fern.vim'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'preservim/nerdcommenter'
 
@@ -79,8 +84,6 @@ call plug#end()
 
 let mapleader = " "
 
-" Theme
-
 lua << EOF
   require("zen-mode").setup {
     window = {
@@ -90,7 +93,7 @@ lua << EOF
   }
 EOF
 
-let g:airline#extensions#coc#enabled = 0
+" let g:airline#extensions#coc#enabled = 0
 let g:airline_section_x=''
 let g:airline_skip_empty_sections = 1
 let g:airline_powerline_fonts = 1
@@ -113,11 +116,9 @@ highlight SignColumn guibg=none
 highlight ColorColumn ctermbg=0 guibg=grey
 highlight CursorLineNR guibg=None
 highlight Normal guibg=none
-" highlight LineNr guifg=#5eacd3
 highlight netrwDir guifg=#5eacd3
 highlight qfFileName guifg=#aed75f
 
-" File tree
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 0
 let g:NERDTreeIgnore = ['node_modules']
@@ -125,19 +126,20 @@ let NERDTreeStatusLine='NERDTree'
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Prettier
 let g:prettier#autoformat_config_present = 1
 let g:prettier#config#config_precedence = 'prefer-file'
 let g:prettier#autoformat_require_pragma = 0
 
-" Remaps
+if executable("rg")
+  set grepprg=rg\ --vimgrep\ --smart-case\ --hidden
+  set grepformat=%f:%l:%c:%m
+endif
+
 nnoremap <silent> <C-a> :NERDTreeToggle<CR>
-" nnoremap <silent> <C-a> :Fern . -drawer -toggle<CR>
 nnoremap <leader>zen :ZenMode<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-l> :Buffers<CR>
 nnoremap <leader>pv :Vex<CR>
-nnoremap <leader>pf :Files<CR>
 nnoremap <silent> <leader>G :LazyGit<CR>
 nnoremap <leader>ps :Rg<SPACE>
 nnoremap Y y$
