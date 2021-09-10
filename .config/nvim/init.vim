@@ -55,6 +55,7 @@ Plug 'junegunn/fzf', {'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Typescript
+Plug 'sheerun/vim-polyglot'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
@@ -62,12 +63,12 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'ajmwagar/vim-deus'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'folke/zen-mode.nvim'
 
 " File tree
 Plug 'scrooloose/nerdtree'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'preservim/nerdcommenter'
+Plug 'ryanoasis/vim-devicons'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -84,16 +85,6 @@ call plug#end()
 
 let mapleader = " "
 
-lua << EOF
-  require("zen-mode").setup {
-    window = {
-      backdrop = 0,
-      width = 160,
-    }
-  }
-EOF
-
-" let g:airline#extensions#coc#enabled = 0
 let g:airline_section_x=''
 let g:airline_skip_empty_sections = 1
 let g:airline_powerline_fonts = 1
@@ -136,7 +127,6 @@ if executable("rg")
 endif
 
 nnoremap <silent> <C-a> :NERDTreeToggle<CR>
-nnoremap <leader>zen :ZenMode<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-l> :Buffers<CR>
 nnoremap <leader>pv :Vex<CR>
