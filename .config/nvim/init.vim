@@ -56,13 +56,14 @@ Plug 'junegunn/fzf.vim'
 
 " Typescript
 Plug 'sheerun/vim-polyglot'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'peitalin/vim-jsx-typescript'
 
 " Theme
 Plug 'ajmwagar/vim-deus'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'folke/zen-mode.nvim'
 
 " File tree
 Plug 'scrooloose/nerdtree'
@@ -131,6 +132,7 @@ nnoremap <silent> <C-a> :NERDTreeToggle<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-l> :Buffers<CR>
 nnoremap <leader>pv :Vex<CR>
+nnoremap <silent> <leader>z :ZenMode<CR>
 nnoremap <silent> <leader>G :LazyGit<CR>
 nnoremap <leader>ps :Rg<SPACE>
 nnoremap Y y$
