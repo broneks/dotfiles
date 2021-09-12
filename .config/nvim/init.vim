@@ -61,9 +61,10 @@ Plug 'sheerun/vim-polyglot'
 
 " Theme
 Plug 'ajmwagar/vim-deus'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'folke/zen-mode.nvim'
+Plug 'itchyny/lightline.vim'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 
 " File tree
 Plug 'scrooloose/nerdtree'
@@ -86,11 +87,25 @@ call plug#end()
 
 let mapleader = " "
 
-let g:airline_section_x=''
-let g:airline_skip_empty_sections = 1
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline_theme='base16_classic'
+" let g:airline_section_x=''
+" let g:airline_skip_empty_sections = 1
+" let g:airline_powerline_fonts = 1
+" let g:airline#extensions#whitespace#enabled = 0
+" let g:airline_theme='base16_classic'
+
+let g:lightline = {
+  \   'colorscheme': 'deus',
+  \   'active': {
+  \     'left': [ ['mode', 'paste' ],
+  \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+  \   },
+  \   'component_function': {
+  \     'cocstatus': 'coc#status'
+  \   },
+  \ }
+
+" Use autocmd to force lightline update.
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 if (has("termguicolors"))
   set termguicolors
