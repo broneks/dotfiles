@@ -76,8 +76,11 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
 Plug 'kdheepak/lazygit.nvim'
 
-" Comment out
+" Comments
 Plug 'tpope/vim-commentary'
+
+" Markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch':'release'}
