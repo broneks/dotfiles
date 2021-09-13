@@ -48,10 +48,13 @@ call plug#begin("~/.vim/plugged")
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'scss', 'json', 'markdown', 'yaml', 'html'] }
+  \ 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'scss', 'json', 'markdown', 'yaml', 'html', 'graphql'] }
 
 " Typescript
 Plug 'sheerun/vim-polyglot'
+
+" Graphql
+Plug 'jparise/vim-graphql'
 
 " Search
 Plug 'junegunn/fzf', {'do': { -> fzf#install() } }
