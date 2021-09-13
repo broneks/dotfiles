@@ -6,11 +6,6 @@
 
 set -g mouse on
 
-unbind C-b
-unbind C-q
-set-option -g prefix C-a
-bind-key C-a send-prefix
-
 # -- navigation ----------------------------------------------------------------
 
 # if you're running tmux within iTerm2
