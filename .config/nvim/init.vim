@@ -50,21 +50,17 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'scss', 'json', 'markdown', 'yaml', 'html'] }
 
+" Typescript
+Plug 'sheerun/vim-polyglot'
+
 " Search
 Plug 'junegunn/fzf', {'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
-" Typescript
-Plug 'sheerun/vim-polyglot'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'peitalin/vim-jsx-typescript'
 
 " Theme
 Plug 'ajmwagar/vim-deus'
 Plug 'folke/zen-mode.nvim'
 Plug 'itchyny/lightline.vim'
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
 
 " File tree
 Plug 'scrooloose/nerdtree'
@@ -89,12 +85,6 @@ Plug 'neoclide/coc-eslint'
 call plug#end()
 
 let mapleader = " "
-
-" let g:airline_section_x=''
-" let g:airline_skip_empty_sections = 1
-" let g:airline_powerline_fonts = 1
-" let g:airline#extensions#whitespace#enabled = 0
-" let g:airline_theme='base16_classic'
 
 let g:lightline = {
   \   'colorscheme': 'deus',
