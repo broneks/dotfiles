@@ -1,6 +1,5 @@
 let g:coc_global_extensions = ['coc-tsserver',
 \ 'coc-json',
-\ 'coc-graphql',
 \ 'coc-html-css-support',
 \ 'coc-css',
 \ 'coc-sql',

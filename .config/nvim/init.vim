@@ -78,6 +78,9 @@ Plug 'kdheepak/lazygit.nvim'
 " Comments
 Plug 'tpope/vim-commentary'
 
+" HTML
+Plug 'tpope/vim-ragtag'
+
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
