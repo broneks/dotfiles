@@ -145,9 +145,9 @@ if executable("rg")
 endif
 
 nnoremap <silent> <C-a> :NERDTreeToggle<CR>
+nnoremap <leader>pv :NERDTreeFind<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-l> :Buffers<CR>
-nnoremap <leader>pv :Vex<CR>
 nnoremap <silent> <leader>z :ZenMode<CR>
 nnoremap <silent> <leader>G :LazyGit<CR>
 nnoremap <leader>ps :Rg<SPACE>
