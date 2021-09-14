@@ -84,6 +84,9 @@ Plug 'tpope/vim-ragtag'
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
+" Registers
+Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
+
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch':'release'}
 Plug 'neoclide/coc-eslint'
