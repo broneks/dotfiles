@@ -40,9 +40,11 @@ set undofile
 set updatetime=300
 
 " Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
+set shortmess+=cI
 
 call plug#begin("~/.vim/plugged")
+
+Plug 'mhinz/vim-startify'
 
 " Prettier
 " post install (yarn install | npm install) then load plugin only for editing supported files
@@ -145,7 +147,7 @@ if executable("rg")
 endif
 
 nnoremap <silent> <C-a> :NERDTreeToggle<CR>
-nnoremap <leader>pv :NERDTreeFind<CR>
+nnoremap <silent> <C-\> :NERDTreeFind<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-l> :Buffers<CR>
 nnoremap <silent> <leader>z :ZenMode<CR>
@@ -156,5 +158,9 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
+nnoremap Q <nop>
+
+noremap H ^
+noremap L $
 
 source ~/.config/nvim/coc.vim
