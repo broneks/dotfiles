@@ -46,6 +46,9 @@ call plug#begin("~/.vim/plugged")
 
 Plug 'mhinz/vim-startify'
 
+" Search and replace
+Plug 'brooth/far.vim'
+
 " Prettier
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', {
@@ -141,6 +144,10 @@ let g:prettier#autoformat_config_present = 1
 let g:prettier#config#config_precedence = 'prefer-file'
 let g:prettier#autoformat_require_pragma = 0
 
+let g:far#default_file_mask="**/*.ts,**/*.tsx,**/*.js,**/*.jsx,**/*.json,**/*.css,**/*.scss,***/*.html"
+let g:far#enable_undo=1
+let g:far#ignore_files=['.gitignore']
+
 if executable("rg")
   set grepprg=rg\ --vimgrep\ --smart-case\ --hidden
   set grepformat=%f:%l:%c:%m
@@ -153,6 +160,7 @@ nnoremap <C-l> :Buffers<CR>
 nnoremap <silent> <leader>z :ZenMode<CR>
 nnoremap <silent> <leader>G :LazyGit<CR>
 nnoremap <leader>ps :Rg<SPACE>
+nnoremap <leader>pr :Far<SPACE>
 nnoremap Y y$
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
