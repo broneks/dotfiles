@@ -138,7 +138,7 @@ let g:NERDTreeMinimalUI = 0
 let g:NERDTreeIgnore = ['node_modules']
 let NERDTreeStatusLine='NERDTree'
 " Automaticaly close nvim if NERDTree is only thing left open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 let g:prettier#autoformat_config_present = 1
 let g:prettier#config#config_precedence = 'prefer-file'
@@ -168,6 +168,8 @@ nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
 nnoremap Q <nop>
 
+noremap <leader>q q
+noremap q <nop>
 noremap H ^
 noremap L $
 
