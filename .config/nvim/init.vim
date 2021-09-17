@@ -129,6 +129,7 @@ highlight Normal guibg=none
 highlight SignColumn guibg=none
 highlight ColorColumn ctermbg=0 guibg=grey
 highlight CursorLineNR guibg=None
+highlight LineNr guifg=#75a077
 highlight Normal guibg=none
 highlight netrwDir guifg=#5eacd3
 highlight qfFileName guifg=#aed75f
