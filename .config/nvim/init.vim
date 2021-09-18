@@ -46,6 +46,9 @@ call plug#begin("~/.vim/plugged")
 
 Plug 'mhinz/vim-startify'
 
+" Music
+Plug 'srishanbhattarai/neovim-spotify', { 'do': 'bash install.sh' }
+
 " Search and replace
 Plug 'brooth/far.vim'
 
@@ -91,6 +94,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " Registers
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
+
+" Motions
+" Plug 'easymotion/vim-easymotion'
 
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch':'release'}
