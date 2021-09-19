@@ -96,7 +96,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 
 " Motions
-" Plug 'easymotion/vim-easymotion'
+Plug 'phaazon/hop.nvim'
 
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch':'release'}
@@ -174,6 +174,7 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
 nnoremap Q <nop>
+nnoremap <silent> <leader><leader> :HopWord<CR>
 
 noremap <leader>q q
 noremap q <nop>
