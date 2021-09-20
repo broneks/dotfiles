@@ -1,13 +1,14 @@
 set encoding=utf8
 
 " Visual
-set background=dark
+set background=dark " terminal bg = #13111
 set noshowmode
 set number
 set relativenumber
 set scrolloff=8
 set signcolumn=yes
 set cmdheight=2
+set fillchars+=vert:\ 
 
 " Text editing
 set expandtab
