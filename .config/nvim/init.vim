@@ -110,10 +110,10 @@ let g:lightline = {
   \   'colorscheme': 'deus',
   \   'active': {
   \     'left': [ ['mode', 'paste' ],
-  \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
   \   },
   \   'component_function': {
-  \     'cocstatus': 'coc#status'
+  \     'gitbranch': 'FugitiveHead',
   \   },
   \ }
 
