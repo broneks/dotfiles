@@ -97,7 +97,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 
 " Motions
-Plug 'phaazon/hop.nvim'
+Plug 'ggandor/lightspeed.nvim'
 
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch':'release'}
