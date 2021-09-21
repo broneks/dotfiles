@@ -145,6 +145,7 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 0
 let g:NERDTreeIgnore = ['node_modules']
 let NERDTreeStatusLine='NERDTree'
+let g:NERDTreeWinSize=50
 " Automaticaly close nvim if NERDTree is only thing left open
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
