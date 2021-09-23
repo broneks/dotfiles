@@ -182,5 +182,7 @@ noremap <leader>q q
 noremap q <nop>
 noremap H ^
 noremap L $
+noremap j gj
+noremap k gk
 
 source ~/.config/nvim/coc.vim
