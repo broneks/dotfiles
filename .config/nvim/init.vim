@@ -73,6 +73,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 " Theme
+Plug 'cormacrelf/vim-colors-github'
 Plug 'ajmwagar/vim-deus'
 Plug 'folke/zen-mode.nvim'
 Plug 'itchyny/lightline.vim'
