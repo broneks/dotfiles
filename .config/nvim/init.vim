@@ -160,27 +160,26 @@ let g:far#default_file_mask="**/*.ts,**/*.tsx,**/*.js,**/*.jsx,**/*.json,**/*.cs
 let g:far#enable_undo=1
 let g:far#ignore_files=['.gitignore']
 
-if executable("rg")
-  set grepprg=rg\ --vimgrep\ --smart-case\ --hidden
-  set grepformat=%f:%l:%c:%m
-endif
-
 nnoremap <silent> <C-a> :NERDTreeToggle<CR>
 nnoremap <silent> <C-\> :NERDTreeFind<CR>
+
 nnoremap <silent> <leader>z :ZenMode<CR>
+
 nnoremap <silent> <leader>G :LazyGit<CR>
+
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 nnoremap <leader>pr :Far<SPACE>
+
 nnoremap Y y$
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
 nnoremap Q <nop>
-nnoremap <silent> <leader><leader> :HopWord<CR>
 
 noremap <leader>q q
 noremap q <nop>
