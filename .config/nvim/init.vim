@@ -66,8 +66,11 @@ Plug 'sheerun/vim-polyglot'
 Plug 'jparise/vim-graphql'
 
 " Search
-Plug 'junegunn/fzf', {'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'BurntSushi/ripgrep'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Theme
 Plug 'ajmwagar/vim-deus'
@@ -164,11 +167,12 @@ endif
 
 nnoremap <silent> <C-a> :NERDTreeToggle<CR>
 nnoremap <silent> <C-\> :NERDTreeFind<CR>
-nnoremap <C-p> :GFiles<CR>
-nnoremap <C-l> :Buffers<CR>
 nnoremap <silent> <leader>z :ZenMode<CR>
 nnoremap <silent> <leader>G :LazyGit<CR>
-nnoremap <leader>ps :Rg<SPACE>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>pr :Far<SPACE>
 nnoremap Y y$
 vnoremap J :m '>+1<CR>gv=gv
