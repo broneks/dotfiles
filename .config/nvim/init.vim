@@ -8,7 +8,7 @@ set relativenumber
 set scrolloff=8
 set signcolumn=yes
 set cmdheight=2
-set fillchars+=vert:\ 
+" set fillchars+=vert:\ 
 
 " Text editing
 set expandtab
@@ -144,6 +144,8 @@ highlight LineNr guifg=#75a077
 highlight Normal guibg=none
 highlight netrwDir guifg=#5eacd3
 highlight qfFileName guifg=#aed75f
+highlight VertSplit guibg=none
+highlight HorizontalSplit guibg=none
 
 highlight StartifyHeader  guifg=#75a077
 highlight StartifyNumber  guifg=#75a077
