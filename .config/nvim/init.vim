@@ -1,7 +1,7 @@
 set encoding=utf8
 
 " Visual
-set background=dark " terminal bg = #13111
+set background=dark " terminal bg = #2a2c33, #18191d
 set noshowmode
 set number
 set relativenumber
