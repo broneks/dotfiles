@@ -136,16 +136,15 @@ syntax enable
 
 colorscheme deus 
 
-highlight Normal guibg=none
-highlight SignColumn guibg=none
+highlight Normal guibg=none ctermbg=none
+highlight SignColumn guibg=none ctermbg=none
+highlight CursorLineNR guibg=none ctermbg=none
+highlight VertSplit guifg=grey guibg=none ctermbg=none
+highlight HorizontalSplit guibg=none ctermbg=none
 highlight ColorColumn ctermbg=0 guibg=grey
-highlight CursorLineNR guibg=None
 highlight LineNr guifg=#75a077
-highlight Normal guibg=none
 highlight netrwDir guifg=#5eacd3
 highlight qfFileName guifg=#aed75f
-highlight VertSplit guibg=none
-highlight HorizontalSplit guibg=none
 
 highlight StartifyHeader  guifg=#75a077
 highlight StartifyNumber  guifg=#75a077
