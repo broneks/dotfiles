@@ -145,6 +145,23 @@ highlight Normal guibg=none
 highlight netrwDir guifg=#5eacd3
 highlight qfFileName guifg=#aed75f
 
+highlight StartifyHeader  guifg=#75a077
+highlight StartifyNumber  guifg=#75a077
+highlight StartifySpecial guifg=#5eacd3
+
+" let g:startify_custom_header = [
+"       \ '          ____                                           ',
+"       \ '         /___/\_                                         ',
+"       \ '        _\   \/_/\__                      __             ',
+"       \ '      __\       \/_/\            .--.--. |__| .--.--.--. ',
+"       \ '      \   __    __ \ \           |  |  | |  | |        | ',
+"       \ '     __\  \_\   \_\ \ \   __      \___/  |__| |__|__|__| ',
+"       \ '    /_/\\   __   __  \ \_/_/\                            ',
+"       \ '    \_\/_\__\/\__\/\__\/_\_\/                            ',
+"       \ '       \_\/_/\       /_\_\/                              ',
+"       \ '          \_\/       \_\/                                ',
+"       \ ]
+
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 0
 let g:NERDTreeIgnore = ['node_modules']
