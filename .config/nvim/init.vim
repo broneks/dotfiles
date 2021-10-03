@@ -101,7 +101,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 
 " Motions
-" Plug 'ggandor/lightspeed.nvim'
+" Plug 'ggandor/lightspeed.nvim' " TODO: remap this
 
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch':'release'}
@@ -114,10 +114,11 @@ let g:lightline = {
   \   'colorscheme': 'deus',
   \   'active': {
   \     'left': [ ['mode', 'paste' ],
-  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+  \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'cocstatus' ] ]
   \   },
   \   'component_function': {
   \     'gitbranch': 'FugitiveHead',
+  \     'cocstatus': 'coc#status'
   \   },
   \ }
 
@@ -149,19 +150,6 @@ highlight qfFileName guifg=#aed75f
 highlight StartifyHeader  guifg=#75a077
 highlight StartifyNumber  guifg=#75a077
 highlight StartifySpecial guifg=#5eacd3
-
-" let g:startify_custom_header = [
-"       \ '          ____                                           ',
-"       \ '         /___/\_                                         ',
-"       \ '        _\   \/_/\__                      __             ',
-"       \ '      __\       \/_/\            .--.--. |__| .--.--.--. ',
-"       \ '      \   __    __ \ \           |  |  | |  | |        | ',
-"       \ '     __\  \_\   \_\ \ \   __      \___/  |__| |__|__|__| ',
-"       \ '    /_/\\   __   __  \ \_/_/\                            ',
-"       \ '    \_\/_\__\/\__\/\__\/_\_\/                            ',
-"       \ '       \_\/_/\       /_\_\/                              ',
-"       \ '          \_\/       \_\/                                ',
-"       \ ]
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 0
