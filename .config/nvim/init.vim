@@ -170,9 +170,13 @@ let g:far#ignore_files=['.gitignore']
 nnoremap <silent> <C-a> :NERDTreeToggle<CR>
 nnoremap <silent> <C-\> :NERDTreeFind<CR>
 
-nnoremap <silent> <leader>z :ZenMode<CR>
+nnoremap <leader>z :ZenMode<CR>
 
-nnoremap <silent> <leader>G :LazyGit<CR>
+nnoremap <leader>gg :LazyGit<CR>
+" bring in changes from upstream (left side)
+nmap     <leader>gh :diffget //2<CR>
+" bring in changes from head (right side)
+nmap     <leader>gl :diffget //3<CR>
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
@@ -195,5 +199,10 @@ noremap H ^
 noremap L $
 noremap j gj
 noremap k gk
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 source ~/.config/nvim/coc.vim
