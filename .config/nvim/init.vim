@@ -184,6 +184,11 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fm <cmd>Telescope marks<cr>
 nnoremap <leader>fc <cmd>Telescope colorscheme<cr>
 
+nnoremap <leader>pp <cmd>SpotifyPlay<cr>
+nnoremap <leader>ph <cmd>SpotifyPrevious<cr>
+nnoremap <leader>pl <cmd>SpotifyNext<cr>
+nnoremap <leader>pk <cmd>SpotifyCurrentSong<cr>
+
 nnoremap <leader>pr :Far<SPACE>
 
 nnoremap Y y$
