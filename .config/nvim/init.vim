@@ -1,7 +1,11 @@
+" Fira Code, Retina, 12
+" Hack Nerd Font Mono, Regular, 9
+" terminal bg: #212328, #2a2c33, #18191d
+
 set encoding=utf8
 
 " Visual
-set background=dark " terminal bg = #2a2c33, #18191d
+set background=dark
 set noshowmode
 set number
 set relativenumber
