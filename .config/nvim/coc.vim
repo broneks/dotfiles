@@ -1,10 +1,10 @@
-let g:coc_global_extensions = ['coc-tsserver',
-\ 'coc-json',
-\ 'coc-eslint',
-\ 'coc-html-css-support',
-\ 'coc-css',
-\ 'coc-sql',
-\ 'coc-yaml']
+" let g:coc_global_extensions = ['coc-tsserver',
+" \ 'coc-json',
+" \ 'coc-css',
+" \ 'coc-eslint',
+" \ 'coc-html-css-support',
+" \ 'coc-sql',
+" \ 'coc-yaml']
 
 let g:coc_disable_transparent_cursor = 1
 " Use tab for trigger completion with characters ahead and navigate.

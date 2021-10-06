@@ -414,3 +414,5 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 # "$@"
 # # /!\ do not remove the previous line
 #
+
+run-shell ~/.tmux-plugins/tmux-resurrect.tmux
