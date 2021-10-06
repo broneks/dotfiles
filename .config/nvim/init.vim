@@ -71,6 +71,7 @@ Plug 'jparise/vim-graphql'
 
 " Search
 Plug 'BurntSushi/ripgrep'
+Plug 'sharkdp/fd'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-lua/plenary.nvim'
@@ -108,7 +109,7 @@ Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 " Plug 'ggandor/lightspeed.nvim' " TODO: remap this
 
 " Intellisense
-Plug 'neoclide/coc.nvim', {'branch':'release'}
+Plug 'neoclide/coc.nvim', {'tag':'v0.0.78'}
 
 call plug#end()
 
@@ -170,6 +171,10 @@ let g:prettier#autoformat_require_pragma = 0
 let g:far#default_file_mask="**/*.ts,**/*.tsx,**/*.js,**/*.jsx,**/*.json,**/*.css,**/*.scss,***/*.html"
 let g:far#enable_undo=1
 let g:far#ignore_files=['.gitignore']
+
+lua << EOF
+require('telescope').setup{ defaults = { file_ignore_patterns = {"node_modules", "@types"} } }
+EOF
 
 nnoremap <silent> <C-a> :NERDTreeToggle<CR>
 nnoremap <silent> <C-\> :NERDTreeFind<CR>
