@@ -55,7 +55,7 @@ Plug 'mhinz/vim-startify'
 Plug 'srishanbhattarai/neovim-spotify', { 'do': 'bash install.sh' }
 
 " Search and replace
-Plug 'brooth/far.vim'
+" Plug 'brooth/far.vim'
 
 " Prettier
 " post install (yarn install | npm install) then load plugin only for editing supported files
@@ -71,14 +71,13 @@ Plug 'jparise/vim-graphql'
 
 " Search
 Plug 'BurntSushi/ripgrep'
-Plug 'sharkdp/fd'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 " Theme
-Plug 'cormacrelf/vim-colors-github'
+" Plug 'cormacrelf/vim-colors-github'
 Plug 'ajmwagar/vim-deus'
 Plug 'folke/zen-mode.nvim'
 Plug 'itchyny/lightline.vim'
@@ -87,7 +86,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'preservim/nerdcommenter'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -100,7 +99,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-ragtag'
 
 " Markdown
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " Registers
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
@@ -110,6 +109,9 @@ Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 
 " Intellisense
 Plug 'neoclide/coc.nvim', {'tag':'v0.0.78'}
+
+" Buffers
+Plug 'Asheq/close-buffers.vim'
 
 call plug#end()
 
@@ -151,6 +153,11 @@ highlight ColorColumn ctermbg=0 guibg=grey
 highlight LineNr guifg=#75a077
 highlight netrwDir guifg=#5eacd3
 highlight qfFileName guifg=#aed75f
+highlight Pmenu guibg=#2f353a gui=none ctermbg=none
+highlight PmenuSel guibg=#2f353a gui=none ctermbg=none
+highlight PmenuSbar guibg=#2f353a gui=none ctermbg=none
+highlight PmenuThumb guibg=#2f353a gui=none ctermbg=none
+highlight NormalFloat guibg=#233646 gui=none ctermbg=none
 
 highlight StartifyHeader  guifg=#75a077
 highlight StartifyNumber  guifg=#75a077
@@ -176,7 +183,7 @@ lua << EOF
 require('telescope').setup{ defaults = { file_ignore_patterns = {"node_modules", "@types"} } }
 EOF
 
-nnoremap <silent> <C-a> :NERDTreeToggle<CR>
+nnoremap <silent> <C-x> :NERDTreeToggle<CR>
 nnoremap <silent> <C-\> :NERDTreeFind<CR>
 
 nnoremap <leader>z :ZenMode<CR>
@@ -199,6 +206,8 @@ nnoremap <leader>pl <cmd>SpotifyNext<cr>
 nnoremap <leader>pk <cmd>SpotifyCurrentSong<cr>
 
 nnoremap <leader>pr :Far<SPACE>
+
+nnoremap <leader>bd :Bdelete other<cr>
 
 nnoremap Y y$
 vnoremap J :m '>+1<CR>gv=gv
