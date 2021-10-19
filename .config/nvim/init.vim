@@ -47,6 +47,9 @@ set updatetime=300
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=cI
 
+" Yank to clipboard
+set clipboard+=unnamedplus
+
 call plug#begin("~/.vim/plugged")
 
 Plug 'mhinz/vim-startify'
@@ -77,7 +80,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 " Theme
-" Plug 'cormacrelf/vim-colors-github'
+Plug 'cormacrelf/vim-colors-github'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'ajmwagar/vim-deus'
 Plug 'folke/zen-mode.nvim'
 Plug 'itchyny/lightline.vim'
