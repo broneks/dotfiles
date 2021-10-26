@@ -112,7 +112,8 @@ Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 " Plug 'ggandor/lightspeed.nvim' " TODO: remap this
 
 " Intellisense
-Plug 'neoclide/coc.nvim', {'tag':'v0.0.78'}
+" Plug 'neoclide/coc.nvim', {'tag':'v0.0.78'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Buffers
 Plug 'Asheq/close-buffers.vim'
@@ -162,6 +163,7 @@ highlight Pmenu guibg=#2f353a gui=none ctermbg=none
 highlight PmenuSbar guibg=#2f353a gui=none ctermbg=none
 highlight PmenuThumb guibg=#2f353a gui=none ctermbg=none
 highlight NormalFloat guibg=#233646 gui=none ctermbg=none
+highlight CocHighlightText guifg=#ffb71a
 
 highlight StartifyHeader  guifg=#75a077
 highlight StartifyNumber  guifg=#75a077

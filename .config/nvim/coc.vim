@@ -1,10 +1,13 @@
-" let g:coc_global_extensions = ['coc-tsserver',
-" \ 'coc-json',
-" \ 'coc-css',
-" \ 'coc-eslint',
-" \ 'coc-html-css-support',
-" \ 'coc-sql',
-" \ 'coc-yaml']
+let g:coc_node_path = '/Users/bszulc/.nvm/versions/node/v14.18.1/bin/node'
+
+let g:coc_global_extensions = ['coc-tsserver',
+\ 'coc-json',
+\ 'coc-css',
+\ 'coc-eslint',
+\ 'coc-html-css-support',
+\ 'coc-sql',
+\ 'coc-graphql',
+\ 'coc-yaml']
 
 let g:coc_disable_transparent_cursor = 1
 " Use tab for trigger completion with characters ahead and navigate.
