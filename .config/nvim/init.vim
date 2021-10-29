@@ -138,9 +138,9 @@ colorscheme deus
 highlight Normal guibg=none ctermbg=none
 highlight SignColumn guibg=none ctermbg=none
 highlight CursorLineNR guibg=none ctermbg=none
-highlight CursorLine ctermfg=none ctermbg=none
-highlight VertSplit guifg=grey guibg=none ctermbg=none
+highlight VertSplit guifg=#8a8a8a guibg=none ctermbg=none
 highlight HorizontalSplit guibg=none ctermbg=none
+highlight CursorLine ctermfg=none ctermbg=none guibg=none guifg=none
 highlight ColorColumn ctermbg=0 guibg=grey
 highlight LineNr guifg=#75a077
 highlight netrwDir guifg=#5eacd3
@@ -150,6 +150,7 @@ highlight PmenuSbar guibg=#2f353a gui=none ctermbg=none
 highlight PmenuThumb guibg=#2f353a gui=none ctermbg=none
 highlight NormalFloat guibg=#233646 gui=none ctermbg=none
 highlight CocHighlightText guifg=#ffb71a
+highlight NERDTreeCWD guifg=#8a8a8a
 
 highlight StartifyHeader  guifg=#75a077
 highlight StartifyNumber  guifg=#75a077
