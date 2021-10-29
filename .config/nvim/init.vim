@@ -1,7 +1,3 @@
-" Fira Code, Retina, 12
-" Hack Nerd Font Mono, Regular, 9
-" terminal bg: #212328, #2a2c33, #18191d
-
 set encoding=utf8
 
 " Visual
@@ -80,8 +76,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 " Theme
-Plug 'cormacrelf/vim-colors-github'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'ajmwagar/vim-deus'
 Plug 'folke/zen-mode.nvim'
 Plug 'itchyny/lightline.vim'
@@ -90,7 +84,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'preservim/nerdcommenter'
-" Plug 'ryanoasis/vim-devicons'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -102,17 +95,10 @@ Plug 'tpope/vim-commentary'
 " HTML
 Plug 'tpope/vim-ragtag'
 
-" Markdown
-" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-
 " Registers
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 
-" Motions
-" Plug 'ggandor/lightspeed.nvim' " TODO: remap this
-
 " Intellisense
-" Plug 'neoclide/coc.nvim', {'tag':'v0.0.78'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Buffers
@@ -147,7 +133,7 @@ endif
 
 syntax enable
 
-colorscheme deus 
+colorscheme deus
 
 highlight Normal guibg=none ctermbg=none
 highlight SignColumn guibg=none ctermbg=none
@@ -205,6 +191,8 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fm <cmd>Telescope marks<cr>
 nnoremap <leader>fc <cmd>Telescope colorscheme<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fe <cmd>Telescope commands<cr>
 
 nnoremap <leader>pp <cmd>SpotifyPlay<cr>
 nnoremap <leader>ph <cmd>SpotifyPrevious<cr>
