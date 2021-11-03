@@ -74,7 +74,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-
+Plug 'tami5/sqlite.lua'
+Plug 'nvim-telescope/telescope-frecency.nvim'
 " Theme
 Plug 'ajmwagar/vim-deus'
 Plug 'folke/zen-mode.nvim'
@@ -149,7 +150,7 @@ highlight Pmenu guibg=#2f353a gui=none ctermbg=none
 highlight PmenuSbar guibg=#2f353a gui=none ctermbg=none
 highlight PmenuThumb guibg=#2f353a gui=none ctermbg=none
 highlight NormalFloat guibg=#233646 gui=none ctermbg=none
-highlight CocHighlightText guifg=#ffb71a
+highlight CocHighlightText guifg=#ffb71a guibg=#303030
 highlight NERDTreeCWD guifg=#8a8a8a
 
 highlight StartifyHeader  guifg=#75a077
@@ -160,9 +161,7 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 0
 let g:NERDTreeIgnore = ['node_modules']
 let NERDTreeStatusLine='NERDTree'
-let g:NERDTreeWinSize=50
-" Automaticaly close nvim if NERDTree is only thing left open
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:NERDTreeWinSize=55
 
 let g:prettier#autoformat_config_present = 1
 let g:prettier#config#config_precedence = 'prefer-file'
@@ -174,6 +173,8 @@ let g:far#ignore_files=['.gitignore']
 
 lua << EOF
 require('telescope').setup{ defaults = { file_ignore_patterns = {"node_modules", "@types"} } }
+
+require('telescope').load_extension('frecency')
 EOF
 
 nnoremap <silent> <C-x> :NERDTreeToggle<CR>
@@ -194,6 +195,7 @@ nnoremap <leader>fm <cmd>Telescope marks<cr>
 nnoremap <leader>fc <cmd>Telescope colorscheme<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fe <cmd>Telescope commands<cr>
+nnoremap <leader>fj <cmd>Telescope frecency<cr>
 
 nnoremap <leader>pp <cmd>SpotifyPlay<cr>
 nnoremap <leader>ph <cmd>SpotifyPrevious<cr>
