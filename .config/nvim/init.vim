@@ -1,4 +1,5 @@
 set encoding=utf8
+set t_Co=256
 
 " Visual
 set background=dark
@@ -8,6 +9,7 @@ set relativenumber
 set scrolloff=8
 set signcolumn=yes
 set cmdheight=2
+set cursorline
 " set fillchars+=vert:\ 
 
 " Text editing
@@ -76,10 +78,14 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'tami5/sqlite.lua'
 Plug 'nvim-telescope/telescope-frecency.nvim'
+
 " Theme
 Plug 'ajmwagar/vim-deus'
 Plug 'folke/zen-mode.nvim'
 Plug 'itchyny/lightline.vim'
+Plug 'EdenEast/nightfox.nvim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'https://gitlab.com/protesilaos/tempus-themes-vim.git'
 
 " File tree
 Plug 'scrooloose/nerdtree'
@@ -136,26 +142,26 @@ syntax enable
 
 colorscheme deus
 
+" specific to the "deus" theme
 highlight Normal guibg=none ctermbg=none
-highlight SignColumn guibg=none ctermbg=none
-highlight CursorLineNR guibg=none ctermbg=none
-highlight VertSplit guifg=#8a8a8a guibg=none ctermbg=none
-highlight HorizontalSplit guibg=none ctermbg=none
-highlight CursorLine ctermfg=none ctermbg=none guibg=none guifg=none
-highlight ColorColumn ctermbg=0 guibg=grey
 highlight LineNr guifg=#75a077
-highlight netrwDir guifg=#5eacd3
-highlight qfFileName guifg=#aed75f
+highlight ColorColumn ctermbg=0 guibg=grey
+highlight CocHighlightText guifg=#ffb71a guibg=#303030
 highlight Pmenu guibg=#2f353a gui=none ctermbg=none
 highlight PmenuSbar guibg=#2f353a gui=none ctermbg=none
 highlight PmenuThumb guibg=#2f353a gui=none ctermbg=none
 highlight NormalFloat guibg=#233646 gui=none ctermbg=none
-highlight CocHighlightText guifg=#ffb71a guibg=#303030
-highlight NERDTreeCWD guifg=#8a8a8a
-
 highlight StartifyHeader  guifg=#75a077
 highlight StartifyNumber  guifg=#75a077
 highlight StartifySpecial guifg=#5eacd3
+highlight NERDTreeCWD guifg=#8a8a8a
+
+highlight CursorLineNR guibg=none ctermbg=none
+highlight SignColumn guibg=none ctermbg=none
+highlight VertSplit guifg=#8a8a8a guibg=none ctermbg=none
+highlight HorizontalSplit guibg=none ctermbg=none
+highlight netrwDir guifg=#5eacd3
+highlight qfFileName guifg=#aed75f
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 0
