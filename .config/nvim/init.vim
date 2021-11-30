@@ -179,7 +179,7 @@ let g:far#ignore_files=['.gitignore']
 
 lua << EOF
 require('telescope').setup{ defaults = { file_ignore_patterns = {"node_modules", "@types"} } }
-
+require('telescope').load_extension('fzf')
 require('telescope').load_extension('frecency')
 EOF
 
