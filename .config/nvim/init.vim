@@ -1,17 +1,15 @@
-" Fira Code, Retina, 12
-" Hack Nerd Font Mono, Regular, 9
-" terminal bg: #212328, #2a2c33, #18191d
-
 set encoding=utf8
+set t_Co=256
 
 " Visual
-set background=dark
+set background=light
 set noshowmode
 set number
 set relativenumber
 set scrolloff=8
 set signcolumn=yes
 set cmdheight=2
+set cursorline
 " set fillchars+=vert:\ 
 
 " Text editing
@@ -47,6 +45,9 @@ set updatetime=300
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=cI
 
+" Yank to clipboard
+set clipboard+=unnamedplus
+
 call plug#begin("~/.vim/plugged")
 
 Plug 'mhinz/vim-startify'
@@ -55,7 +56,7 @@ Plug 'mhinz/vim-startify'
 Plug 'srishanbhattarai/neovim-spotify', { 'do': 'bash install.sh' }
 
 " Search and replace
-Plug 'brooth/far.vim'
+" Plug 'brooth/far.vim'
 
 " Prettier
 " post install (yarn install | npm install) then load plugin only for editing supported files
@@ -75,18 +76,21 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'tami5/sqlite.lua'
+Plug 'nvim-telescope/telescope-frecency.nvim'
 
 " Theme
-Plug 'cormacrelf/vim-colors-github'
 Plug 'ajmwagar/vim-deus'
 Plug 'folke/zen-mode.nvim'
 Plug 'itchyny/lightline.vim'
+Plug 'EdenEast/nightfox.nvim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'https://gitlab.com/protesilaos/tempus-themes-vim.git'
 
 " File tree
 Plug 'scrooloose/nerdtree'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'preservim/nerdcommenter'
-Plug 'ryanoasis/vim-devicons'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -98,17 +102,14 @@ Plug 'tpope/vim-commentary'
 " HTML
 Plug 'tpope/vim-ragtag'
 
-" Markdown
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-
 " Registers
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 
-" Motions
-" Plug 'ggandor/lightspeed.nvim' " TODO: remap this
-
 " Intellisense
-Plug 'neoclide/coc.nvim', {'branch':'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Buffers
+Plug 'Asheq/close-buffers.vim'
 
 call plug#end()
 
@@ -139,29 +140,34 @@ endif
 
 syntax enable
 
-colorscheme deus 
+colorscheme deus
 
+" specific to the "deus" theme
 highlight Normal guibg=none ctermbg=none
-highlight SignColumn guibg=none ctermbg=none
-highlight CursorLineNR guibg=none ctermbg=none
-highlight VertSplit guifg=grey guibg=none ctermbg=none
-highlight HorizontalSplit guibg=none ctermbg=none
-highlight ColorColumn ctermbg=0 guibg=grey
 highlight LineNr guifg=#75a077
-highlight netrwDir guifg=#5eacd3
-highlight qfFileName guifg=#aed75f
-
+highlight ColorColumn ctermbg=0 guibg=grey
+highlight CocHighlightText guifg=#ffb71a guibg=#303030
+highlight Pmenu guibg=#2f353a gui=none ctermbg=none
+highlight PmenuSbar guibg=#2f353a gui=none ctermbg=none
+highlight PmenuThumb guibg=#2f353a gui=none ctermbg=none
+highlight NormalFloat guibg=#233646 gui=none ctermbg=none
 highlight StartifyHeader  guifg=#75a077
 highlight StartifyNumber  guifg=#75a077
 highlight StartifySpecial guifg=#5eacd3
+highlight NERDTreeCWD guifg=#8a8a8a
+
+highlight CursorLineNR guibg=none ctermbg=none
+highlight SignColumn guibg=none ctermbg=none
+highlight VertSplit guifg=#8a8a8a guibg=none ctermbg=none
+highlight HorizontalSplit guibg=none ctermbg=none
+highlight netrwDir guifg=#5eacd3
+highlight qfFileName guifg=#aed75f
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 0
 let g:NERDTreeIgnore = ['node_modules']
 let NERDTreeStatusLine='NERDTree'
-let g:NERDTreeWinSize=50
-" Automaticaly close nvim if NERDTree is only thing left open
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:NERDTreeWinSize=55
 
 let g:prettier#autoformat_config_present = 1
 let g:prettier#config#config_precedence = 'prefer-file'
@@ -171,7 +177,13 @@ let g:far#default_file_mask="**/*.ts,**/*.tsx,**/*.js,**/*.jsx,**/*.json,**/*.cs
 let g:far#enable_undo=1
 let g:far#ignore_files=['.gitignore']
 
-nnoremap <silent> <C-a> :NERDTreeToggle<CR>
+lua << EOF
+require('telescope').setup{ defaults = { file_ignore_patterns = {"node_modules", "@types"}, layout_strategy = "vertical" } }
+require('telescope').load_extension('fzf')
+require('telescope').load_extension('frecency')
+EOF
+
+nnoremap <silent> <C-x> :NERDTreeToggle<CR>
 nnoremap <silent> <C-\> :NERDTreeFind<CR>
 
 nnoremap <leader>z :ZenMode<CR>
@@ -187,6 +199,9 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fm <cmd>Telescope marks<cr>
 nnoremap <leader>fc <cmd>Telescope colorscheme<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fe <cmd>Telescope commands<cr>
+nnoremap <leader>fj <cmd>Telescope frecency<cr>
 
 nnoremap <leader>pp <cmd>SpotifyPlay<cr>
 nnoremap <leader>ph <cmd>SpotifyPrevious<cr>
@@ -194,6 +209,8 @@ nnoremap <leader>pl <cmd>SpotifyNext<cr>
 nnoremap <leader>pk <cmd>SpotifyCurrentSong<cr>
 
 nnoremap <leader>pr :Far<SPACE>
+
+nnoremap <leader>bd :Bdelete other<cr>
 
 nnoremap Y y$
 vnoremap J :m '>+1<CR>gv=gv
