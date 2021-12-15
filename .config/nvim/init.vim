@@ -2,7 +2,7 @@ set encoding=utf8
 set t_Co=256
 
 " Visual
-set background=dark
+set background=light
 set noshowmode
 set number
 set relativenumber
@@ -178,7 +178,7 @@ let g:far#enable_undo=1
 let g:far#ignore_files=['.gitignore']
 
 lua << EOF
-require('telescope').setup{ defaults = { file_ignore_patterns = {"node_modules", "@types"} } }
+require('telescope').setup{ defaults = { file_ignore_patterns = {"node_modules", "@types"}, layout_strategy = "vertical" } }
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('frecency')
 EOF

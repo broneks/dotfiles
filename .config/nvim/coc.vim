@@ -6,6 +6,8 @@ let g:coc_global_extensions = ['coc-tsserver',
 \ 'coc-eslint',
 \ 'coc-html-css-support',
 \ 'coc-sql',
+\ 'coc-metals',
+\ 'coc-java',
 \ 'coc-graphql',
 \ 'coc-yaml']
 
