@@ -86,6 +86,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'https://gitlab.com/protesilaos/tempus-themes-vim.git'
+Plug 'kyazdani42/nvim-web-devicons'
 
 " File tree
 Plug 'scrooloose/nerdtree'
