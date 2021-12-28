@@ -2,7 +2,7 @@ set encoding=utf8
 set t_Co=256
 
 " Visual
-set background=light
+set background=dark
 set noshowmode
 set number
 set relativenumber
@@ -141,22 +141,23 @@ endif
 
 syntax enable
 
-colorscheme deus
+colorscheme nightfox
 
 " specific to the "deus" theme
-highlight Normal guibg=none ctermbg=none
-highlight LineNr guifg=#75a077
-highlight ColorColumn ctermbg=0 guibg=grey
-highlight CocHighlightText guifg=#ffb71a guibg=#303030
-highlight Pmenu guibg=#2f353a gui=none ctermbg=none
-highlight PmenuSbar guibg=#2f353a gui=none ctermbg=none
-highlight PmenuThumb guibg=#2f353a gui=none ctermbg=none
-highlight NormalFloat guibg=#233646 gui=none ctermbg=none
-highlight StartifyHeader  guifg=#75a077
-highlight StartifyNumber  guifg=#75a077
-highlight StartifySpecial guifg=#5eacd3
-highlight NERDTreeCWD guifg=#8a8a8a
+" highlight Normal guibg=none ctermbg=none
+" highlight LineNr guifg=#75a077
+" highlight ColorColumn ctermbg=0 guibg=grey
+" highlight CocHighlightText guifg=#ffb71a guibg=#303030
+" highlight Pmenu guibg=#2f353a gui=none ctermbg=none
+" highlight PmenuSbar guibg=#2f353a gui=none ctermbg=none
+" highlight PmenuThumb guibg=#2f353a gui=none ctermbg=none
+" highlight NormalFloat guibg=#233646 gui=none ctermbg=none
+" highlight StartifyHeader  guifg=#75a077
+" highlight StartifyNumber  guifg=#75a077
+" highlight StartifySpecial guifg=#5eacd3
+" highlight NERDTreeCWD guifg=#8a8a8a
 
+" general purpose
 highlight CursorLineNR guibg=none ctermbg=none
 highlight SignColumn guibg=none ctermbg=none
 highlight VertSplit guifg=#8a8a8a guibg=none ctermbg=none
@@ -179,7 +180,13 @@ let g:far#enable_undo=1
 let g:far#ignore_files=['.gitignore']
 
 lua << EOF
-require('telescope').setup{ defaults = { file_ignore_patterns = {"node_modules", "@types"}, layout_strategy = "vertical" } }
+require('telescope').setup{
+  defaults = {
+    file_ignore_patterns = {"node_modules", "@types"},
+    layout_strategy = "vertical",
+    preview = false,
+  },
+}
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('frecency')
 EOF
