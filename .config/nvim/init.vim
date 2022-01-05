@@ -1,3 +1,5 @@
+let $PATH = '/Users/bszulc/.nvm/versions/node/v14.18.1/bin:' . $PATH
+
 set encoding=utf8
 set t_Co=256
 
