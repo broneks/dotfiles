@@ -186,7 +186,6 @@ require('telescope').setup{
   defaults = {
     file_ignore_patterns = {"node_modules", "@types"},
     layout_strategy = "vertical",
-    preview = false,
   },
 }
 require('telescope').load_extension('fzf')
