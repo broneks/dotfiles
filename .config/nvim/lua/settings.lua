@@ -3,9 +3,10 @@ local g = vim.g
 local cmd = vim.cmd
 
 o.encoding = 'utf8'
+o.termguicolors = true
 
 -- Visual
-o.background = 'dark'
+-- o.background = 'dark'
 o.showmode = false
 o.number = true
 o.relativenumber = true
@@ -53,10 +54,10 @@ o.clipboard:append('unnamedplus')
 
 g.mapleader = ' '
 
+-- au ColorScheme * hi Normal ctermbg=none guibg=none
+-- hi Normal guibg=none ctermbg=none
 cmd [[
   syntax on
-
-  colorscheme nightfox
 
   hi LineNr guibg=none ctermbg=none
   hi Folded guibg=none ctermbg=none
