@@ -1,11 +1,6 @@
--- Eviline config for lualine
--- Author: shadmansaleh
--- Credit: glepnir
 local lualine = require('lualine')
 local status = require('nvim-spotify').status
 
--- Color table for highlights
--- stylua: ignore
 local colors = {
   bg       = '#202328',
   fg       = '#bbc2cf',
@@ -34,7 +29,6 @@ local conditions = {
   end,
 }
 
--- Config
 local config = {
   options = {
     -- Disable sections and component separators
@@ -175,11 +169,8 @@ ins_left {
 --   color = { fg = '#ffffff' },
 -- }
 
--- Add components to right sections
-
 ins_right {
   'diff',
-  -- Is it me or the symbol for modified us really weird
   -- symbols = { added = ' ', modified = '柳 ', removed = ' ' },
   symbols = { added = '加 ', modified = '柳 ', removed = '減 ' },
   diff_color = {
@@ -205,7 +196,6 @@ ins_right {
 }
 
 ins_right {
-  -- filesize component
   'filesize',
   cond = conditions.buffer_not_empty,
 }
@@ -223,5 +213,4 @@ ins_right {
 -- Spotify
 status:start()
 
--- Now don't forget to initialize lualine
 lualine.setup(config)

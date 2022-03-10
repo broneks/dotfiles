@@ -6,7 +6,6 @@ o.encoding = 'utf8'
 o.termguicolors = true
 
 -- Visual
--- o.background = 'dark'
 o.showmode = false
 o.number = true
 o.relativenumber = true

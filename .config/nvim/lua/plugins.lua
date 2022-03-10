@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
   use 'mhinz/vim-startify'
 
   -- brew install spotify-tui
+  -- requires golang
   use {
     'KadoBOT/nvim-spotify', 
     requires = 'nvim-telescope/telescope.nvim',
