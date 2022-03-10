@@ -16,7 +16,7 @@ nnoremap('<leader>gl', ':diffget //3<CR>')
 nnoremap('<leader>ff', '<cmd>Telescope find_files<cr>')
 nnoremap('<leader>fg', '<cmd>Telescope live_grep<cr>')
 nnoremap('<leader>fb', '<cmd>Telescope buffers<cr>')
-nnoremap('<leader>fm', '<cmd>Telescope marks<cr>')
+nnoremap('<leader>fm', '<cmd>Telescope harpoon marks<cr>')
 nnoremap('<leader>fc', '<cmd>Telescope colorscheme<cr>')
 nnoremap('<leader>fh', '<cmd>Telescope help_tags<cr>')
 nnoremap('<leader>fe', '<cmd>Telescope commands<cr>')
@@ -53,6 +53,14 @@ nnoremap('<C-H>', '<C-W><C-H>')
 
 -- This unsets the "last search pattern" register by hitting return
 nnoremap('<CR>', ':noh<CR><CR>')
+
+-- Harpoon man
+nnoremap('<space><space>f', [[:lua require('harpoon.ui').toggle_quick_menu()<CR>]])
+nnoremap('<space><space>g', [[:lua require('harpoon.mark').add_file()<CR>]])
+nnoremap('<space><space>j', [[:lua require('harpoon.ui').nav_file(1)<CR>]])
+nnoremap('<space><space>k', [[:lua require('harpoon.ui').nav_file(2)<CR>]])
+nnoremap('<space><space>l', [[:lua require('harpoon.ui').nav_file(3)<CR>]])
+nnoremap('<space><space>;', [[:lua require('harpoon.ui').nav_file(4)<CR>]])
 
 -- Spotify
 nnoremap('<leader>pn', [[:call SpotifyPlayback('next')<CR>]]) -- Skip the current track

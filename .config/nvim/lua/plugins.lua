@@ -102,6 +102,12 @@ return require('packer').startup(function(use)
   -- Buffers
   use 'Asheq/close-buffers.vim'
 
+  -- Harpoon
+  use {
+    'ThePrimeagen/harpoon',
+    requires = {'nvim-lua/plenary.nvim'}
+  }
+
   -- Automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then
     require('packer').sync()
