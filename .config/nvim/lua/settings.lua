@@ -26,7 +26,6 @@ o.smartindent = true
 o.wrap = false
 
 -- Search
-o.hlsearch = false
 o.incsearch = true
 
 -- Buffers

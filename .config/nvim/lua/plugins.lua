@@ -56,11 +56,13 @@ return require('packer').startup(function(use)
   -- Theme
   use 'ajmwagar/vim-deus'
   use 'folke/zen-mode.nvim'
-  use 'itchyny/lightline.vim'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
   use 'EdenEast/nightfox.nvim'
   use 'NLKNguyen/papercolor-theme'
   use 'https://gitlab.com/protesilaos/tempus-themes-vim.git'
-  use 'kyazdani42/nvim-web-devicons'
 
   -- File tree
   use 'scrooloose/nerdtree'
