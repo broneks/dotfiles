@@ -1,6 +1,6 @@
--- NERDTree
-nnoremap('<C-x>', ':NERDTreeToggle<CR>')
-nnoremap([[<C-\>]], ':NERDTreeFind<CR>')
+-- Tree 
+nnoremap('<C-x>', ':NvimTreeToggle<CR>')
+nnoremap([[<C-\>]], ':NvimTreeFindFile<CR>')
 
 -- ZenMode
 nnoremap('<leader>z', ':ZenMode<CR>')
@@ -21,12 +21,6 @@ nnoremap('<leader>fc', '<cmd>Telescope colorscheme<cr>')
 nnoremap('<leader>fh', '<cmd>Telescope help_tags<cr>')
 nnoremap('<leader>fe', '<cmd>Telescope commands<cr>')
 nnoremap('<leader>fj', '<cmd>Telescope frecency<cr>')
-
--- Spotify
-nnoremap('<leader>pp', '<cmd>SpotifyPlay<cr>')
-nnoremap('<leader>ph', '<cmd>SpotifyPrevious<cr>')
-nnoremap('<leader>pl', '<cmd>SpotifyNext<cr>')
-nnoremap('<leader>pk', '<cmd>SpotifyCurrentSong<cr>')
 
 -- Far
 nnoremap('<leader>pr', ':Far<SPACE>')

@@ -11,14 +11,8 @@ return require('packer').startup(function(use)
 
   use 'mhinz/vim-startify'
 
-  -- Music
-  -- use {
-  --   'srishanbhattarai/neovim-spotify',
-  --   run = 'bash install.sh'
-  -- }
-
   -- Search and replace
-  -- use 'brooth/far.vim'
+  use 'brooth/far.vim'
 
   -- Prettier
   -- post install (yarn install | npm install) then load plugin only for editing supported files
@@ -62,10 +56,12 @@ return require('packer').startup(function(use)
   }
   use 'EdenEast/nightfox.nvim'
   use 'NLKNguyen/papercolor-theme'
-  use 'https://gitlab.com/protesilaos/tempus-themes-vim.git'
 
   -- File tree
-  use 'scrooloose/nerdtree'
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {'kyazdani42/nvim-web-devicons'}
+  }
   use 'antoinemadec/FixCursorHold.nvim'
   use 'preservim/nerdcommenter'
 
