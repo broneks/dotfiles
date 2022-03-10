@@ -11,9 +11,6 @@ return require('packer').startup(function(use)
 
   use 'mhinz/vim-startify'
 
-  -- Search and replace
-  use 'brooth/far.vim'
-
   -- Prettier
   -- post install (yarn install | npm install) then load plugin only for editing supported files
   use {
@@ -63,7 +60,6 @@ return require('packer').startup(function(use)
     requires = {'kyazdani42/nvim-web-devicons'}
   }
   use 'antoinemadec/FixCursorHold.nvim'
-  use 'preservim/nerdcommenter'
 
   -- Git
   use 'tpope/vim-fugitive'

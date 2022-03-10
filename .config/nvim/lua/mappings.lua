@@ -22,9 +22,6 @@ nnoremap('<leader>fh', '<cmd>Telescope help_tags<cr>')
 nnoremap('<leader>fe', '<cmd>Telescope commands<cr>')
 nnoremap('<leader>fj', '<cmd>Telescope frecency<cr>')
 
--- Far
-nnoremap('<leader>pr', ':Far<SPACE>')
-
 -- Buffer cleanup
 nnoremap('<leader>bd', ':Bdelete other<cr>')
 
