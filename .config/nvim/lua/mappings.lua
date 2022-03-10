@@ -53,3 +53,11 @@ nnoremap('<C-H>', '<C-W><C-H>')
 
 -- This unsets the "last search pattern" register by hitting return
 nnoremap('<CR>', ':noh<CR><CR>')
+
+-- Spotify
+nnoremap('<leader>pn', [[:call SpotifyPlayback('next')<CR>]]) -- Skip the current track
+nnoremap('<leader>pp', [[:call SpotifyPlayback('pause')<CR>]]) -- Pause/Resume the current track
+nnoremap('<leader>ps', [[:call SpotifySave()<CR>]]) -- Add the current track to your library
+nnoremap('<leader>po', ':Spotify<CR>') -- Open Spotify Search window
+nnoremap('<leader>pd', ':SpotifyDevices<CR>') -- Open Spotify Devices window
+nnoremap('<leader>pb', [[:call SpotifyPlayback('prev')<CR>]]) -- Go back to the previous tracbrew install gR

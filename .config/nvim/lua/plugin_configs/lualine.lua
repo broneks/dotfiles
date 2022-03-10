@@ -2,6 +2,7 @@
 -- Author: shadmansaleh
 -- Credit: glepnir
 local lualine = require('lualine')
+local status = require('nvim-spotify').status
 
 -- Color table for highlights
 -- stylua: ignore
@@ -55,7 +56,7 @@ local config = {
     lualine_z = {'g:coc_status'},
     -- These will be filled later
     lualine_c = {},
-    lualine_x = {},
+    lualine_x = {status.listen},
   },
   inactive_sections = {
     -- these are to remove the defaults
@@ -218,6 +219,9 @@ ins_right {
   color = { fg = colors.blue },
   padding = { left = 1 },
 }
+
+-- Spotify
+status:start()
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
