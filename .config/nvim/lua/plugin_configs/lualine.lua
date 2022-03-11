@@ -200,7 +200,7 @@ ins_right {
   cond = conditions.buffer_not_empty,
 }
 
-ins_right { 'progress', color = { fg = colors.fg } }
+ins_right { 'progress', color = { fg = colors.blue } }
 
 ins_right {
   function()
