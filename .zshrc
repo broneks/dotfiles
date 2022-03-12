@@ -2,26 +2,27 @@
 
 export TERM=xterm-256color
 export BAT_THEME="1337"
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Repos
 
-export C='/Users/bszulc/base/coursera'
+export C="$HOME/base/coursera"
 export W=${C}/web
 
 # Dotfiles
 
-alias config='/usr/bin/git --git-dir=/Users/bszulc/.config/ --work-tree=/Users/bszulc'
+# https://atlassian.com/git/tutorials/dotfiles
+alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 # Neovim
 
-export VIMCON='/Users/bszulc/.config/nvim'
+export VIMCON="$HOME/.config/nvim"
 export EDITOR='nvim'
 export VISUAL="$EDITOR"
 
 alias vim='nvim'
 alias v='nvim .'
-alias vw='cd /Users/bszulc/base/coursera/web && nvim .'
+alias vw="cd $HOME/base/coursera/web && nvim ."
 
 # Tmux
 
@@ -32,7 +33,7 @@ alias ta='tmux a'
 
 export NODE_PATH="/usr/local/lib/node_modules"
 export NODE_OPTIONS=--max-old-space-size=4096
-export NVM_DIR="/Users/bszulc/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Yarn
@@ -63,7 +64,7 @@ alias worker='docker-compose restart worker'
 
 # ZSH
 
-export ZSH="/Users/bszulc/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
 
