@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
 
+# bare repo
+
+# git clone --bare git@github.com:broneks/dotfiles.git $HOME/.cfg
+# config config --local status.showUntrackedFiles no)"
+# config checkout
+#
+# backup if checkout fails
+#
+# mkdir -p $HOME/.config-backup && \
+# config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+# xargs -I{} mv {} $HOME/.config-backup/{}
+
 # zsh
 
 which zsh 1>&/dev/null
@@ -59,12 +71,12 @@ fi
 
 # tmux conf
 
-if [[ ! -d ~/.tmux ]] ; then
+if [[ ! -d $HOME/.tmux ]] ; then
   echo "Installing tmux conf..."
 
-  git clone https://github.com/gpakosz/.tmux.git ~/.tmux
-  ln -s -f ~/.tmux/.tmux.conf
-  # cp ~/.tmux/.tmux.conf.local ~
+  git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux
+  ln -s -f $HOME/.tmux/.tmux.conf
+  # cp $HOME/.tmux/.tmux.conf.local $HOME
 else
   echo "tmux conf is already installed!"
 fi
