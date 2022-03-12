@@ -1,0 +1,4 @@
+.cfg
+logs
+*.log
+.DS_Store
