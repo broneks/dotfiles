@@ -3,7 +3,7 @@
 # bare repo
 
 # git clone --bare git@github.com:broneks/dotfiles.git $HOME/.cfg
-# config config --local status.showUntrackedFiles no)"
+# config config --local status.showUntrackedFiles no
 # config checkout
 #
 # backup if checkout fails
