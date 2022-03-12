@@ -1,14 +1,73 @@
+# General
+
 export TERM=xterm-256color
 export BAT_THEME="1337"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.emacs.d/bin:$PATH"
 
-export ZSH="/Users/bronek/.oh-my-zsh"
-export NODE_PATH="/usr/local/lib/node_modules"
+# Repos
 
+export C='/Users/bszulc/base/coursera'
+export W=${C}/web
+
+# Dotfiles
+
+alias config='/usr/bin/git --git-dir=/Users/bszulc/.config/ --work-tree=/Users/bszulc'
+
+# Neovim
+
+export VIMCON='/Users/bszulc/.config/nvim'
 export EDITOR='nvim'
 export VISUAL="$EDITOR"
 
+alias vim='nvim'
+alias v='nvim .'
+alias vw='cd /Users/bszulc/base/coursera/web && nvim .'
+
+# Tmux
+
+alias tn='tmux new'
+alias ta='tmux a'
+
+# Node
+
+export NODE_PATH="/usr/local/lib/node_modules"
+export NODE_OPTIONS=--max-old-space-size=4096
+export NVM_DIR="/Users/bszulc/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Yarn
+
+alias y='yarn'
+alias yi='yarn install --ignore-scripts'
+alias ys='yarn snowpack:serve'
+
+# Docker
+
+alias dk='docker'
+alias dkl='docker logs'
+alias dklf='docker logs -f'
+alias dki='docker images'
+alias dks='docker service'
+alias dkrm='docker rm'
+alias dm='docker-machine'
+alias dmx='docker-machine ssh'
+alias dc='docker-compose'
+alias de='docker-compose exec'
+alias dkps="docker ps --format '{{.Names}} --- {{.Status}}'"
+alias dclf='docker-compose logs -f'
+alias lf='dclf'
+alias up='docker-compose up -d'
+alias stop='docker-compose stop'
+alias ps='docker-compose ps'
+alias worker='docker-compose restart worker'
+
+# ZSH
+
+export ZSH="/Users/bszulc/.oh-my-zsh"
+
 ZSH_THEME="spaceship"
 
+SPACESHIP_GIT_SHOW=false
 SPACESHIP_HG_SHOW=false
 SPACESHIP_PACKAGE_SHOW=false
 SPACESHIP_NODE_SHOW=true
@@ -39,27 +98,3 @@ SPACESHIP_EXEC_TIME_SHOW=false
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-
-alias vim='nvim'
-
-alias y='yarn'
-alias yi='yarn install --ignore-scripts'
-
-alias dk='docker'
-alias dkl='docker logs'
-alias dklf='docker logs -f'
-alias dki='docker images'
-alias dks='docker service'
-alias dkrm='docker rm'
-alias dm='docker-machine'
-alias dmx='docker-machine ssh'
-alias dc='docker-compose'
-alias de='docker-compose exec'
-alias dkps="docker ps --format '{{.Names}} --- {{.Status}}'"
-alias dclf='docker-compose logs -f'
-alias lf='dclf'
-alias up='docker-compose up -d'
-alias stop='docker-compose stop'
-alias ps='docker-compose ps'
-alias worker='docker-compose restart worker'
-
