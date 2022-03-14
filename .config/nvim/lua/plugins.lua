@@ -72,15 +72,6 @@ return require('packer').startup(function(use)
   -- Git
   use 'tpope/vim-fugitive'
   use 'kdheepak/lazygit.nvim'
-  use {
-    'lewis6991/gitsigns.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim'
-    },
-    config = function()
-      require('gitsigns').setup()
-    end
-  }
 
   -- Comments
   use 'tpope/vim-commentary'
