@@ -1,5 +1,3 @@
-let g:coc_node_path = '/Users/bszulc/.nvm/versions/node/v14.18.1/bin/node'
-
 let g:coc_global_extensions = ['coc-tsserver',
 \ 'coc-json',
 \ 'coc-css',
