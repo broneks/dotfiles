@@ -54,6 +54,10 @@ nnoremap('<C-H>', '<C-W><C-H>')
 -- This unsets the "last search pattern" register by hitting return
 nnoremap('<CR>', ':noh<CR><CR>')
 
+-- Paste
+nnoremap('<leader>p', ':pu<CR>')
+nnoremap('<leader>P', ':pu!<CR>')
+
 -- Harpoon man
 nnoremap('<space><space>f', [[:lua require('harpoon.ui').toggle_quick_menu()<CR>]])
 nnoremap('<space><space>g', [[:lua require('harpoon.mark').add_file()<CR>]])
