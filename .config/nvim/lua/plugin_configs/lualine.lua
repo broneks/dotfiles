@@ -1,5 +1,5 @@
 local lualine = require('lualine')
-local status = require('nvim-spotify').status
+-- local status = require('nvim-spotify').status
 
 local colors = {
   bg       = '#202328',
@@ -50,7 +50,8 @@ local config = {
     lualine_z = {'g:coc_status'},
     -- These will be filled later
     lualine_c = {},
-    lualine_x = {status.listen},
+    -- lualine_x = {status.listen},
+    lualine_x = {},
   },
   inactive_sections = {
     -- these are to remove the defaults
@@ -211,6 +212,6 @@ ins_right {
 }
 
 -- Spotify
-status:start()
+-- status:start()
 
 lualine.setup(config)

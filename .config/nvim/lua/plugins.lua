@@ -13,11 +13,12 @@ return require('packer').startup(function(use)
 
   -- brew install spotify-tui
   -- requires golang
-  use {
-    'KadoBOT/nvim-spotify', 
-    requires = 'nvim-telescope/telescope.nvim',
-    run = 'make'
-  }
+  -- FIXME: buggy
+  -- use {
+  --   'KadoBOT/nvim-spotify', 
+  --   requires = 'nvim-telescope/telescope.nvim',
+  --   run = 'make'
+  -- }
 
   -- Prettier
   -- post install (yarn install | npm install) then load plugin only for editing supported files
@@ -50,7 +51,7 @@ return require('packer').startup(function(use)
     }
   }
   use 'tami5/sqlite.lua'
-  use 'nvim-telescope/telescope-frecency.nvim'
+  -- use 'nvim-telescope/telescope-frecency.nvim'
 
   -- Theme
   use 'ajmwagar/vim-deus'
