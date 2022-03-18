@@ -51,7 +51,6 @@ return require('packer').startup(function(use)
     }
   }
   use 'tami5/sqlite.lua'
-  -- use 'nvim-telescope/telescope-frecency.nvim'
 
   -- Theme
   use 'ajmwagar/vim-deus'
