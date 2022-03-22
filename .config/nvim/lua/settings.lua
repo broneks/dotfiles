@@ -57,6 +57,8 @@ g.mapleader = ' '
 cmd [[
   syntax on
 
+  colorscheme duskfox 
+
   hi LineNr guibg=none ctermbg=none
   hi Folded guibg=none ctermbg=none
   hi NonText guibg=none ctermbg=none
