@@ -1,0 +1,9 @@
+# neovim
+~/
+
+# java
+bin/
+.bloop/
+.classpath
+.metals/
+.settings/
