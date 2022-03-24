@@ -7,10 +7,13 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Repos
 
 export C="$HOME/base/coursera"
+
 export W=${C}/web
 export B=${W}/static/bundles
 export PAY=${B}/payments
 export PUR=${B}/my-purchases-graphql
+export INF=${C}/infra-services
+export PRO=${C}/payment-processor-application
 
 # Dotfiles
 
