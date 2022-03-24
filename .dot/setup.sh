@@ -66,8 +66,8 @@ if [[ $? != 0 ]] ; then
   brew install lazygit
   brew install ripgrep
   brew install spaceship
-  brew install sqlite
   brew install spotify-tui
+  brew install jq
 
   brew cleanup
 else
