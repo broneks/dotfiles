@@ -8,6 +8,9 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 export C="$HOME/base/coursera"
 export W=${C}/web
+export B=${W}/static/bundles
+export PAY=${B}/payments
+export PUR=${B}/my-purchases-graphql
 
 # Dotfiles
 
@@ -28,6 +31,10 @@ alias vw="cd $HOME/base/coursera/web && nvim ."
 
 alias tn='tmux new'
 alias ta='tmux a'
+
+# Java
+
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Node
 
