@@ -28,8 +28,9 @@ return require('packer').startup(function(use)
     ft = {'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'scss', 'json', 'markdown', 'yaml', 'html', 'graphql', 'lua'}
   }
 
-  -- Typescript
+  -- Syntax 
   use 'sheerun/vim-polyglot'
+  use 'uiiaoo/java-syntax.vim'
 
   -- Graphql
   use 'jparise/vim-graphql'
