@@ -42,7 +42,6 @@ return require('packer').startup(function(use)
       {'nvim-lua/plenary.nvim'}
     }
   }
-  use 'tami5/sqlite.lua'
 
   -- Theme
   use 'ajmwagar/vim-deus'
@@ -78,10 +77,7 @@ return require('packer').startup(function(use)
   }
 
   -- Intellisense
-  use {
-    'neoclide/coc.nvim',
-    branch = 'release'
-  }
+  use 'neovim/nvim-lspconfig'
 
   -- Buffers
   use 'Asheq/close-buffers.vim'
