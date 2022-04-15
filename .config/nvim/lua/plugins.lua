@@ -11,15 +11,6 @@ return require('packer').startup(function(use)
 
   use 'mhinz/vim-startify'
 
-  -- brew install spotify-tui
-  -- requires golang
-  -- FIXME: buggy
-  -- use {
-  --   'KadoBOT/nvim-spotify', 
-  --   requires = 'nvim-telescope/telescope.nvim',
-  --   run = 'make'
-  -- }
-
   -- Prettier
   -- post install (yarn install | npm install) then load plugin only for editing supported files
   use {

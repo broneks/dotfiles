@@ -13,7 +13,6 @@ o.scrolloff = 8
 o.cmdheight = 2
 o.cursorline = true
 o.signcolumn = 'yes'
--- o.fillchars+=vert:\ 
 
 -- Text editing
 o.expandtab = true
@@ -52,8 +51,6 @@ o.clipboard:append('unnamedplus')
 
 g.mapleader = ' '
 
--- au ColorScheme * hi Normal ctermbg=none guibg=none
--- hi Normal guibg=none ctermbg=none
 cmd [[
   syntax on
 
