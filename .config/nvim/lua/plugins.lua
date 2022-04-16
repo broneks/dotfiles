@@ -76,9 +76,6 @@ return require('packer').startup(function(use)
     branch = 'main'
   }
 
-  -- Intellisense
-  use 'neovim/nvim-lspconfig'
-
   -- Buffers
   use 'Asheq/close-buffers.vim'
 
@@ -95,6 +92,9 @@ return require('packer').startup(function(use)
       require("which-key").setup {}
     end
   }
+
+  -- Intellisense
+  use 'neovim/nvim-lspconfig'
 
   -- Automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then

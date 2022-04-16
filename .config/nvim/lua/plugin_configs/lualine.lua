@@ -46,7 +46,7 @@ local config = {
     lualine_a = {},
     lualine_b = {},
     lualine_y = {},
-    lualine_z = {'g:coc_status'},
+    lualine_z = {"require'lsp_status'.status()"},
     -- These will be filled later
     lualine_c = {},
     lualine_x = {},
@@ -130,7 +130,7 @@ ins_left { 'location' }
 
 ins_left {
   'diagnostics',
-  sources = { 'nvim_diagnostic', 'coc' },
+  sources = { 'nvim_diagnostic', 'nvim_lsp' },
   symbols = { error = ' ', warn = ' ', info = ' ' },
   diagnostics_color = {
     color_error = { fg = colors.red },
@@ -146,27 +146,6 @@ ins_left {
     return '%='
   end,
 }
-
--- ins_left {
---   -- Lsp server name .
---   function()
---     local msg = 'No Active Lsp'
---     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
---     local clients = vim.lsp.get_active_clients()
---     if next(clients) == nil then
---       return msg
---     end
---     for _, client in ipairs(clients) do
---       local filetypes = client.config.filetypes
---       if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
---         return client.name
---       end
---     end
---     return msg
---   end,
---   icon = ' LSP:',
---   color = { fg = '#ffffff' },
--- }
 
 ins_right {
   'diff',
@@ -187,12 +166,12 @@ ins_right {
   color = { fg = colors.fg },
 }
 
-ins_right {
-  'fileformat',
-  fmt = string.upper,
-  icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-  color = { fg = colors.fg },
-}
+-- ins_right {
+--   'fileformat',
+--   fmt = string.upper,
+--   icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
+--   color = { fg = colors.fg },
+-- }
 
 ins_right {
   'filesize',
@@ -207,6 +186,41 @@ ins_right {
   end,
   color = { fg = colors.blue },
   padding = { left = 1 },
+}
+
+local lsp_client_names = {
+  cssls = 'css',
+  cssmodules_ls = 'css',
+  tsserver = 'ts',
+  eslint = 'es',
+  graphql = 'gql',
+  jsonls = 'json',
+  yamlls = 'yml',
+  sqlls = 'sql',
+}
+
+ins_right {
+  -- Lsp server name
+  function()
+    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+    local clients = vim.lsp.get_active_clients()
+
+    if next(clients) == nil then
+      return 'No Lsp'
+    end
+
+    local names = {}
+
+    for _, client in ipairs(clients) do
+      local filetypes = client.config.filetypes
+      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+        table.insert(names, lsp_client_names[client.name] or client.name)
+      end
+    end
+
+    return table.concat(names, ',')
+  end,
+  color = { fg = colors.blue },
 }
 
 lualine.setup(config)

@@ -6,7 +6,7 @@ nnoremap([[<C-\>]], ':NvimTreeFindFile<CR>')
 nnoremap('<leader>z', ':ZenMode<CR>')
 
 -- Git
-nnoremap('<leader>gg', ':LazyGit<CR>')
+nnoremap('<leader><leader>g', ':LazyGit<CR>')
 -- bring in changes from upstream (left side)
 nnoremap('<leader>gh', ':diffget //2<CR>')
 -- bring in changes from head (right side)
@@ -35,7 +35,7 @@ vnoremap('K', [[:m '<-2<CR>gv=gv]])
 
 -- Macro remap to something more intentional
 nnoremap('Q', '<nop>')
-nnoremap('<leader>q', 'q')
+nnoremap('<leader><leader>q', 'q')
 nnoremap('q', '<nop>')
 
 -- Line navigation

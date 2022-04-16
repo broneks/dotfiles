@@ -1,11 +1,13 @@
 local o = vim.opt
 local g = vim.g
+local d = vim.diagnostic
 local cmd = vim.cmd
 
 o.encoding = 'utf8'
 o.termguicolors = true
 
 -- Visual
+o.laststatus = 3
 o.showmode = false
 o.number = true
 o.relativenumber = true
@@ -50,6 +52,9 @@ o.shortmess:append('cI')
 o.clipboard:append('unnamedplus')
 
 g.mapleader = ' '
+
+-- no inline errors
+d.config({ virtual_text = false })
 
 cmd [[
   syntax on
