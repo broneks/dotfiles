@@ -7,6 +7,7 @@ o.encoding = 'utf8'
 o.termguicolors = true
 
 -- Visual
+o.background = 'light'
 o.laststatus = 3
 o.showmode = false
 o.number = true
@@ -66,7 +67,7 @@ end
 cmd [[
   syntax on
 
-  colorscheme duskfox 
+  colorscheme dawnfox 
 
   hi LineNr guibg=none ctermbg=none
   hi Folded guibg=none ctermbg=none
