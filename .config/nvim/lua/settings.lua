@@ -1,11 +1,14 @@
 local o = vim.opt
 local g = vim.g
+local d = vim.diagnostic
 local cmd = vim.cmd
 
 o.encoding = 'utf8'
 o.termguicolors = true
 
 -- Visual
+o.background = 'light'
+o.laststatus = 3
 o.showmode = false
 o.number = true
 o.relativenumber = true
@@ -39,6 +42,12 @@ o.writebackup = false
 o.undofile = true
 o.undodir = '~/.vim/undodir'
 
+-- Autocomplete
+o.completeopt = 'menu,menuone,noselect'
+
+-- Popup
+o.pumheight = 10 -- after which it scrolls
+
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.
 o.updatetime = 300
@@ -51,10 +60,20 @@ o.clipboard:append('unnamedplus')
 
 g.mapleader = ' '
 
+-- no inline errors
+d.config({ virtual_text = false })
+
+-- gutter signs
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
 cmd [[
   syntax on
 
-  colorscheme duskfox 
+  colorscheme dawnfox 
 
   hi LineNr guibg=none ctermbg=none
   hi Folded guibg=none ctermbg=none

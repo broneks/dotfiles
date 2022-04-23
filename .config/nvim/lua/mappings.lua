@@ -2,9 +2,6 @@
 nnoremap('<C-x>', ':NvimTreeToggle<CR>')
 nnoremap([[<C-\>]], ':NvimTreeFindFile<CR>')
 
--- ZenMode
-nnoremap('<leader>z', ':ZenMode<CR>')
-
 -- Git
 nnoremap('<leader>gg', ':LazyGit<CR>')
 -- bring in changes from upstream (left side)
@@ -35,7 +32,7 @@ vnoremap('K', [[:m '<-2<CR>gv=gv]])
 
 -- Macro remap to something more intentional
 nnoremap('Q', '<nop>')
-nnoremap('<leader>q', 'q')
+nnoremap('<leader><leader>q', 'q')
 nnoremap('q', '<nop>')
 
 -- Line navigation
@@ -64,3 +61,6 @@ nnoremap('<space><space>j', [[:lua require('harpoon.ui').nav_file(1)<CR>]])
 nnoremap('<space><space>k', [[:lua require('harpoon.ui').nav_file(2)<CR>]])
 nnoremap('<space><space>l', [[:lua require('harpoon.ui').nav_file(3)<CR>]])
 nnoremap('<space><space>;', [[:lua require('harpoon.ui').nav_file(4)<CR>]])
+
+-- lab
+nnoremap('<leader>bb', [[:lua require('./lab/print_filename').printFilename()<CR>]])
