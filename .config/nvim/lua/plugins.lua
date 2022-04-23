@@ -21,7 +21,6 @@ return require('packer').startup(function(use)
 
   -- Syntax 
   use 'sheerun/vim-polyglot'
-  use 'uiiaoo/java-syntax.vim'
 
   -- Graphql
   use 'jparise/vim-graphql'
@@ -44,8 +43,6 @@ return require('packer').startup(function(use)
   }
 
   -- Theme
-  use 'ajmwagar/vim-deus'
-  use 'folke/zen-mode.nvim'
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
@@ -58,7 +55,6 @@ return require('packer').startup(function(use)
     'kyazdani42/nvim-tree.lua',
     requires = {'kyazdani42/nvim-web-devicons'}
   }
-  use 'antoinemadec/FixCursorHold.nvim'
 
   -- Git
   use 'tpope/vim-fugitive'
@@ -95,6 +91,13 @@ return require('packer').startup(function(use)
 
   -- Intellisense
   use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
 
   -- Automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then
