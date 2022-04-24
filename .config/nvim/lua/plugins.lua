@@ -82,12 +82,7 @@ return require('packer').startup(function(use)
   }
 
   -- Helping hand
-  use {
-    'folke/which-key.nvim',
-    config = function()
-      require("which-key").setup {}
-    end
-  }
+  use 'folke/which-key.nvim'
 
   -- Intellisense
   use 'neovim/nvim-lspconfig'
@@ -98,6 +93,9 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
+
+  -- Fix
+  use 'antoinemadec/FixCursorHold.nvim'
 
   -- Automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then

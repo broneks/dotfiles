@@ -2,17 +2,23 @@ local o = vim.opt
 local g = vim.g
 local d = vim.diagnostic
 local cmd = vim.cmd
+local bg = require('./utils').bg
+local fg = require('./utils').fg
+local fg_bg = require('./utils').fg_bg
 
 o.encoding = 'utf8'
 o.termguicolors = true
 
 -- Visual
-o.background = 'light'
+o.background = vim.env.NVIM_COLORSCHEME_BG or 'dark'
+o.title = true
 o.laststatus = 3
 o.showmode = false
 o.number = true
+o.numberwidth = 4
 o.relativenumber = true
 o.scrolloff = 8
+o.sidescrolloff = 8
 o.cmdheight = 2
 o.cursorline = true
 o.signcolumn = 'yes'
@@ -43,7 +49,7 @@ o.undofile = true
 o.undodir = '~/.vim/undodir'
 
 -- Autocomplete
-o.completeopt = 'menu,menuone,noselect'
+o.completeopt = { 'menuone', 'noselect' }
 
 -- Popup
 o.pumheight = 10 -- after which it scrolls
@@ -51,6 +57,7 @@ o.pumheight = 10 -- after which it scrolls
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.
 o.updatetime = 300
+o.timeoutlen = 250
 
 -- Don't pass messages to |ins-completion-menu|.
 o.shortmess:append('cI')
@@ -70,21 +77,22 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
-cmd [[
-  syntax on
+-- colorscheme
+cmd('syntax on')
+cmd('colorscheme duskfox')
 
-  colorscheme dawnfox 
-
-  hi LineNr guibg=none ctermbg=none
-  hi Folded guibg=none ctermbg=none
-  hi NonText guibg=none ctermbg=none
-  hi SpecialKey guibg=none ctermbg=none
-  hi SignColumn guibg=none ctermbg=none
-  hi EndOfBuffer guibg=none ctermbg=none
-  hi HorizontalSplit guibg=none ctermbg=none
-  hi CursorLineNR guibg=none ctermbg=none
-  hi Pmenu guibg=none ctermbg=none
-  hi VertSplit guifg=#8a8a8a guibg=none ctermbg=none
-  hi netrwDir guifg=#5eacd3
-  hi qfFileName guifg=#aed75f
-]]
+-- highlights
+bg('Pmenu', 'none') 
+bg('LineNr', 'none')
+bg('CursorLineNr', 'none')
+bg('NonText', 'none')
+bg('SpecialKey', 'none')
+bg('SignColumn', 'none')
+bg('EndOfBuffer', 'none')
+bg('HorizontalSplit', 'none')
+---
+fg('netrwDir', '#5eacd3')
+fg('qfFileName', '#aed75f')
+fg('Folded', 'none')
+---
+fg_bg('VertSplit', '#77747f', 'none')
