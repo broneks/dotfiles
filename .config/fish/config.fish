@@ -14,6 +14,11 @@ if status is-interactive
     set -Ux EDITOR nvim
     set -Ux VISUAL nvim
 
+    alias ls  'ls -p -G'
+    alias la  'ls -A'
+    alias ll  'ls -l'
+    alias lla 'll -A'
+
     # Repos
 
     set -Ux C   {$HOME}/base/coursera
@@ -62,9 +67,6 @@ if status is-interactive
 
     # Fish
 
-    function fish_greeting
-        echo The time is (set_color yellow; date +%T; set_color normal) and this machine is called $hostname
-    end
-
-    set theme_color_scheme 'Base16 Eighties'
+    set fish_greeting ''
+    set -g theme_color_scheme 'Base16 Eighties'
 end
