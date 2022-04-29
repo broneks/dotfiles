@@ -35,6 +35,8 @@ alias vw="cd $HOME/base/coursera/web && nvim ."
 alias tn='tmux new'
 alias ta='tmux a'
 
+export ZSH_TMUX_AUTOSTART=true
+
 # Java
 
 export JAVA_HOME=$(/usr/libexec/java_home)
@@ -78,6 +80,6 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="avit"
 
-plugins=(git)
+plugins=(git tmux)
 
 source $ZSH/oh-my-zsh.sh
