@@ -1,8 +1,8 @@
 -- Pane navigation
-nnoremap('<C-j>', '<C-w>j')
-nnoremap('<C-j>', '<C-W>k')
-nnoremap('<C-l>', '<C-W>l')
-nnoremap('<C-h>', '<C-W>h')
+nnoremap('<C-J>', '<C-W><C-J>')
+nnoremap('<C-K>', '<C-W><C-K>')
+nnoremap('<C-L>', '<C-W><C-L>')
+nnoremap('<C-H>', '<C-W><C-H>')
 
 -- Line navigation
 nnoremap('H', '^')
