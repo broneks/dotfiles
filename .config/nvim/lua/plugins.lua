@@ -56,6 +56,7 @@ return packer.startup(function(use)
   }
   use 'EdenEast/nightfox.nvim'
   use 'NLKNguyen/papercolor-theme'
+  use 'f-person/auto-dark-mode.nvim'
 
   -- File tree
   use {

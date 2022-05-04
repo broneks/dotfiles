@@ -10,7 +10,7 @@ o.encoding = 'utf8'
 o.termguicolors = true
 
 -- Visual
-o.background = vim.env.NVIM_COLORSCHEME_BG or 'dark'
+o.background = 'light'
 o.title = true
 o.laststatus = 3
 o.showmode = false
@@ -83,7 +83,7 @@ end
 
 -- colorscheme
 cmd('syntax on')
-cmd('colorscheme duskfox')
+cmd('colorscheme Papercolor')
 
 -- highlights
 bg('Pmenu', 'none') 
