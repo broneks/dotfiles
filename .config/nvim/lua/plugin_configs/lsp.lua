@@ -1,5 +1,13 @@
 -- Setup nvim-cmp.
-local cmp = require'cmp'
+local cmp_status_ok, cmp = pcall(require, 'cmp')
+if not cmp_status_ok then
+  return
+end
+
+local cmp_lsp_status_ok, cmp_lsp = pcall(require, 'cmp_nvim_lsp')
+if not cmp_lsp_status_ok then
+  return
+end
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -145,7 +153,7 @@ cmp.setup.cmdline(':', {
   })
 
 -- Setup lspconfig.
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 

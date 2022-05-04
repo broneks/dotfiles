@@ -65,7 +65,11 @@ o.shortmess:append('cI')
 -- Yank to clipboard
 o.clipboard:append('unnamedplus')
 
+-- Leader
+vim.api.nvim_set_keymap('', '<space>', '<nop>', { noremap = true, silent = true })
+
 g.mapleader = ' '
+g.maplocalleader = ' '
 
 -- no inline errors
 d.config({ virtual_text = false })

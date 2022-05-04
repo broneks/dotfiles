@@ -6,10 +6,17 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd 'packadd packer.nvim'
 end
 
-return require('packer').startup(function(use)
+-- Use a protected call so we don't error out on first use
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+  return
+end
+
+return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use 'mhinz/vim-startify'
+  use 'lewis6991/impatient.nvim'
 
   -- Prettier
   -- post install (yarn install | npm install) then load plugin only for editing supported files
@@ -59,6 +66,7 @@ return require('packer').startup(function(use)
   -- Git
   use 'tpope/vim-fugitive'
   use 'kdheepak/lazygit.nvim'
+  use 'lewis6991/gitsigns.nvim'
 
   -- Comments
   use 'tpope/vim-commentary'

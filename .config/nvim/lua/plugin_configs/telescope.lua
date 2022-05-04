@@ -1,4 +1,9 @@
-require('telescope').setup{
+local telescope_status_ok, telescope = pcall(require, 'telescope')
+if not telescope_status_ok then
+  return
+end
+
+telescope.setup{
   defaults = {
     entry_prefix = "  ",
     initial_mode = "insert",
@@ -28,5 +33,5 @@ require('telescope').setup{
     }
   },
 }
-require('telescope').load_extension('fzf')
-require('telescope').load_extension('harpoon')
+telescope.load_extension('fzf')
+telescope.load_extension('harpoon')
