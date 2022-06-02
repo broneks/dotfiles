@@ -163,6 +163,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- graphql                  graphql-language-service-cli graphql
 -- yaml                     yaml-language-server
 -- sql                      sql-language-server
+-- rust                     rust-analyzer
 
 local servers = {
   'html',
@@ -174,6 +175,7 @@ local servers = {
   'jsonls',
   'yamlls',
   'sqlls',
+  'rust_analyzer',
 }
 
 for _, lsp in pairs(servers) do

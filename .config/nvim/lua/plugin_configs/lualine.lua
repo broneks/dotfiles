@@ -201,6 +201,7 @@ local lsp_client_names = {
   jsonls = 'json',
   yamlls = 'yml',
   sqlls = 'sql',
+  rust_analyzer = 'rust',
 }
 
 ins_right {
@@ -213,18 +214,33 @@ ins_right {
       return 'No Lsp'
     end
 
-    local names = {}
-
-    for _, client in ipairs(clients) do
-      local filetypes = client.config.filetypes
-      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-        table.insert(names, lsp_client_names[client.name] or client.name)
-      end
-    end
-
-    return table.concat(names, ',')
+    return 'Lsp'
   end,
   color = { fg = colors.blue },
 }
+
+-- ins_right {
+--   -- Lsp server name
+--   function()
+--     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+--     local clients = vim.lsp.get_active_clients()
+
+--     if next(clients) == nil then
+--       return 'No Lsp'
+--     end
+
+--     local names = {}
+
+--     for _, client in ipairs(clients) do
+--       local filetypes = client.config.filetypes
+--       if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+--         table.insert(names, lsp_client_names[client.name] or client.name)
+--       end
+--     end
+
+--     return table.concat(names, ',')
+--   end,
+--   color = { fg = colors.blue },
+-- }
 
 lualine.setup(config)
