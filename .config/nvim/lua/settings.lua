@@ -46,7 +46,7 @@ o.swapfile = false
 o.backup = false
 o.writebackup = false
 o.undofile = true
-o.undodir = '~/.vim/undodir'
+o.undodir = '$HOME/.vim/undodir'
 
 -- Autocomplete
 o.completeopt = { 'menuone', 'noselect' }
