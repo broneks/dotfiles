@@ -83,7 +83,7 @@ end
 
 -- colorscheme
 cmd('syntax on')
-cmd('colorscheme Papercolor')
+cmd('colorscheme dawnfox')
 
 -- highlights
 bg('Pmenu', 'none') 
