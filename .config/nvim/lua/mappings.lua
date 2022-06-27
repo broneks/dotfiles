@@ -63,7 +63,7 @@ nnoremap('<leader>fb', '<cmd>Telescope buffers<cr>')
 nnoremap('<leader>fm', '<cmd>Telescope harpoon marks<cr>')
 nnoremap('<leader>fc', '<cmd>Telescope colorscheme<cr>')
 nnoremap('<leader>fh', '<cmd>Telescope help_tags<cr>')
-nnoremap('<leader>fe', '<cmd>Telescope commands<cr>')
+nnoremap('<leader>fe', '<cmd>Telescope oldfiles<cr>')
 
 -- lab
 nnoremap('<leader>bb', [[:lua require('./lab/print_filename').printFilename()<cr>]])
