@@ -178,6 +178,12 @@ local servers = {
   'rust_analyzer',
 }
 
+local handlers = {
+  eslint = {
+    ['window/showMessageRequest'] = function(_, result, params) return result end -- silence parse errors
+  }
+}
+
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
@@ -185,6 +191,7 @@ for _, lsp in pairs(servers) do
     flags = {
       -- This will be the default in neovim 0.7+
       debounce_text_changes = 150,
-    }
+    },
+    handlers = handlers[lsp] or {}
   }
 end
