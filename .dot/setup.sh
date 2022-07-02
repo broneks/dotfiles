@@ -57,6 +57,7 @@ if [[ $? != 0 ]] ; then
   brew install --cask alacritty
 
   brew install nvm
+  brew install deno
   brew install lua
   brew install rust
   brew install rust-analyzer
