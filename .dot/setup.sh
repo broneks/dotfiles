@@ -59,6 +59,7 @@ if [[ $? != 0 ]] ; then
   brew install nvm
   brew install lua
   brew install rust
+  brew install rust-analyzer
   brew install go
 
   brew install tmux

@@ -164,6 +164,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- yaml                     yaml-language-server
 -- sql                      sql-language-server
 -- rust                     rust-analyzer
+-- deno                     built-in to deno
 
 local servers = {
   'html',
@@ -176,6 +177,7 @@ local servers = {
   'yamlls',
   'sqlls',
   'rust_analyzer',
+  'denols',
 }
 
 local handlers = {
