@@ -227,12 +227,12 @@ schemes:
       bright_foreground: '#CAD3F5' # text
 
     # Cursor colors
-    cursor:
-      text: '#24273A' # base
-      cursor: '#F4DBD6' # rosewater
-    vi_mode_cursor:
-      text: '#24273A' # base
-      cursor: '#B7BDF8' # lavender
+    # cursor:
+    #   text: '#24273A' # base
+    #   cursor: 'F4DBD6' # rosewater
+    # vi_mode_cursor:
+    #   text: '#24273A' # base
+    #   cursor: '#B7BDF8' # lavender
 
     # Search colors
     search:
