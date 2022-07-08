@@ -154,7 +154,10 @@ ins_left {
 ins_right {
   'diff',
   -- symbols = { added = ' ', modified = '柳 ', removed = ' ' },
-  symbols = { added = '加 ', modified = '柳 ', removed = '減 ' },
+  -- jia1  = add
+  -- bian4 = change
+  -- jian3 = reduce
+  symbols = { added = '加 ', modified = '變 ', removed = '減 ' },
   diff_color = {
     added = { fg = colors.green },
     modified = { fg = colors.orange },
@@ -201,7 +204,9 @@ local lsp_client_names = {
   jsonls = 'json',
   yamlls = 'yml',
   sqlls = 'sql',
+  vuels = 'vue',
   rust_analyzer = 'rust',
+  denols = 'deno',
 }
 
 ins_right {

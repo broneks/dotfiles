@@ -163,6 +163,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- graphql                  graphql-language-service-cli graphql
 -- yaml                     yaml-language-server
 -- sql                      sql-language-server
+-- vue                      vls
 -- rust                     rust-analyzer
 -- deno                     built-in to deno
 
@@ -176,8 +177,9 @@ local servers = {
   'jsonls',
   'yamlls',
   'sqlls',
+  'vuels',
   'rust_analyzer',
-  'denols',
+  -- 'denols', -- off
 }
 
 local handlers = {

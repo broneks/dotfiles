@@ -23,7 +23,21 @@ return packer.startup(function(use)
   use {
     'prettier/vim-prettier',
     run = 'yarn install',
-    ft = {'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'scss', 'json', 'markdown', 'yaml', 'html', 'graphql', 'lua'}
+    ft = {
+      'javascript',
+      'javascriptreact',
+      'typescript',
+      'typescriptreact',
+      'css',
+      'scss',
+      'json',
+      'markdown',
+      'yaml',
+      'html',
+      'graphql',
+      'lua',
+      'vue',
+    }
   }
 
   -- Syntax 
