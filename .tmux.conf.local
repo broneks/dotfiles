@@ -14,6 +14,8 @@ bind C-q send-prefix -2
 
 set-option -sa terminal-overrides ",xterm*:Tc,alacritty*:Tc,tmux*:Tc"
 
+set -s escape-time 0
+
 # -- navigation ----------------------------------------------------------------
 
 # if you're running tmux within iTerm2
