@@ -19,14 +19,14 @@
 
 # zsh
 
-which zsh 1>&/dev/null
-if [[ $? != 0 ]] ; then
-  echo "Installing zsh..."
+# which zsh 1>&/dev/null
+# if [[ $? != 0 ]] ; then
+#   echo "Installing zsh..."
 
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-else
-  echo "zsh is already installed!"
-fi
+#   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# else
+#   echo "zsh is already installed!"
+# fi
 
 # Homebrew
 
@@ -63,15 +63,16 @@ if [[ $? != 0 ]] ; then
   brew install rust-analyzer
   brew install go
 
+  brew install fish
   brew install tmux
   brew install neovim
   brew install lazygit
   brew install ripgrep
-  brew install spaceship
-  brew install spotify-tui
   brew install jq
 
   brew cleanup
+
+  # chsh -s /usr/local/bin/fish
 else
   echo "Homebrew is already installed!"
 fi
