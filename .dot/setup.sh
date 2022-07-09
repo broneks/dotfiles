@@ -59,7 +59,7 @@ if [[ $? != 0 ]] ; then
   brew install nvm
   brew install deno
   brew install lua
-  brew install rust
+  brew install rustup-init
   brew install rust-analyzer
   brew install go
 
