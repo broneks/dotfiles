@@ -1,0 +1,30 @@
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[merge]
+	ff = no
+[user]
+	email = bszulc@coursera.org
+	name = Bronek Szulc
+[alias]
+	co = checkout
+[apply]
+	whitespace = nowarn
+[pull]
+	rebase = true
+[core]
+	editor = vim
