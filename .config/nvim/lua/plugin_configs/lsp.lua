@@ -65,6 +65,7 @@ cmp.setup({
       }),
     sources = cmp.config.sources({
         { name = 'nvim_lsp', keyword_length = keyword_length, priority = "9" },
+        { name = 'nvim_lsp_signature_help' },
         { name = 'vsnip', keyword_length = keyword_length, priority = "8" },
         { name = 'buffer', keyword_length = keyword_length },
         { name = "npm", keyword_length = 3 },
