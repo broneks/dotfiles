@@ -186,7 +186,10 @@ local servers = {
 local handlers = {
   eslint = {
     ['window/showMessageRequest'] = function(_, result, params) return result end -- silence parse errors
-  }
+  },
+  vuels = {
+    ['window/showMessageRequest'] = function(_, result, params) return result end -- silence parse errors
+  },
 }
 
 for _, lsp in pairs(servers) do
