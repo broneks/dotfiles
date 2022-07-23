@@ -19,14 +19,14 @@
 
 # zsh
 
-# which zsh 1>&/dev/null
-# if [[ $? != 0 ]] ; then
-#   echo "Installing zsh..."
+which zsh 1>&/dev/null
+if [[ $? != 0 ]] ; then
+  echo "Installing zsh..."
 
-#   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# else
-#   echo "zsh is already installed!"
-# fi
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
+  echo "zsh is already installed!"
+fi
 
 # chsh -s /usr/local/bin/fish
 
@@ -55,4 +55,12 @@ if [[ ! -d $HOME/.tmux ]] ; then
   # cp $HOME/.tmux/.tmux.conf.local $HOME
 else
   echo "tmux conf is already installed!"
+fi
+
+if [ ! -d "${HOME}/.nvm" ] ; then
+  echo "Installing nvm..."
+  
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+else
+  echo "nvm is already installed!"
 fi

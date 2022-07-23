@@ -19,7 +19,6 @@ else
   brew install --cask discord
   brew install --cask alacritty
 
-  brew install nvm
   brew install deno
   brew install lua
   brew install rustup-init
