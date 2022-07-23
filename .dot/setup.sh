@@ -64,3 +64,12 @@ if [ ! -d "${HOME}/.nvm" ] ; then
 else
   echo "nvm is already installed!"
 fi
+
+which rustup 1>&/dev/null
+if [[ $? != 0 ]] ; then
+  echo "Installing rustup..."
+
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+else
+  echo "rustup is already installed!"
+fi

@@ -21,7 +21,6 @@ else
 
   brew install deno
   brew install lua
-  brew install rustup-init
   brew install rust-analyzer
   brew install go
 
