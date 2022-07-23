@@ -12,12 +12,15 @@ else
 
   # Libraries 
 
+  brew install --cask alacritty
+  brew install --cask librewolf
   brew install --cask google-chrome
-  brew install --cask rectangle
-  brew install --cask spotify
+  brew install --cask insomnia
   brew install --cask slack
   brew install --cask discord
-  brew install --cask alacritty
+  brew install --cask spotify
+  brew install --cask notion
+  brew install --cask vlc
 
   brew install deno
   brew install lua
