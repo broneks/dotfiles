@@ -33,23 +33,24 @@ shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
 shift + alt - right  : yabai -m window --grid 1:2:1:0:1:1
 
 # create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
-shift + cmd - n : yabai -m space --create && \
-                  index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
-                  yabai -m window --space "${index}" && \
-                  yabai -m space --focus "${index}"
+# shift + cmd - n : yabai -m space --create && \
+#                   index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
+#                   yabai -m window --space "${index}" && \
+#                   yabai -m space --focus "${index}"
 
-# create desktop and follow focus - uses jq for parsing json (brew install jq)
-cmd + alt - n : yabai -m space --create && \
-                index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
-                yabai -m space --focus "${index}"
+# # create desktop and follow focus - uses jq for parsing json (brew install jq)
+# cmd + alt - n : yabai -m space --create && \
+#                 index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
+#                 yabai -m space --focus "${index}"
 
-# destroy desktop
+# desktop
 cmd + alt - w : yabai -m space --destroy
+cmd + alt - c : yabai -m space --create
 
 # fast focus desktop
 cmd + alt - x : yabai -m space --focus recent
-cmd + alt - z : yabai -m space --focus prev || skhd -k "ctrl + alt + cmd - z"
-cmd + alt - c : yabai -m space --focus next || skhd -k "ctrl + alt + cmd - c"
+cmd + alt - p : yabai -m space --focus prev || skhd -k "ctrl + alt + cmd - z"
+cmd + alt - n : yabai -m space --focus next || skhd -k "ctrl + alt + cmd - c"
 cmd + alt - 1 : yabai -m space --focus  1 || skhd -k "ctrl + alt + cmd - 1"
 cmd + alt - 2 : yabai -m space --focus  2 || skhd -k "ctrl + alt + cmd - 2"
 cmd + alt - 3 : yabai -m space --focus  3 || skhd -k "ctrl + alt + cmd - 3"
