@@ -18,7 +18,7 @@
 [merge]
 	ff = no
 [user]
-	email = bszulc@coursera.org
+	email = bronek@fastmail.fm
 	name = Bronek Szulc
 [alias]
 	co = checkout

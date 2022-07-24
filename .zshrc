@@ -5,18 +5,9 @@ PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%(5~|%-1~/...
 
 # export TERM=xterm-256color
 export BAT_THEME="1337"
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.cargo/bin:$PATH"
 
-# Repos
-
-export C="$HOME/base/coursera"
-
-export W=${C}/web
-export B=${W}/static/bundles
-export PAY=${B}/payments
-export PUR=${B}/my-purchases-graphql
-export INF=${C}/infra-services
-export PRO=${C}/payment-processor-application
+# TODO: Repos
 
 # Dotfiles
 
@@ -31,7 +22,6 @@ export VISUAL="$EDITOR"
 
 alias vim='nvim'
 alias v='nvim .'
-alias vw="cd $HOME/base/coursera/web && nvim ."
 
 # Tmux
 
@@ -56,7 +46,7 @@ export NVM_DIR="$HOME/.nvm"
 
 alias y='yarn'
 alias yi='yarn install --ignore-scripts'
-alias ys='yarn snowpack:serve'
+alias ys='yarn start'
 
 # Docker
 
@@ -81,8 +71,6 @@ alias worker='docker-compose restart worker'
 # ZSH
 
 export ZSH="$HOME/.oh-my-zsh"
-
-# ZSH_THEME="avit"
 
 plugins=(
   git

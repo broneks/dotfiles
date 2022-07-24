@@ -19,15 +19,7 @@ if status is-interactive
     alias ll  'ls -l'
     alias lla 'll -A'
 
-    # Repos
-
-    set -Ux C   {$HOME}/base/coursera
-    set -Ux W   {$C}/web
-    set -l  B   {$W}/static/bundles
-    set -Ux PAY {$B}/payments
-    set -Ux PUR {$B}/my-purchases-graphql
-    set -Ux INF {$C}/infra-services
-    set -Ux PRO {$C}/payment-processors-application
+    # TODO: Repos
 
     # Dotfiles
 
@@ -39,7 +31,6 @@ if status is-interactive
 
     alias vim nvim
     alias v   'nvim .'
-    alias vw  'cd {$W} && nvim .'
 
     # Tmux
     
@@ -48,7 +39,7 @@ if status is-interactive
 
     # Java
     
-    set -Ux JAVA_HOME $(/usr/libexec/java_home)
+    # set -Ux JAVA_HOME $(/usr/libexec/java_home)
 
     # Node
     
@@ -63,7 +54,7 @@ if status is-interactive
     
     alias y  yarn
     alias yi 'yarn install'
-    alias ys 'yarn snowpack:serve'
+    alias ys 'yarn start'
 
     # Fish
 
