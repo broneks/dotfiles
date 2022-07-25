@@ -44,7 +44,7 @@ return packer.startup(function(use)
   use 'sheerun/vim-polyglot'
 
   -- Graphql
-  use 'jparise/vim-graphql'
+  -- use 'jparise/vim-graphql'
 
   -- Search
   use 'BurntSushi/ripgrep'
@@ -77,7 +77,7 @@ return packer.startup(function(use)
     'kyazdani42/nvim-tree.lua',
     requires = {'kyazdani42/nvim-web-devicons'}
   }
-  use 'simrat39/symbols-outline.nvim'
+  -- use 'simrat39/symbols-outline.nvim'
 
   -- Git
   use 'tpope/vim-fugitive'
