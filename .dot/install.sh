@@ -15,6 +15,7 @@ else
   brew install --cask alacritty
   brew install --cask librewolf
   brew install --cask google-chrome
+  brew install --cask amethyst
   brew install --cask insomnia
   brew install --cask slack
   brew install --cask discord
