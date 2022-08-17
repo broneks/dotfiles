@@ -7,7 +7,10 @@ PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%(5~|%-1~/...
 export BAT_THEME="1337"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.cargo/bin:$PATH"
 
-# TODO: Repos
+# Repos
+
+export D="$HOME/draft"
+export C="$D/contentfly"
 
 # Dotfiles
 
