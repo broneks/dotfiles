@@ -25,6 +25,7 @@ export VISUAL="$EDITOR"
 
 alias vim='nvim'
 alias v='nvim .'
+alias vc='vim $C'
 
 # Tmux
 
