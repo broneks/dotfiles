@@ -72,6 +72,9 @@ alias stop='docker-compose stop'
 alias ps='docker-compose ps'
 alias worker='docker-compose restart worker'
 
+alias rap='dc restart app'
+alias lap='dklf contentfly_app'
+
 # ZSH
 
 export ZSH="$HOME/.oh-my-zsh"
