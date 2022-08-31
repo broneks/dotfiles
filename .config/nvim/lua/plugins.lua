@@ -118,6 +118,10 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
 
+  -- toggle values
+  use 'AndrewRadev/switch.vim'
+  use 'gerazov/vim-toggle-bool'
+
   -- Fix
   use 'antoinemadec/FixCursorHold.nvim'
 
