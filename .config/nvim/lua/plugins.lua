@@ -15,8 +15,15 @@ end
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  -- Startup
   use 'mhinz/vim-startify'
   use 'lewis6991/impatient.nvim'
+
+  -- Treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 
   -- Prettier
   -- post install (yarn install | npm install) then load plugin only for editing supported files
@@ -49,10 +56,6 @@ return packer.startup(function(use)
   -- Search
   use 'BurntSushi/ripgrep'
   use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  }
-  use {
     'nvim-telescope/telescope-fzf-native.nvim',
     run = 'make'
   }
@@ -63,21 +66,22 @@ return packer.startup(function(use)
     }
   }
 
-  -- Theme
+  -- Statusline
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
+
+  -- Theme
+  use 'f-person/auto-dark-mode.nvim'
   use 'EdenEast/nightfox.nvim'
   use 'NLKNguyen/papercolor-theme'
-  use 'f-person/auto-dark-mode.nvim'
 
   -- File tree
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {'kyazdani42/nvim-web-devicons'}
   }
-  -- use 'simrat39/symbols-outline.nvim'
 
   -- Git
   use 'tpope/vim-fugitive'
@@ -118,7 +122,7 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
 
-  -- toggle values
+  -- Toggle values
   use 'AndrewRadev/switch.vim'
   use 'gerazov/vim-toggle-bool'
 
