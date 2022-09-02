@@ -28,10 +28,10 @@ else
   brew install rust-analyzer
   brew install go
 
-  brew install fish
   brew install tmux
   brew install neovim
   brew install lazygit
+  brew install fd
   brew install ripgrep
   brew install jq
 
