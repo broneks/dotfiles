@@ -25,6 +25,9 @@ return packer.startup(function(use)
     run = ':TSUpdate'
   }
 
+  -- Icons
+  use 'kyazdani42/nvim-web-devicons'
+
   -- Prettier
   -- post install (yarn install | npm install) then load plugin only for editing supported files
   use {
@@ -49,6 +52,9 @@ return packer.startup(function(use)
 
   -- Syntax 
   use 'sheerun/vim-polyglot'
+
+  -- Colors
+  use 'ap/vim-css-color'
 
   -- Graphql
   -- use 'jparise/vim-graphql'
