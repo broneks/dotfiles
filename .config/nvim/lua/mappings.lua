@@ -36,7 +36,9 @@ nnoremap('<leader><leader>q', 'q')
 -- This unsets the "last search pattern" register by hitting return
 nnoremap('<cr>', ':noh<cr><cr>')
 
--- Buffer cleanup
+-- Buffers
+nnoremap('<tab>', ':bnext<cr>')
+nnoremap('<s-tab>', ':bprev<cr>')
 nnoremap('<leader>bd', ':Bdelete other<cr>')
 
 -- Harpoon man
