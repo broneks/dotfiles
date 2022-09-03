@@ -13,7 +13,6 @@ else
   # Libraries 
 
   brew install --cask alacritty
-  brew install --cask librewolf
   brew install --cask google-chrome
   brew install --cask amethyst
   brew install --cask insomnia
@@ -23,17 +22,16 @@ else
   brew install --cask notion
   brew install --cask vlc
 
-  brew install deno
-  brew install lua
-  brew install rust-analyzer
-  brew install go
-
   brew install tmux
   brew install neovim
   brew install lazygit
-  brew install fd
   brew install ripgrep
+  brew install fd
   brew install jq
+  brew install tldr
+
+  brew install lua
+  brew install rust-analyzer
 
   brew cleanup
 fi
