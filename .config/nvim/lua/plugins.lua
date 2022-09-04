@@ -132,6 +132,9 @@ return packer.startup(function(use)
   -- Improved quickfix
   use 'kevinhwang91/nvim-bqf'
 
+  -- Utility
+  use 'windwp/nvim-autopairs'
+
   -- Fix
   use 'antoinemadec/FixCursorHold.nvim'
 
