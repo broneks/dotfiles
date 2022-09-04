@@ -1,8 +1,8 @@
 -- Pane navigation
-nnoremap('<C-J>', '<C-W><C-J>')
-nnoremap('<C-K>', '<C-W><C-K>')
-nnoremap('<C-L>', '<C-W><C-L>')
-nnoremap('<C-H>', '<C-W><C-H>')
+nnoremap('<C-h>', '<C-w>h')
+nnoremap('<C-j>', '<C-w>j')
+nnoremap('<C-k>', '<C-w>k')
+nnoremap('<C-l>', '<C-w>l')
 
 -- Line navigation
 nnoremap('H', '^')
@@ -14,8 +14,8 @@ nnoremap('k', 'gk')
 nnoremap('Y', 'y$')
 
 -- Line shifting
-nnoremap('<leader>j', ':m .+1<cr>==')
-nnoremap('<leader>k', ':m .-2<cr>==')
+nnoremap('J', ':m .+1<cr>==')
+nnoremap('K', ':m .-2<cr>==')
 vnoremap('J', [[:m '>+1<cr>gv=gv]])
 vnoremap('K', [[:m '<-2<cr>gv=gv]])
 vnoremap('p', [["_dP]])
@@ -36,12 +36,19 @@ nnoremap('<leader><leader>q', 'q')
 -- This unsets the "last search pattern" register by hitting return
 nnoremap('<cr>', ':noh<cr><cr>')
 
+-- Quickfix
+nnoremap(']q', ':cnext<cr>')
+nnoremap('[q', ':cprev<cr>')
+
 -- Buffers
 nnoremap('<tab>', ':bnext<cr>')
 nnoremap('<s-tab>', ':bprev<cr>')
 nnoremap('<leader>bd', ':Bdelete other<cr>')
 
--- Harpoon man
+-- Toggle values
+nnoremap('<C-s>', ':ToggleBool<cr>')
+
+-- Harpoon
 nnoremap('<space><space>f', [[:lua require('harpoon.ui').toggle_quick_menu()<cr>]])
 nnoremap('<space><space>g', [[:lua require('harpoon.mark').add_file()<cr>]])
 nnoremap('<space><space>j', [[:lua require('harpoon.ui').nav_file(1)<cr>]])
@@ -57,13 +64,10 @@ nnoremap([[<C-\>]], ':NvimTreeFindFile<cr>')
 nnoremap('<leader>gg', ':LazyGit<cr>')
 
 -- Telescope
-nnoremap('<leader>ff', '<cmd>Telescope find_files<cr>')
-nnoremap('<leader>fg', '<cmd>Telescope live_grep<cr>')
-nnoremap('<leader>fb', '<cmd>Telescope buffers<cr>')
-nnoremap('<leader>fm', '<cmd>Telescope harpoon marks<cr>')
-nnoremap('<leader>fc', '<cmd>Telescope colorscheme<cr>')
-nnoremap('<leader>fh', '<cmd>Telescope help_tags<cr>')
-nnoremap('<leader>fe', '<cmd>Telescope oldfiles<cr>')
-
--- Toggle values
-nnoremap('<leader>rr', ':ToggleBool<cr>')
+nnoremap('<leader>ff', ':Telescope find_files<cr>')
+nnoremap('<leader>fg', ':Telescope live_grep<cr>')
+nnoremap('<leader>fb', ':Telescope buffers<cr>')
+nnoremap('<leader>fm', ':Telescope harpoon marks<cr>')
+nnoremap('<leader>fc', ':Telescope colorscheme<cr>')
+nnoremap('<leader>fh', ':Telescope help_tags<cr>')
+nnoremap('<leader>fe', ':Telescope oldfiles<cr>')
