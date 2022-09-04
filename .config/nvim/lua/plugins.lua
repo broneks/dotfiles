@@ -129,9 +129,6 @@ return packer.startup(function(use)
   use 'AndrewRadev/switch.vim'
   use 'gerazov/vim-toggle-bool'
 
-  -- Improved quickfix
-  use 'kevinhwang91/nvim-bqf'
-
   -- Utility
   use 'windwp/nvim-autopairs'
 
