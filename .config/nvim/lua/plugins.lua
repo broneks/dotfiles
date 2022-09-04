@@ -56,9 +56,6 @@ return packer.startup(function(use)
   -- Colors
   use 'ap/vim-css-color'
 
-  -- Graphql
-  -- use 'jparise/vim-graphql'
-
   -- Search
   use 'BurntSushi/ripgrep'
   use {
@@ -131,6 +128,9 @@ return packer.startup(function(use)
   -- Toggle values
   use 'AndrewRadev/switch.vim'
   use 'gerazov/vim-toggle-bool'
+
+  -- Improved quickfix
+  use 'kevinhwang91/nvim-bqf'
 
   -- Fix
   use 'antoinemadec/FixCursorHold.nvim'

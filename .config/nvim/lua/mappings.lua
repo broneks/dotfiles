@@ -55,8 +55,6 @@ nnoremap([[<C-\>]], ':NvimTreeFindFile<cr>')
 
 -- Git
 nnoremap('<leader>gg', ':LazyGit<cr>')
-nnoremap('<leader>gh', ':diffget //2<cr>') -- bring in changes from upstream (left side)
-nnoremap('<leader>gl', ':diffget //3<cr>') -- bring in changes from head (right side)
 
 -- Telescope
 nnoremap('<leader>ff', '<cmd>Telescope find_files<cr>')
