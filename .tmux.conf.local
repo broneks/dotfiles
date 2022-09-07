@@ -16,6 +16,10 @@ set-option -sa terminal-overrides ",xterm*:Tc,alacritty*:Tc,tmux*:Tc"
 
 set -s escape-time 0
 
+set -Fg 'status-format[1]' '#{status-format[0]}'
+set -g 'status-format[0]' ''
+set -g status 2
+
 # -- navigation ----------------------------------------------------------------
 
 # if you're running tmux within iTerm2
