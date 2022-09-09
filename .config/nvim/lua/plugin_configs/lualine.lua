@@ -4,7 +4,7 @@ if not lualine_status_ok then
 end
 
 local colors = {
-  bg       = '#202328',
+  bg       = '#24273A', -- '#202328',
   fg       = '#bbc2cf',
   yellow   = '#ECBE7B',
   cyan     = '#008080',
