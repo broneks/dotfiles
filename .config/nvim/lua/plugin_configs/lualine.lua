@@ -6,15 +6,15 @@ end
 local colors = {
   bg       = '#24273A', -- '#202328',
   fg       = '#bbc2cf',
-  yellow   = '#ECBE7B',
-  cyan     = '#008080',
+  yellow   = '#EED49F', -- #ECBE7B',
+  cyan     = '#8AADF4', -- '#008080',
   darkblue = '#081633',
-  green    = '#98be65',
+  green    = '#A6DA95', -- #98be65',
   orange   = '#FF8800',
   violet   = '#a9a1e1',
   magenta  = '#c678dd',
   blue     = '#bbc2cf', -- '#51afef',
-  red      = '#ec5f67',
+  red      = '#ED8796', -- #ec5f67',
 }
 
 local conditions = {
