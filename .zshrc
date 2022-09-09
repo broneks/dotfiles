@@ -72,6 +72,7 @@ alias stop='docker-compose stop'
 alias ps='docker-compose ps'
 alias worker='docker-compose restart worker'
 
+alias dab='de app bash'
 alias rap='dc restart app'
 alias lap='dklf contentfly_app'
 
