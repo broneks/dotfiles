@@ -13,7 +13,7 @@ local colors = {
   orange   = '#FF8800',
   violet   = '#a9a1e1',
   magenta  = '#c678dd',
-  blue     = '#51afef',
+  blue     = '#bbc2cf', -- '#51afef',
   red      = '#ec5f67',
 }
 
@@ -78,7 +78,8 @@ end
 
 ins_left {
   function()
-    return '▊'
+    -- return '▊'
+    return ''
   end,
   color = { fg = colors.blue }, -- Sets highlighting of component
   padding = { left = 0, right = 1 }, -- We don't need space before this
@@ -87,7 +88,8 @@ ins_left {
 ins_left {
   -- mode component
   function()
-    return ''
+    -- return ''
+    return ''
   end,
   color = function()
     -- auto change color according to neovims mode
@@ -190,7 +192,8 @@ ins_right { 'progress', color = { fg = colors.blue } }
 
 ins_right {
   function()
-    return '▊'
+    -- return '▊'
+    return ''
   end,
   color = { fg = colors.blue },
   padding = { left = 1 },
@@ -244,7 +247,7 @@ ins_right {
       end
     end
 
-    return table.concat(names, ',')
+    return '| ' .. table.concat(names, ',')
   end,
   color = { fg = colors.blue },
 }
