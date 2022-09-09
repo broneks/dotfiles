@@ -3,6 +3,15 @@ _G.P = function(v)
   return v
 end
 
+_G.RELOAD = function(...)
+  return require("plenary.reload").reload_module(...)
+end
+
+_G.R = function(name)
+  RELOAD(name)
+  return require(name)
+end
+
 local keymapper = function(mode, lhs, rhs, override_opts, bufnr)
   -- set default options
   local opts = { noremap = true, silent = true }
