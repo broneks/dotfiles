@@ -1,5 +1,5 @@
 require('nightfox').setup({
-    options = {
-      transparent = true
-    },
+  options = {
+    transparent = true
+  },
 })

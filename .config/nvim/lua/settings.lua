@@ -10,7 +10,7 @@ o.encoding = 'utf8'
 o.termguicolors = true
 
 -- Visual
-o.background = 'light'
+o.background = 'dark'
 o.title = true
 o.laststatus = 3
 o.showmode = false
@@ -83,7 +83,7 @@ end
 
 -- colorscheme
 cmd('syntax on')
-cmd('colorscheme carbonfox')
+cmd('colorscheme terafox')
 
 -- highlights
 bg('Pmenu', 'none') 
