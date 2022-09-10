@@ -83,7 +83,7 @@ end
 
 -- colorscheme
 cmd('syntax on')
-cmd('colorscheme terafox')
+cmd('colorscheme carbonfox')
 
 -- highlights
 bg('Pmenu', 'none') 
