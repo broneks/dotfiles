@@ -1,7 +1,14 @@
 # General
+function parse_git_branch() {
+  git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p' | head -c 40
+}
 
-autoload -U colors && colors
-PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%(5~|%-1~/.../%3~|%4~) %{$reset_color%}%% "
+COLOR_DEF=$'%f'
+COLOR_USR=$'%F{#ED8796}'
+COLOR_DIR=$'%F{#A6DA95}'
+COLOR_GIT=$'%F{#8AADF4}'
+setopt PROMPT_SUBST
+export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
 
 # export TERM=xterm-256color
 export BAT_THEME="1337"
