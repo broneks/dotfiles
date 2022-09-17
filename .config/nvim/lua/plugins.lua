@@ -50,9 +50,6 @@ return packer.startup(function(use)
     }
   }
 
-  -- Syntax 
-  use 'sheerun/vim-polyglot'
-
   -- Colors
   use 'ap/vim-css-color'
 
