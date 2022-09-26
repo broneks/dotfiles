@@ -132,6 +132,9 @@ return packer.startup(function(use)
   -- Fix
   use 'antoinemadec/FixCursorHold.nvim'
 
+  -- Syntax 
+  use 'sheerun/vim-polyglot'
+
   -- Automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then
     require('packer').sync()
