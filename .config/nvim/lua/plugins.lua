@@ -135,6 +135,10 @@ return packer.startup(function(use)
   -- Syntax 
   use 'sheerun/vim-polyglot'
 
+  -- Debug
+  use 'mfussenegger/nvim-dap'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
   -- Automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then
     require('packer').sync()
