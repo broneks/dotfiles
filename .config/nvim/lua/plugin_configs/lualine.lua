@@ -154,6 +154,19 @@ ins_left {
   end,
 }
 
+local dap_status_ok, dap = pcall(require, 'dap')
+
+ins_right {
+  function()
+    if not dap_status_ok then
+      return
+    end
+
+    return dap.status()
+  end,
+  color = { fg = colors.fg },
+}
+
 ins_right {
   'diff',
   -- symbols = { added = ' ', modified = '柳 ', removed = ' ' },
