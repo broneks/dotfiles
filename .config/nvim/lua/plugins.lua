@@ -110,7 +110,7 @@ return packer.startup(function(use)
   }
 
   -- Helping hand
-  use 'folke/which-key.nvim'
+  -- use 'folke/which-key.nvim'
 
   -- Intellisense
   use 'neovim/nvim-lspconfig'
