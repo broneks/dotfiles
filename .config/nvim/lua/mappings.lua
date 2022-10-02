@@ -94,3 +94,8 @@ nnoremap('<leader>dk', [[<cmd>lua require"dap".up()<cr>zz<cr>]])
 nnoremap('<leader>dj', [[<cmd>lua require"dap".down()<cr>zz<cr>]])
 nnoremap('<leader>dr', [[<cmd>lua require"dap".repl.toggle({}, "vsplit")<CR><C-w>l<cr>]])
 
+-- Jest
+nnoremap('<leader>tf', [[<cmd>lua require"jester".run_file()<cr>]])
+nnoremap('<leader>tb', [[<cmd>lua require"jester".run()<cr>]])
+nnoremap('<leader>tr', [[<cmd>lua require"jester".run_last()<cr>]])
+nnoremap('<leader>td', [[<cmd>lua require"jester".debug()<cr>]])
