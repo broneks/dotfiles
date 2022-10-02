@@ -95,10 +95,7 @@ return packer.startup(function(use)
   use 'tpope/vim-ragtag'
 
   -- Registers
-  use {
-    'tversteeg/registers.nvim',
-    branch = 'main'
-  }
+  use 'tversteeg/registers.nvim'
 
   -- Buffers
   use 'Asheq/close-buffers.vim'
@@ -138,6 +135,7 @@ return packer.startup(function(use)
   -- Debug
   use 'mfussenegger/nvim-dap'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use 'David-Kunz/jester'
 
   -- Automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then
