@@ -19,9 +19,9 @@ o.numberwidth = 4
 o.relativenumber = true
 o.scrolloff = 8
 o.sidescrolloff = 8
-o.cmdheight = 2
 o.cursorline = true
 o.signcolumn = 'yes'
+o.ch = 1 -- command height
 
 -- Text editing
 o.expandtab = true
@@ -31,6 +31,7 @@ o.shiftwidth = 2
 o.autoindent = true
 o.smartindent = true
 o.wrap = false
+o.spell = true
 
 -- Search
 o.incsearch = true
