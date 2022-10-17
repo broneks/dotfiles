@@ -31,7 +31,6 @@ o.shiftwidth = 2
 o.autoindent = true
 o.smartindent = true
 o.wrap = false
-o.spell = true
 
 -- Search
 o.incsearch = true
@@ -72,6 +71,10 @@ vim.api.nvim_set_keymap('', '<space>', '<nop>', { noremap = true, silent = true 
 g.mapleader = ' '
 g.maplocalleader = ' '
 
+-- Tree
+g.loaded = 1
+g.loaded_netrwPlugin = 1
+
 -- no inline errors
 d.config({ virtual_text = false })
 
@@ -105,4 +108,4 @@ fg('netrwDir', '#5eacd3')
 fg('qfFileName', '#aed75f')
 fg('Folded', 'none')
 ---
-fg_bg('VertSplit', '#77747f', 'none')
+fg_bg('VertSplit', '#524f57', 'none')

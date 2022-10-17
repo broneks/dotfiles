@@ -73,14 +73,14 @@ return packer.startup(function(use)
   }
 
   -- Theme
-  use 'f-person/auto-dark-mode.nvim'
   use 'EdenEast/nightfox.nvim'
   use 'NLKNguyen/papercolor-theme'
 
   -- File tree
   use {
     'kyazdani42/nvim-tree.lua',
-    requires = {'kyazdani42/nvim-web-devicons'}
+    requires = {'kyazdani42/nvim-web-devicons'},
+    tag = 'nightly',
   }
 
   -- Git
