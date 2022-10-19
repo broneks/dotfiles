@@ -1,4 +1,7 @@
-local dap = require('dap')
+local status_ok, dap = pcall(require, 'dap')
+if not status_ok then
+  return
+end
 
 dap.adapters.node2 = {
   type = 'executable',

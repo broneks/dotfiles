@@ -74,7 +74,6 @@ return packer.startup(function(use)
 
   -- Theme
   use 'EdenEast/nightfox.nvim'
-  use 'NLKNguyen/papercolor-theme'
 
   -- File tree
   use {
@@ -106,9 +105,6 @@ return packer.startup(function(use)
     requires = {'nvim-lua/plenary.nvim'}
   }
 
-  -- Helping hand
-  -- use 'folke/which-key.nvim'
-
   -- Intellisense
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
@@ -134,7 +130,10 @@ return packer.startup(function(use)
 
   -- Debug
   use 'mfussenegger/nvim-dap'
-  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use {
+    'rcarriga/nvim-dap-ui',
+    requires = {'mfussenegger/nvim-dap'}
+  }
   use 'David-Kunz/jester'
 
   -- Automatically set up configuration after cloning packer.nvim
