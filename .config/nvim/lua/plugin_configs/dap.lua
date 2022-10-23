@@ -30,22 +30,24 @@ dap.configurations.javascript = {
 }
 
 -- dap.adapters.chrome = {
--- 	type = "executable",
--- 	command = "node",
--- 	args = {os.getenv("HOME") .. "/dev/microsoft/vscode-chrome-debug/out/src/chromeDebug.js"}
+--   type = 'executable',
+--   command = 'node',
+--   args = { os.getenv('HOME') .. '/dev/microsoft/vscode-chrome-debug/out/src/chromeDebug.js' }
 -- }
 
--- dap.configurations.typescript = {
--- 	{
--- 		type = "chrome",
--- 		request = "attach",
--- 		program = "${file}",
--- 		cwd = vim.fn.getcwd(),
--- 		sourceMaps = true,
--- 		protocol = "inspector",
--- 		port = 9222,
--- 		webRoot = "${workspaceFolder}"
--- 	}
+-- dap.configurations.javascriptreact = {
+--   {
+--     name = 'Debug (Attach) - Remote',
+--     type = 'chrome',
+--     request = 'attach',
+--     program = '${file}',
+--     cwd = vim.fn.getcwd(),
+--     sourceMaps = true,
+--     trace = true,
+--     protocol = 'inspector',
+--     port = 9222,
+--     webRoot = '${workspaceFolder}'
+--   }
 -- }
 
 vim.fn.sign_define('DapBreakpoint', { texthl='DiagnosticSignWarn', numhl='DiagnosticSignWarn' })
@@ -56,7 +58,8 @@ vim.fn.sign_define('DapStopped', { texthl='DiagnosticSignHint', numhl= 'Diagnost
 
 require('dapui').setup()
 require('jester').setup({
-  cmd = "CF_ENV=test npx jest -t '$result' -- $file", -- run command
+  -- cmd = "CF_ENV=test npx jest -t '$result' -- $file", -- run command
+  cmd = "CF_ENV=test npx jest -- $file", -- run command
   identifiers = {"test", "it"}, -- used to identify tests
   prepend = {"describe"}, -- prepend describe blocks
   expressions = {"call_expression"}, -- tree-sitter object used to scan for tests/describe blocks

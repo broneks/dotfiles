@@ -72,8 +72,7 @@ alias dmx='docker-machine ssh'
 alias dc='docker-compose'
 alias de='docker-compose exec'
 alias dkps="docker ps --format '{{.Names}} --- {{.Status}}'"
-alias dclf='docker-compose logs -f'
-alias lf='dclf'
+alias lf='docker-compose logs -f'
 alias up='docker-compose up -d'
 alias stop='docker-compose stop'
 alias ps='docker-compose ps'
@@ -82,6 +81,10 @@ alias worker='docker-compose restart worker'
 alias dab='de app bash'
 alias rap='dc restart app'
 alias lap='dklf contentfly_app'
+
+# Chrome
+
+alias chromedebug='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222'
 
 # ZSH
 
