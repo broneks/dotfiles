@@ -15,6 +15,9 @@ end
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  -- Fix
+  use 'antoinemadec/FixCursorHold.nvim'
+
   -- Startup
   use 'mhinz/vim-startify'
   use 'lewis6991/impatient.nvim'
@@ -122,9 +125,6 @@ return packer.startup(function(use)
   -- Utility
   use 'windwp/nvim-autopairs'
 
-  -- Fix
-  use 'antoinemadec/FixCursorHold.nvim'
-
   -- Syntax 
   use 'sheerun/vim-polyglot'
 
@@ -135,6 +135,9 @@ return packer.startup(function(use)
     requires = {'mfussenegger/nvim-dap'}
   }
   use 'David-Kunz/jester'
+
+  -- Note
+  use 'vimwiki/vimwiki'
 
   -- Automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then

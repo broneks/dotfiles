@@ -1,3 +1,5 @@
+inoremap('<C-c>', '<Esc>')
+
 -- Pane navigation
 nnoremap('<C-h>', '<C-w>h')
 nnoremap('<C-j>', '<C-w>j')
@@ -12,6 +14,9 @@ nnoremap('k', 'gk')
 
 -- Yank everything after cursor
 nnoremap('Y', 'y$')
+-- nnoremap('<leader>y', [["+y]])
+-- vnoremap('<leader>y', [["+y]])
+-- nnoremap('<leader>Y', [["+Y]], { noremap = false })
 
 -- Line shifting
 nnoremap('<leader>j', ':m .+1<cr>==')

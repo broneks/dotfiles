@@ -75,6 +75,9 @@ g.maplocalleader = ' '
 g.loaded = 1
 g.loaded_netrwPlugin = 1
 
+-- Note
+g.vimwiki_list = {{ path = '~/vimwiki/', syntax = 'markdown', ext = '.md' }}
+
 -- no inline errors
 d.config({ virtual_text = false })
 
@@ -86,6 +89,7 @@ for type, icon in pairs(signs) do
 end
 
 -- colorscheme
+cmd('filetype plugin on')
 cmd('syntax on')
 cmd('colorscheme carbonfox')
 
