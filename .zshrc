@@ -16,8 +16,9 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.
 
 # Repos
 
-export D="$HOME/draft"
-export C="$D/contentfly"
+export BASE="$HOME/draft"
+export C="$BASE/contentfly"
+export D="$BASE/draft"
 
 # Dotfiles
 
@@ -33,6 +34,7 @@ export VISUAL="$EDITOR"
 alias vim='nvim'
 alias v='nvim .'
 alias vc='vim $C'
+alias vd='vim $D'
 
 # Tmux
 
@@ -81,6 +83,7 @@ alias worker='docker-compose restart worker'
 alias dab='de app bash'
 alias rap='dc restart app'
 alias lap='dklf contentfly_app'
+alias dap='dklf draft_app'
 
 # Chrome
 
