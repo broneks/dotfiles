@@ -82,8 +82,7 @@ alias worker='docker-compose restart worker'
 
 alias dab='de app bash'
 alias rap='dc restart app'
-alias lap='dklf contentfly_app'
-alias dap='dklf draft_app'
+alias lap='dklf draft_app'
 
 # Chrome
 
