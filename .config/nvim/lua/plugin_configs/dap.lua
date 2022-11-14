@@ -58,8 +58,7 @@ vim.fn.sign_define('DapStopped', { texthl='DiagnosticSignHint', numhl= 'Diagnost
 
 require('dapui').setup()
 require('jester').setup({
-  -- cmd = "CF_ENV=test npx jest -t '$result' -- $file", -- run command
-  cmd = "npx jest -- $file", -- run command
+  cmd = "APP_ENV=test npx jest -- $file", -- run command
   identifiers = {"test", "it"}, -- used to identify tests
   prepend = {"describe"}, -- prepend describe blocks
   expressions = {"call_expression"}, -- tree-sitter object used to scan for tests/describe blocks
