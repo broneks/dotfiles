@@ -127,6 +127,10 @@ return packer.startup(function(use)
 
   -- Syntax 
   use 'sheerun/vim-polyglot'
+  use({
+    'iamcco/markdown-preview.nvim',
+    run = function() vim.fn['mkdp#util#install']() end,
+  })
 
   -- Debug
   use 'mfussenegger/nvim-dap'
