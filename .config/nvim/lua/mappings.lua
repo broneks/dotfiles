@@ -52,6 +52,11 @@ nnoremap('<s-tab>', ':bprev<cr>')
 -- Toggle values
 nnoremap('<C-s>', ':ToggleBool<cr>')
 
+-- split join
+nnoremap('tt', ':TSJToggle<cr>')
+nnoremap('ts', ':TSJSplit<cr>')
+nnoremap('tj', ':TSJJoin<cr>')
+
 -- Harpoon
 nnoremap('<space><space>f', [[:lua require('harpoon.ui').toggle_quick_menu()<cr>]])
 nnoremap('<space><space>g', [[:lua require('harpoon.mark').add_file()<cr>]])

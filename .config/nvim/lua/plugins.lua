@@ -124,13 +124,17 @@ return packer.startup(function(use)
 
   -- Utility
   use 'windwp/nvim-autopairs'
+  use {
+    'Wansmer/treesj',
+    requires = { 'nvim-treesitter' },
+  }
 
   -- Syntax 
   use 'sheerun/vim-polyglot'
-  use({
+  use {
     'iamcco/markdown-preview.nvim',
     run = function() vim.fn['mkdp#util#install']() end,
-  })
+  }
 
   -- Debug
   use 'mfussenegger/nvim-dap'
