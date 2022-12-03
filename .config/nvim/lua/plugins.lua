@@ -50,13 +50,6 @@ return packer.startup(function(use)
   -- Registers
   use 'tversteeg/registers.nvim'
 
-  -- Sessions
-  use {
-    'folke/persistence.nvim',
-    event = 'BufReadPre', -- this will only start session saving when an actual file was opened
-    module = 'persistence',
-  }
-
   -- Statusline
   use {
     'nvim-lualine/lualine.nvim',
