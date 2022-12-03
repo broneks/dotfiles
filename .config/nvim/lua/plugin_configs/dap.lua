@@ -56,7 +56,22 @@ vim.fn.sign_define('DapBreakpointRejected', { texthl='DiagnosticSignError', numh
 vim.fn.sign_define('DapLogPoint', { texthl='DiagnosticSignWarn', numhl= 'DiagnosticSignWarn' })
 vim.fn.sign_define('DapStopped', { texthl='DiagnosticSignHint', numhl= 'DiagnosticSignHint' })
 
-require('dapui').setup()
+dapui = require('dapui')
+
+dapui.setup()
+
+dap.listeners.after.event_initialized['dapui_config'] = function()
+  dapui.open()
+end
+
+dap.listeners.before.event_terminated['dapui_config'] = function()
+  dapui.close()
+end
+
+dap.listeners.before.event_exited['dapui_config'] = function()
+  dapui.close()
+end
+
 require('jester').setup({
   cmd = "APP_ENV=test npx jest -- $file", -- run command
   identifiers = {"test", "it"}, -- used to identify tests
