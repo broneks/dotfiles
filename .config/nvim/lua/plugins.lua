@@ -13,10 +13,8 @@ if not status_ok then
 end
 
 return packer.startup(function(use)
+  -- Plugin manager
   use 'wbthomason/packer.nvim'
-
-  -- Fix
-  use 'antoinemadec/FixCursorHold.nvim'
 
   -- Startup
   use 'mhinz/vim-startify'
@@ -27,9 +25,62 @@ return packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+  use 'nvim-treesitter/nvim-treesitter-textobjects'
+
+  -- File tree
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {'kyazdani42/nvim-web-devicons'},
+    tag = 'nightly',
+  }
+
+  -- Search
+  use 'BurntSushi/ripgrep'
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'make'
+  }
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {
+      {'nvim-lua/plenary.nvim'}
+    }
+  }
+
+  -- Registers
+  use 'tversteeg/registers.nvim'
+
+  -- Sessions
+  use {
+    'folke/persistence.nvim',
+    event = 'BufReadPre', -- this will only start session saving when an actual file was opened
+    module = 'persistence',
+  }
+
+  -- Statusline
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
+
+  -- Comments
+  use 'tpope/vim-commentary'
 
   -- Icons
   use 'kyazdani42/nvim-web-devicons'
+
+  -- Colors
+  use 'ap/vim-css-color'
+
+  -- LSP Intellisense
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
 
   -- Prettier
   -- post install (yarn install | npm install) then load plugin only for editing supported files
@@ -53,70 +104,33 @@ return packer.startup(function(use)
     }
   }
 
-  -- Colors
-  use 'ap/vim-css-color'
-
-  -- Search
-  use 'BurntSushi/ripgrep'
-  use {
-    'nvim-telescope/telescope-fzf-native.nvim',
-    run = 'make'
-  }
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = {
-      {'nvim-lua/plenary.nvim'}
-    }
-  }
-
-  -- Statusline
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
-
-  -- Theme
-  use 'EdenEast/nightfox.nvim'
-
-  -- File tree
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {'kyazdani42/nvim-web-devicons'},
-    tag = 'nightly',
-  }
-
   -- Git
   use 'tpope/vim-fugitive'
   use 'kdheepak/lazygit.nvim'
   use 'lewis6991/gitsigns.nvim'
 
-  -- Comments
-  use 'tpope/vim-commentary'
-
   -- HTML
   use 'tpope/vim-ragtag'
 
-  -- Registers
-  use 'tversteeg/registers.nvim'
+  -- Markdown 
+  use {
+    'iamcco/markdown-preview.nvim',
+    run = function() vim.fn['mkdp#util#install']() end,
+  }
 
-  -- Buffers
-  use 'Asheq/close-buffers.vim'
+  -- Test and Debug
+  use 'mfussenegger/nvim-dap'
+  use {
+    'rcarriga/nvim-dap-ui',
+    requires = {'mfussenegger/nvim-dap'}
+  }
+  use 'David-Kunz/jester'
 
   -- Harpoon
   use {
     'ThePrimeagen/harpoon',
     requires = {'nvim-lua/plenary.nvim'}
   }
-
-  -- Intellisense
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-vsnip'
-  use 'hrsh7th/vim-vsnip'
 
   -- Toggle values
   use 'AndrewRadev/switch.vim'
@@ -128,24 +142,16 @@ return packer.startup(function(use)
     'Wansmer/treesj',
     requires = { 'nvim-treesitter' },
   }
-
-  -- Syntax 
-  use 'sheerun/vim-polyglot'
   use {
-    'iamcco/markdown-preview.nvim',
-    run = function() vim.fn['mkdp#util#install']() end,
+    'kylechui/nvim-surround',
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
   }
-
-  -- Debug
-  use 'mfussenegger/nvim-dap'
-  use {
-    'rcarriga/nvim-dap-ui',
-    requires = {'mfussenegger/nvim-dap'}
-  }
-  use 'David-Kunz/jester'
 
   -- Note
   use 'vimwiki/vimwiki'
+
+  -- Theme
+  use 'EdenEast/nightfox.nvim'
 
   -- Automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then

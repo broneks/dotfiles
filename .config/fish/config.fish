@@ -60,3 +60,5 @@ if status is-interactive
 
     set fish_greeting ''
 end
+
+source /Users/bronek/.docker/init-fish.sh || true # Added by Docker Desktop
