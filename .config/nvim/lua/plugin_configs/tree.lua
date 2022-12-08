@@ -12,9 +12,6 @@ tree.setup {
       resize_window = true,
     },
   },
-  git = {
-    ignore = false,
-  },
   renderer = {
     icons = {
       glyphs = {

@@ -91,7 +91,7 @@ end
 -- colorscheme
 cmd('filetype plugin on')
 cmd('syntax on')
-cmd('colorscheme carbonfox')
+cmd('colorscheme nightfox')
 
 -- highlights
 bg('Normal', 'none')
