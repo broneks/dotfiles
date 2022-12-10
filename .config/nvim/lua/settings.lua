@@ -88,11 +88,6 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
--- colorscheme
-cmd('filetype plugin on')
-cmd('syntax on')
-cmd('colorscheme nightfox')
-
 -- highlights
 bg('Normal', 'none')
 bg('NonText', 'none')
@@ -113,3 +108,8 @@ fg('qfFileName', '#aed75f')
 fg('Folded', 'none')
 ---
 fg_bg('VertSplit', '#524f57', 'none')
+
+-- colorscheme
+cmd('filetype plugin on')
+cmd('syntax on')
+cmd('colorscheme nightfox')

@@ -19,7 +19,11 @@ local colors = {
 
 local conditions = {
   buffer_not_empty = function()
-    return vim.fn.empty(vim.fn.expand('%:t')) ~= 1
+    local filename = vim.fn.expand('%:t')
+    local is_empty = vim.fn.empty(filename) ~= 1
+    local is_nvim_tree = string.find(filename, 'NvimTree') ~= nil
+
+    return not is_empty or not is_nvim_tree
   end,
   hide_in_width = function()
     return vim.fn.winwidth(0) > 80
