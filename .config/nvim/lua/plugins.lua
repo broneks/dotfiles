@@ -111,6 +111,9 @@ return packer.startup(function(use)
     run = function() vim.fn['mkdp#util#install']() end,
   }
 
+  -- Stylus
+  use 'ChiliConSql/neovim-stylus'
+
   -- Test and Debug
   use 'mfussenegger/nvim-dap'
   use {
