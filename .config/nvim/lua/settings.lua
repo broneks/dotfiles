@@ -112,4 +112,4 @@ fg_bg('VertSplit', '#524f57', 'none')
 -- colorscheme
 cmd('filetype plugin on')
 cmd('syntax on')
-cmd('colorscheme nightfox')
+cmd('colorscheme carbonfox')
