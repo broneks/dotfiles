@@ -88,6 +88,10 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
+-- Seek
+
+cmd 'command -nargs=1 Seek noautocmd vimgrep /<args>/gj `git ls-files` | cw'
+
 -- highlights
 bg('Normal', 'none')
 bg('NonText', 'none')
