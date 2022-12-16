@@ -71,6 +71,12 @@ vim.api.nvim_set_keymap('', '<space>', '<nop>', { noremap = true, silent = true 
 g.mapleader = ' '
 g.maplocalleader = ' '
 
+-- Syntax
+cmd 'syntax on'
+
+-- Filetype
+cmd 'filetype plugin on'
+
 -- Tree
 g.loaded = 1
 g.loaded_netrwPlugin = 1
@@ -89,11 +95,11 @@ for type, icon in pairs(signs) do
 end
 
 -- Seek
-
-cmd 'command -nargs=1 Seek noautocmd vimgrep /<args>/gj `git ls-files` | cw'
+cmd 'command! -nargs=1 Seek noautocmd vimgrep /<args>/gj `git ls-files` | cw'
 
 -- highlights
 bg('Normal', 'none')
+bg('NormalFloat', 'none')
 bg('NonText', 'none')
 bg('Menu', 'none') 
 bg('Pmenu', 'none') 
@@ -113,7 +119,5 @@ fg('Folded', 'none')
 ---
 fg_bg('VertSplit', '#524f57', 'none')
 
--- colorscheme
-cmd('filetype plugin on')
-cmd('syntax on')
-cmd('colorscheme carbonfox')
+-- Colorscheme
+cmd 'colorscheme carbonfox'

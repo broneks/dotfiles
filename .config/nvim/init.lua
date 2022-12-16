@@ -1,6 +1,5 @@
 require 'globals'
 require 'plugins'
-require 'plugin_configs'
 require 'settings'
 require 'mappings'
 require 'autocmds'
