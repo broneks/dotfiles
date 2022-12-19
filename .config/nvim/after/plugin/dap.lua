@@ -6,7 +6,7 @@ end
 dap.adapters.node2 = {
   type = 'executable',
   command = 'node',
-  args = {os.getenv('HOME') .. '/dev/microsoft/vscode-node-debug2/out/src/nodeDebug.js'},
+  args = {os.getenv('HOME') .. '/debugger/microsoft/vscode-node-debug2/out/src/nodeDebug.js'},
 }
 
 dap.configurations.javascript = {
@@ -32,7 +32,7 @@ dap.configurations.javascript = {
 -- dap.adapters.chrome = {
 --   type = 'executable',
 --   command = 'node',
---   args = { os.getenv('HOME') .. '/dev/microsoft/vscode-chrome-debug/out/src/chromeDebug.js' }
+--   args = { os.getenv('HOME') .. '/debugger/microsoft/vscode-chrome-debug/out/src/chromeDebug.js' }
 -- }
 
 -- dap.configurations.javascriptreact = {
