@@ -1,4 +1,5 @@
 # General
+
 function parse_git_branch() {
   git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p' | head -c 40
 }
@@ -10,20 +11,16 @@ COLOR_GIT=$'%F{#8AADF4}'
 setopt PROMPT_SUBST
 export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
 
-# export TERM=xterm-256color
 export BAT_THEME="1337"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.cargo/bin:$PATH"
+
+alias cat = bat
+alias rm = "Please don't use rm. Use `trash` instead."
 
 # Repos
 
 export BASE="$HOME/draft"
-export C="$BASE/contentfly"
 export D="$BASE/draft"
-
-# Dotfiles
-
-# https://atlassian.com/git/tutorials/dotfiles
-alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 # Neovim
 
@@ -33,7 +30,6 @@ export VISUAL="$EDITOR"
 
 alias vim='nvim'
 alias v='nvim .'
-alias vc='vim $C'
 alias vd='vim $D'
 
 # Tmux
@@ -42,10 +38,6 @@ alias tn='tmux new'
 alias ta='tmux a'
 
 export ZSH_TMUX_AUTOSTART=true
-
-# Java
-
-# export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Node
 
@@ -58,7 +50,6 @@ export NVM_DIR="$HOME/.nvm"
 # Yarn
 
 alias y='yarn'
-alias yi='yarn install --ignore-scripts'
 alias ys='yarn start'
 
 # Docker
