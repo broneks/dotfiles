@@ -14,8 +14,8 @@ export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${CO
 export BAT_THEME="1337"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.cargo/bin:$PATH"
 
-alias cat = bat
-alias rm = "Please don't use rm. Use `trash` instead."
+alias cat='bat'
+alias rm='echo "rm is disabled, use trash instead."'
 
 # Repos
 
