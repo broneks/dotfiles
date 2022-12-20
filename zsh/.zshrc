@@ -29,7 +29,7 @@ export EDITOR='nvim'
 export VISUAL="$EDITOR"
 
 alias vim='nvim'
-alias v='nvim .'
+alias v='vim .'
 alias vd='vim $D'
 
 # Tmux
