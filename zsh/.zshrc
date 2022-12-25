@@ -22,6 +22,8 @@ alias rm='echo "rm is disabled, use trash instead."'
 export BASE="$HOME/draft"
 export D="$BASE/draft"
 
+alias vd='vim $D'
+
 # Neovim
 
 export VIMCON="$HOME/.config/nvim"
@@ -30,7 +32,6 @@ export VISUAL="$EDITOR"
 
 alias vim='nvim'
 alias v='vim .'
-alias vd='vim $D'
 
 # Tmux
 
