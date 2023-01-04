@@ -1,3 +1,6 @@
 logs
 *.log
 .DS_Store
+
+**/.config/nvim/plugin
+**/.config/stripe
