@@ -8,6 +8,7 @@ set -g mouse on
 
 unbind C-a
 unbind C-b
+unbind C-c
 
 set -g prefix2 C-q
 bind C-q send-prefix -2
