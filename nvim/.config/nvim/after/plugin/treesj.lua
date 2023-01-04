@@ -3,4 +3,6 @@ if not status_ok then
   return
 end
 
-tsj.setup()
+tsj.setup {
+  use_default_keymaps = false,
+}
