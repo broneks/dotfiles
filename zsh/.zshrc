@@ -16,6 +16,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.
 
 alias cat='bat'
 alias rm='echo "rm is disabled, use trash instead."'
+alias lg='lazygit'
 
 # Repos
 
