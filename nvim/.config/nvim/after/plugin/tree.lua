@@ -6,6 +6,11 @@ end
 tree.setup {
   view = {
     width = 50,
+    mappings = {
+      list = {
+        { key = "<C-s>", action = "split" },
+      },
+    },
   },
   actions = {
     open_file = {
