@@ -148,6 +148,7 @@ return packer.startup(function(use)
 
   -- Theme
   use 'EdenEast/nightfox.nvim'
+  use 'folke/tokyonight.nvim'
 
   -- Automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then
