@@ -46,6 +46,7 @@ return packer.startup(function(use)
       {'nvim-lua/plenary.nvim'}
     }
   }
+  use 'windwp/nvim-spectre'
 
   -- Registers
   use 'tversteeg/registers.nvim'

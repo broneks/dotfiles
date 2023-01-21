@@ -41,6 +41,12 @@ nnoremap('<leader><leader>q', 'q')
 -- This unsets the "last search pattern" register by hitting return
 nnoremap('<cr>', ':noh<cr><cr>')
 
+-- Spectre search
+nnoremap('<leader>S', [[:lua require('spectre').open()<cr>]])
+nnoremap('<leader>sw', [[:lua require('spectre').open_visual({select_word=true})<cr>]])
+vnoremap('<leader>s', [[<esc>:lua require('spectre').open_visual()<cr>]])
+nnoremap('<leader>sp', [[viw:lua require('spectre').open_file_search()<cr>]])
+
 -- Quickfix
 nnoremap(']q', ':cnext<cr>')
 nnoremap('[q', ':cprev<cr>')
