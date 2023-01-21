@@ -54,11 +54,17 @@ return packer.startup(function(use)
   -- Statusline
   use {
     'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    requires = {
+      'kyazdani42/nvim-web-devicons',
+      opt = true,
+    }
   }
 
   -- Comments
-  use 'tpope/vim-commentary'
+  use {
+    'echasnovski/mini.comment',
+    branch = 'stable',
+  }
 
   -- Icons
   use 'kyazdani42/nvim-web-devicons'
@@ -74,7 +80,10 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-vsnip'
-  use 'hrsh7th/vim-vsnip'
+  use {
+    'L3MON4D3/LuaSnip',
+    tag = 'v1.*',
+  }
 
   -- Prettier
   -- post install (yarn install | npm install) then load plugin only for editing supported files
@@ -134,14 +143,17 @@ return packer.startup(function(use)
   use 'gerazov/vim-toggle-bool'
 
   -- Utility
-  use 'windwp/nvim-autopairs'
+  use {
+    'echasnovski/mini.pairs',
+    branch = 'stable',
+  }
   use {
     'Wansmer/treesj',
     requires = { 'nvim-treesitter' },
   }
   use {
-    'kylechui/nvim-surround',
-    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    'echasnovski/mini.surround',
+    branch = 'stable',
   }
 
   -- Note
