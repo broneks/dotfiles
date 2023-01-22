@@ -14,15 +14,17 @@ export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${CO
 export BAT_THEME="1337"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.cargo/bin:$PATH"
 
+alias upgrade='brew upgrade && brew cleanup --prune=1 -s'
 alias cat='bat'
 alias rm='echo "rm is disabled, use trash instead."'
-alias lg='lazygit'
+alias calc='insect'
 
 # Repos
 
 export BASE="$HOME/draft"
 export D="$BASE/draft"
 
+alias lg='lazygit'
 alias vd='vim $D'
 
 # Neovim
