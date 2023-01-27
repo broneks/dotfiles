@@ -19,6 +19,23 @@ alias cat='bat'
 alias rm='echo "rm is disabled, use trash instead."'
 alias calc='insect'
 
+function fm() {
+  if [ -n "$1" ]
+  then
+    somafm p $1 -n
+  else
+    somafm p random -n
+  fi
+}
+
+function fmall() {
+  somafm ls
+}
+
+function fmtune() {
+  somafm -n
+}
+
 # Repos
 
 export BASE="$HOME/draft"
