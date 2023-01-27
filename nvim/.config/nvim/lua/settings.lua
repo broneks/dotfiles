@@ -14,6 +14,7 @@ o.background = 'dark'
 o.title = true
 o.laststatus = 3
 o.showmode = false
+o.showcmd = false
 o.number = true
 o.numberwidth = 4
 o.relativenumber = true

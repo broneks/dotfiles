@@ -170,4 +170,4 @@ schemes:
       cyan:    '#0db9d7'
       white:   '#acb0d0'
 
-colors: *tokyo-night
+colors: *macchiato
