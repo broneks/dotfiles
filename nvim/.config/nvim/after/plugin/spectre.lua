@@ -3,4 +3,7 @@ if not status_ok then
   return
 end
 
-spectre.setup()
+spectre.setup({
+  live_update = true,
+  is_insert_mode = true,
+})

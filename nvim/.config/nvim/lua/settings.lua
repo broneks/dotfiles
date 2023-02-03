@@ -121,4 +121,4 @@ fg('Folded', 'none')
 fg_bg('VertSplit', '#524f57', 'none')
 
 -- Colorscheme
-cmd 'colorscheme nightfox'
+cmd 'colorscheme duskfox'
