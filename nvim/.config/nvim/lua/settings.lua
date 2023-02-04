@@ -69,9 +69,6 @@ o.clipboard:append('unnamedplus')
 -- Leader
 vim.api.nvim_set_keymap('', '<space>', '<nop>', { noremap = true, silent = true })
 
-g.mapleader = ' '
-g.maplocalleader = ' '
-
 -- Syntax
 cmd 'syntax on'
 
@@ -79,11 +76,8 @@ cmd 'syntax on'
 cmd 'filetype plugin on'
 
 -- Tree
-g.loaded = 1
+g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
-
--- Note
-g.vimwiki_list = {{ path = '~/vimwiki/', syntax = 'markdown', ext = '.md' }}
 
 -- no inline errors
 d.config({ virtual_text = false })
@@ -119,6 +113,3 @@ fg('qfFileName', '#aed75f')
 fg('Folded', 'none')
 ---
 fg_bg('VertSplit', '#524f57', 'none')
-
--- Colorscheme
-cmd 'colorscheme duskfox'

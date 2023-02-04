@@ -2,5 +2,8 @@ logs
 *.log
 .DS_Store
 
-**/.config/nvim/plugin
 **/.config/stripe
+**/.config/mvp
+
+**/.config/nvim/plugin
+**/.config/nvim/lazy-lock.json
