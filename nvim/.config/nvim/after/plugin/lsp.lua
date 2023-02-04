@@ -167,6 +167,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- vue                      vls
 -- rust                     rust-analyzer
 -- deno                     built-in to deno
+-- prisma                   @prisma/language-server
 
 local servers = {
   'html',
@@ -180,6 +181,7 @@ local servers = {
   'sqlls',
   'vuels',
   'rust_analyzer',
+  'prismals',
   -- 'denols', -- off
 }
 
