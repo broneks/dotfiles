@@ -11,16 +11,18 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Use a protected call so we don't error out on first use
-local status_ok, lazy = pcall(require, 'lazy')
-if not status_ok then
-  return
-end
-
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-lazy.setup('plugins')
+require('lazy').setup('plugins', {
+  checker = {
+    enabled = true,
+    frequency = 43200, -- twice a day
+  },
+  ui = {
+    border = 'rounded',
+  },
+})
 
 require 'globals'
 require 'settings'
