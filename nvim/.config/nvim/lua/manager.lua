@@ -29,5 +29,14 @@ require('lazy').setup('plugins', {
   ui = {
     border = 'rounded',
   },
+  rtp = {
+    disabled_plugins = {
+      'gzip',
+      'netrwPlugin',
+      'tarPlugin',
+      'zipPlugin',
+      'tutor',
+    },
+  },
 })
 
