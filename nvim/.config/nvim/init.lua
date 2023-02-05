@@ -1,5 +1,5 @@
 require 'manager'
 require 'globals'
-require 'settings'
 require 'mappings'
 require 'autocmds'
+require 'settings'

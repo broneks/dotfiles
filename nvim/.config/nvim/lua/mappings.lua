@@ -108,3 +108,8 @@ nnoremap('<leader>tf', [[<cmd>lua require'jester'.run_file()<cr>]])
 nnoremap('<leader>tb', [[<cmd>lua require'jester'.run()<cr>]])
 nnoremap('<leader>tr', [[<cmd>lua require'jester'.run_last()<cr>]])
 nnoremap('<leader>td', [[<cmd>lua require'jester'.debug()<cr>]])
+
+-- Persistence
+nnoremap('<leader>qs', [[<cmd>lua require('persistence').load()<cr>]]) -- restore the session for the current directory
+nnoremap('<leader>ql', [[<cmd>lua require('persistence').load({ last = true })<cr>]]) -- restore the last session
+nnoremap('<leader>qd', [[<cmd>lua require('persistence').stop()<cr>]]) -- stop Persistence => session won't be saved on exit
