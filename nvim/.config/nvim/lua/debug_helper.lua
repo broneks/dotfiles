@@ -1,7 +1,7 @@
 local dap = require('dap')
 
 local function debugJest(testName, filename)
-  print("starting " .. testName .. " in " .. filename)
+  print('starting ' .. testName .. ' in ' .. filename)
   dap.run({
     type = 'node2',
     request = 'launch',
@@ -16,7 +16,7 @@ local function debugJest(testName, filename)
 end
 
 local function attach()
-  print("attaching")
+  print('attaching')
   dap.run({
     type = 'node2',
     request = 'attach',
@@ -28,14 +28,14 @@ local function attach()
 end
 
 local function attachToRemote()
-  print("attaching")
+  print('attaching')
   dap.run({
     type = 'node2',
     request = 'attach',
-    address = "127.0.0.1",
+    address = '127.0.0.1',
     port = 9229,
     localRoot = vim.fn.getcwd(),
-    remoteRoot = "/home/vcap/app",
+    remoteRoot = '/home/vcap/app',
     sourceMaps = true,
     protocol = 'inspector',
     skipFiles = {'<node_internals>/**/*.js'},

@@ -55,9 +55,9 @@ return {
           -- REQUIRED - you must specify a snippet engine
           expand = function(args)
             require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-            -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+            -- vim.fn['vsnip#anonymous'](args.body) -- For `vsnip` users.
             -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-            -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+            -- vim.fn['UltiSnips#Anon'](args.body) -- For `ultisnips` users.
           end,
         },
         window = {
@@ -72,12 +72,12 @@ return {
             ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
           }),
         sources = cmp.config.sources({
-            { name = 'nvim_lsp', keyword_length = keyword_length, priority = "9" },
+            { name = 'nvim_lsp', keyword_length = keyword_length, priority = '9' },
             { name = 'nvim_lsp_signature_help' },
             { name = 'luasnip', keyword_length = keyword_length },
             { name = 'buffer', keyword_length = keyword_length },
-            { name = "npm", keyword_length = 3 },
-            -- { name = 'vsnip', keyword_length = keyword_length, priority = "8" },
+            { name = 'npm', keyword_length = 3 },
+            -- { name = 'vsnip', keyword_length = keyword_length, priority = '8' },
             -- { name = 'ultisnips' }, -- For ultisnips users.
             -- { name = 'snippy' }, -- For snippy users.
           }),
@@ -88,47 +88,47 @@ return {
           if vim.api.nvim_get_mode().mode == 'c' then
             return true
           else
-            return not context.in_treesitter_capture("comment") 
-              and not context.in_syntax_group("Comment")
+            return not context.in_treesitter_capture('comment') 
+              and not context.in_syntax_group('Comment')
           end
         end,
         format = function(entry, vim_item)
           local kind_icons = {
-            Text = "",
-            Method = "",
-            Function = "",
-            Constructor = "",
-            Field = "ﰠ",
-            Variable = "",
-            Class = "ﴯ",
-            Interface = "",
-            Module = "",
-            Property = "ﰠ",
-            Unit = "塞",
-            Value = "",
-            Enum = "",
-            Keyword = "",
-            Snippet = "",
-            Color = "",
-            File = "",
-            Reference = "",
-            Folder = "",
-            EnumMember = "",
-            Constant = "",
-            Struct = "פּ",
-            Event = "",
-            Operator = "",
-            TypeParameter = "",
+            Text = '',
+            Method = '',
+            Function = '',
+            Constructor = '',
+            Field = 'ﰠ',
+            Variable = '',
+            Class = 'ﴯ',
+            Interface = '',
+            Module = '',
+            Property = 'ﰠ',
+            Unit = '塞',
+            Value = '',
+            Enum = '',
+            Keyword = '',
+            Snippet = '',
+            Color = '',
+            File = '',
+            Reference = '',
+            Folder = '',
+            EnumMember = '',
+            Constant = '',
+            Struct = 'פּ',
+            Event = '',
+            Operator = '',
+            TypeParameter = '',
           }
-          vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
+          vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
           vim_item.menu = ({
-              buffer = "[BUF]",
-              nvim_lsp = "[LSP]",
-              nvim_lua = "[API]",
-              path = "[PATH]",
-              luasnip = "[SNIP]",
-              npm = "[NPM]",
-              neorg = "[NEORG]",
+              buffer = '[BUF]',
+              nvim_lsp = '[LSP]',
+              nvim_lua = '[API]',
+              path = '[PATH]',
+              luasnip = '[SNIP]',
+              npm = '[NPM]',
+              neorg = '[NEORG]',
             })[entry.source.name]
           return vim_item
         end,
