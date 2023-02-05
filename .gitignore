@@ -4,6 +4,8 @@ logs
 
 **/.config/stripe
 **/.config/mvp
+**/.config/neofetch
 
 **/.config/nvim/plugin
 **/.config/nvim/lazy-lock.json
+
