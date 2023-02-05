@@ -15,6 +15,13 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 require('lazy').setup('plugins', {
+  install = {
+    colorscheme = {
+      'duskfox',
+      'tokyonight',
+      'habamaz',
+    },
+  },
   checker = {
     enabled = true,
     frequency = 43200, -- twice a day
