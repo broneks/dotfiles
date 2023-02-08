@@ -94,10 +94,10 @@ cmd 'command! -nargs=1 Seek noautocmd vimgrep /<args>/gj `git ls-files` | cw'
 
 -- highlights
 bg('Normal', 'none')
-bg('NormalFloat', 'none')
+-- bg('NormalFloat', 'none')
 bg('NonText', 'none')
-bg('Menu', 'none') 
-bg('Pmenu', 'none') 
+-- bg('Menu', 'none') 
+-- bg('Pmenu', 'none') 
 bg('LineNr', 'none')
 bg('CursorLineNr', 'none')
 bg('SpecialKey', 'none')
