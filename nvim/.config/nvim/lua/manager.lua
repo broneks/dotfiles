@@ -25,6 +25,10 @@ require('lazy').setup('plugins', {
   checker = {
     enabled = true,
     frequency = 43200, -- twice a day
+    notify = false,
+  },
+  change_detection = {
+    notify = false,
   },
   ui = {
     border = 'rounded',
