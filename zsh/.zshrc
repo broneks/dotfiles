@@ -40,6 +40,7 @@ function fmtune() {
 
 export BASE="$HOME/draft"
 export D="$BASE/draft"
+export H="$BASE/harold"
 
 alias lg='lazygit'
 alias vd='vim $D'
