@@ -77,8 +77,7 @@ alias ys='yarn start'
 # Docker
 
 alias dk='docker'
-alias dkl='docker logs'
-alias dklf='docker logs -f'
+alias dl='docker logs -f'
 alias dki='docker images'
 alias dks='docker service'
 alias dkrm='docker rm'
@@ -95,7 +94,6 @@ alias worker='docker-compose restart worker'
 
 alias dab='de app bash'
 alias rap='dc restart app'
-alias lap='dklf draft_app'
 
 # Chrome
 
