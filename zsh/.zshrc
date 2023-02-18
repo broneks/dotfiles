@@ -94,6 +94,7 @@ alias worker='docker-compose restart worker'
 
 alias dab='de app bash'
 alias rap='dc restart app'
+alias mongo='docker-compose exec documentdb  mongo -u root -p 'password' --authenticationDatabase admin'
 
 # Chrome
 
