@@ -49,31 +49,31 @@ nnoremap('[q', ':cprev<cr>')
 nnoremap('<tab>', ':bnext<cr>')
 nnoremap('<s-tab>', ':bprev<cr>')
 
--------------- Plugins -------------- 
+--- Plugins ---
 
--- Spectre search
+-- Plugin: Spectre search
 nnoremap('<leader>S', [[:lua require('spectre').open()<cr>]])
 nnoremap('<leader>sw', [[:lua require('spectre').open_visual({select_word=true})<cr>]])
 vnoremap('<leader>s', [[<esc>:lua require('spectre').open_visual()<cr>]])
 nnoremap('<leader>sp', [[viw:lua require('spectre').open_file_search()<cr>]])
 
--- Toggle values
+-- Plugin: Toggle bool
 nnoremap('<C-s>', [[<cmd>lua require'toggle-bool'.toggle_bool()<cr>]])
 
--- split join
+-- Plugin: Treesj split join
 nnoremap('tt', ':TSJToggle<cr>')
 nnoremap('ts', ':TSJSplit<cr>')
 nnoremap('tj', ':TSJJoin<cr>')
 
--- Tree 
+-- Plugin: Nvim tree 
 nnoremap('<C-x>', ':NvimTreeToggle<cr>')
 nnoremap([[<C-\>]], ':NvimTreeFindFile<cr>')
 
--- Git
+-- Plugin: Git
 nnoremap('<leader>gg', ':LazyGit<cr>')
 nnoremap('gb', ':G blame<cr>')
 
--- Telescope
+-- Plugin: Telescope
 nnoremap('<leader>ff', ':Telescope find_files<cr>')
 nnoremap('<leader>fg', ':Telescope live_grep<cr>')
 nnoremap('<leader>fr', ':Telescope resume<cr>')
@@ -82,7 +82,7 @@ nnoremap('<leader>fc', ':Telescope colorscheme<cr>')
 nnoremap('<leader>fh', ':Telescope help_tags<cr>')
 nnoremap('<leader>fe', ':Telescope oldfiles<cr>')
 
--- Debug
+-- Plugin: Debug
 nnoremap('<F5>', [[<cmd>lua require'dap'.continue()<cr>]])
 nnoremap('<F9>', [[<cmd>lua require'dap'.step_over()<cr>]])
 nnoremap('<F10>', [[<cmd>lua require'dap'.step_into()<cr>]])
@@ -103,13 +103,13 @@ nnoremap('<leader>dk', [[<cmd>lua require'dap'.up()<cr>zz<cr>]])
 nnoremap('<leader>dj', [[<cmd>lua require'dap'.down()<cr>zz<cr>]])
 nnoremap('<leader>dr', [[<cmd>lua require'dap'.repl.toggle({}, 'vsplit')<CR><C-w>l<cr>]])
 
--- Jest
+-- Plugin: Jest
 nnoremap('<leader>tf', [[<cmd>lua require'jester'.run_file()<cr>]])
 nnoremap('<leader>tb', [[<cmd>lua require'jester'.run()<cr>]])
 nnoremap('<leader>tr', [[<cmd>lua require'jester'.run_last()<cr>]])
 nnoremap('<leader>td', [[<cmd>lua require'jester'.debug()<cr>]])
 
--- Persistence
+-- Plugin: Persistence
 nnoremap('<leader>qs', [[<cmd>lua require('persistence').load()<cr>]]) -- restore the session for the current directory
 nnoremap('<leader>ql', [[<cmd>lua require('persistence').load({ last = true })<cr>]]) -- restore the last session
 nnoremap('<leader>qd', [[<cmd>lua require('persistence').stop()<cr>]]) -- stop Persistence => session won't be saved on exit
