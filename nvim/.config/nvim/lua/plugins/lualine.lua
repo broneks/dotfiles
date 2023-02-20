@@ -261,13 +261,22 @@ return {
             return ''
           end
 
+          local names_map = {}
           local names = {}
 
           for _, client in ipairs(clients) do
+            name = lsp_client_names[client.name] or client.name
+
+            if names_map[name] then goto continue end
+
             local filetypes = client.config.filetypes
+
             if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-              table.insert(names, lsp_client_names[client.name] or client.name)
+              names_map[name] = true
+              table.insert(names, name)
             end
+
+            ::continue::
           end
 
           return '| ' .. table.concat(names, ',')
