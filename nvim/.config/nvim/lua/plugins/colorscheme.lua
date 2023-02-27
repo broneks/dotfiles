@@ -1,15 +1,19 @@
+local cmd = vim.cmd;
+
+function set_colorscheme()
+  cmd [[ colorscheme nightfox ]]
+end
+
 return {
   {
     'EdenEast/nightfox.nvim',
     opts = {
       options = {
-        transparent = false
+        transparent = false,
       },
     },
     priority = 1000,
-    config = function()
-      vim.cmd 'colorscheme duskfox'
-    end,
+    config = set_colorscheme,
   },
   {
     'folke/tokyonight.nvim',
