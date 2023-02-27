@@ -2,7 +2,7 @@ return {
   {
     'nvim-lualine/lualine.nvim',
     dependencies = {
-      'kyazdani42/nvim-web-devicons',
+      'nvim-tree/nvim-web-devicons',
       lazy = true,
     },
     lazy = false,
@@ -183,7 +183,8 @@ return {
         -- jia1  = add
         -- bian4 = change
         -- jian3 = reduce
-        symbols = { added = '加 ', modified = '變 ', removed = '減 ' },
+        -- symbols = { added = '加 ', modified = '變 ', removed = '減 ' },
+        symbols = { added = '', modified = '', removed = '' },
         diff_color = {
           added = { fg = colors.green },
           modified = { fg = colors.orange },
