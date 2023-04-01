@@ -1,7 +1,7 @@
 local cmd = vim.cmd;
 
 function set_colorscheme()
-  cmd [[ colorscheme duskfox ]]
+  cmd [[ colorscheme tokyonight ]]
 end
 
 return {
@@ -9,7 +9,7 @@ return {
     'EdenEast/nightfox.nvim',
     opts = {
       options = {
-        transparent = false,
+        transparent = true,
       },
     },
     priority = 1000,
@@ -27,5 +27,6 @@ return {
       sidebars = { 'qf', 'help' },
       day_brightness = 0.3,
     },
+    priority = 1000,
   },
 }
