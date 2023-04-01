@@ -18,6 +18,7 @@ alias upgrade='brew upgrade && brew cleanup --prune=1 -s'
 alias cat='bat'
 alias rm='echo "rm is disabled, use trash instead."'
 alias calc='insect'
+alias lg='lazygit'
 
 function fm() {
   if [ -n "$1" ]
@@ -35,15 +36,6 @@ function fmall() {
 function fmtune() {
   somafm -n
 }
-
-# Repos
-
-export BASE="$HOME/draft"
-export D="$BASE/draft"
-export H="$BASE/harold"
-
-alias lg='lazygit'
-alias vd='vim $D'
 
 # Neovim
 
@@ -91,10 +83,6 @@ alias up='docker-compose up -d'
 alias stop='docker-compose stop'
 alias ps='docker-compose ps'
 alias worker='docker-compose restart worker'
-
-alias dab='de app bash'
-alias rap='dc restart app'
-alias mongo='docker-compose exec documentdb  mongo -u root -p 'password' --authenticationDatabase admin'
 
 # Chrome
 
