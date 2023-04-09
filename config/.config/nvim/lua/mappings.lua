@@ -49,6 +49,10 @@ nnoremap('[q', ':cprev<cr>')
 nnoremap('<tab>', ':bnext<cr>')
 nnoremap('<s-tab>', ':bprev<cr>')
 
+-- Git diff
+nnoremap('gj', '<cmd>diffget //2<cr>')
+nnoremap('gk', '<cmd>diffget //3<cr>')
+
 --- Plugins ---
 
 -- Plugin: Spectre search
