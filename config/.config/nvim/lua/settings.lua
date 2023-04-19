@@ -22,9 +22,10 @@ o.scrolloff = 8
 o.sidescrolloff = 8
 o.cursorline = true
 o.signcolumn = 'yes'
-o.ch = 1 -- command height
+o.cmdheight = 1
 
 -- Text editing
+o.browsedir = 'current'
 o.expandtab = true
 o.tabstop = 2
 o.softtabstop = 2
@@ -42,6 +43,7 @@ o.splitbelow = true
 o.splitright = true
 
 -- Experience
+o.autoread = true;
 o.errorbells = false
 o.swapfile = false
 o.backup = false
