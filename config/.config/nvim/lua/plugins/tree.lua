@@ -1,3 +1,15 @@
+local function on_attach(bufnr)
+  local api = require('nvim-tree.api')
+
+  local function opts(desc)
+    return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
+  api.config.mappings.default_on_attach(bufnr)
+
+  vim.keymap.set('n', '<C-s>', api.node.open.horizontal, opts('Open: Horizontal Split'))
+end
+
 return {
   {
     'nvim-tree/nvim-tree.lua',
@@ -7,14 +19,9 @@ return {
     version = 'nightly',
     cmd = { 'NvimTreeOpen', 'NvimTreeToggle' },
     opts = {
-      on_attach = 'disable',
+      on_attach = on_attach,
       view = {
         width = 50,
-        mappings = {
-          list = {
-            { key = '<C-s>', action = 'split' },
-          },
-        },
       },
       actions = {
         open_file = {
