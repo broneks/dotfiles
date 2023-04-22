@@ -181,6 +181,7 @@ return {
         'html',
         'cssls',
         'cssmodules_ls',
+        'clangd',
         'tsserver',
         'graphql',
         'eslint',
