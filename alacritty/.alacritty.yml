@@ -33,116 +33,7 @@ mouse:
   hide_when_typing: true
 
 schemes:
-  deus: &deus
-    # Default colors
-    primary:
-      background: '#2c323b'
-      foreground: '#eaeaea'
-
-    # Normal colors
-    normal:
-      black:   '#242a32'
-      red:     '#d54e53'
-      green:   '#98c379'
-      yellow:  '#e5c07b'
-      blue:    '#83a598'
-      magenta: '#c678dd'
-      cyan:    '#70c0ba'
-      white:   '#eaeaea'
-    
-    # Bright colors
-    bright:
-      black:   '#666666'
-      red:     '#ec3e45'
-      green:   '#90c966'
-      yellow:  '#edbf69'
-      blue:    '#73ba9f'
-      magenta: '#c858e9'
-      cyan:    '#2bcec2'
-      white:   '#ffffff'
-
-  macchiato: &macchiato
-    # Default colors
-    primary:
-      background: '#24273A' # base
-      foreground: '#CAD3F5' # text
-      # Bright and dim foreground colors
-      dim_foreground: '#CAD3F5' # text
-      bright_foreground: '#CAD3F5' # text
-
-    # Cursor colors
-    # cursor:
-    #   text: '#24273A' # base
-    #   cursor: 'F4DBD6' # rosewater
-    # vi_mode_cursor:
-    #   text: '#24273A' # base
-    #   cursor: '#B7BDF8' # lavender
-
-    # Search colors
-    search:
-      matches:
-        foreground: '#24273A' # base
-        background: '#A5ADCB' # subtext0
-      focused_match:
-        foreground: '#24273A' # base
-        background: '#A6DA95' # green
-      colors:
-        footer_bar:
-          foreground: '#24273A' # base
-          background: '#A5ADCB' # subtext0
-
-    # Keyboard regex hints
-    hints:
-      start:
-        foreground: '#24273A' # base
-        background: '#EED49F' # yellow
-      end:
-        foreground: '#24273A' # base
-        background: '#A5ADCB' # subtext0
-
-    # Selection colors
-    selection:
-      text: '#24273A' # base
-      background: '#F4DBD6' # rosewater
-
-    # Normal colors
-    normal:
-      black:   '#494D64' # surface1
-      red:     '#ED8796' # red
-      green:   '#A6DA95' # green
-      yellow:  '#EED49F' # yellow
-      blue:    '#8AADF4' # blue
-      magenta: '#F5BDE6' # pink
-      cyan:    '#8BD5CA' # teal
-      white:   '#B8C0E0' # subtext1
-
-    # Bright colors
-    bright:
-      black:   '#5B6078' # surface2
-      red:     '#ED8796' # red
-      green:   '#A6DA95' # green
-      yellow:  '#EED49F' # yellow
-      blue:    '#8AADF4' # blue
-      magenta: '#F5BDE6' # pink
-      cyan:    '#8BD5CA' # teal
-      white:   '#A5ADCB' # subtext0
-
-    # Dim colors
-    dim:
-      black:   '#494D64' # surface1
-      red:     '#ED8796' # red
-      green:   '#A6DA95' # green
-      yellow:  '#EED49F' # yellow
-      blue:    '#8AADF4' # blue
-      magenta: '#F5BDE6' # pink
-      cyan:    '#8BD5CA' # teal
-      white:   '#B8C0E0' # subtext1
-
-    indexed_colors:
-    #   - { index: 16, color: '#F5A97F' }
-      - { index: 17, color: '#F4DBD6' }
-
-  tokyo-night: &tokyo-night
+  tokyonight: &tokyonight
     # Default colors
     primary:
       background: '#1a1b26'
@@ -173,29 +64,29 @@ schemes:
   duskfox: &duskfox
     # Default colors
     primary:
-      background: '0x232136'
-      foreground: '0xe0def4'
+      background: '#232136'
+      foreground: '#e0def4'
     # Normal colors
     normal:
-      black:   '0x393552'
-      red:     '0xeb6f92'
-      green:   '0xa3be8c'
-      yellow:  '0xf6c177'
-      blue:    '0x569fba'
-      magenta: '0xc4a7e7'
-      cyan:    '0x9ccfd8'
-      white:   '0xe0def4'
+      black:   '#393552'
+      red:     '#eb6f92'
+      green:   '#a3be8c'
+      yellow:  '#f6c177'
+      blue:    '#569fba'
+      magenta: '#c4a7e7'
+      cyan:    '#9ccfd8'
+      white:   '#e0def4'
     # Bright colors
     bright:
-      black:   '0x47407d'
-      red:     '0xf083a2'
-      green:   '0xb1d196'
-      yellow:  '0xf9cb8c'
-      blue:    '0x65b1cd'
-      magenta: '0xccb1ed'
-      cyan:    '0xa6dae3'
-      white:   '0xe2e0f7'
+      black:   '#47407d'
+      red:     '#f083a2'
+      green:   '#b1d196'
+      yellow:  '#f9cb8c'
+      blue:    '#65b1cd'
+      magenta: '#ccb1ed'
+      cyan:    '#a6dae3'
+      white:   '#e2e0f7'
     indexed_colors:
-      - { index: 17, color: '0xeb98c3' }
+      - { index: 17, color: '#eb98c3' }
 
 colors: *duskfox
