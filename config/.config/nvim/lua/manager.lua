@@ -24,7 +24,8 @@ require('lazy').setup('plugins', {
   },
   checker = {
     enabled = true,
-    frequency = 43200, -- twice a day
+    frequency = 604800, -- once a week
+    -- frequency = 43200, -- twice a day
     notify = false,
   },
   change_detection = {
