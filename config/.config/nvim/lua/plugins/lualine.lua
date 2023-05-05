@@ -140,7 +140,7 @@ return {
         'filename',
         path = 1,
         cond = conditions.buffer_not_empty,
-        color = { fg = colors.cyan },
+        color = { fg = colors.fg },
       }
 
       ins_left { 'location' }
