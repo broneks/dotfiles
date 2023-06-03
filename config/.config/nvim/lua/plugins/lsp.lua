@@ -169,13 +169,10 @@ return {
       -- html, css, json, eslint  vscode-langservers-extracted
       -- css modules              cssmodules-language-server
       -- ts                       typescript-language-server typescript
-      -- graphql                  graphql-language-service-cli graphql
       -- yaml                     yaml-language-server
       -- sql                      sql-language-server
-      -- vue                      vls
       -- rust                     rust-analyzer
-      -- deno                     built-in to deno
-      -- prisma                   @prisma/language-server
+      -- ruby_ls                  ruby
 
       local servers = {
         'html',
@@ -183,14 +180,12 @@ return {
         'cssmodules_ls',
         'clangd',
         'tsserver',
-        'graphql',
         'eslint',
         'jsonls',
         'yamlls',
         'sqlls',
-        'vuels',
         'rust_analyzer',
-        'prismals',
+        'ruby_ls',
       }
 
       local handlers = {

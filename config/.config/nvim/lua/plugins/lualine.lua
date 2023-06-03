@@ -235,6 +235,8 @@ return {
         vuels = 'vue',
         rust_analyzer = 'rust',
         denols = 'deno',
+        clangd = 'c',
+        ruby_ls = 'ruby',
       }
 
       -- ins_right {
