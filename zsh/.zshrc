@@ -1,4 +1,26 @@
+# Path
+
+PATH+="$HOME/.yarn/bin"
+PATH+="$HOME/.config/yarn/global/node_modules/.bin"
+PATH+="$HOME/.cargo/bin"
+PATH+="$HOME/Library/Python/3.9/bin"
+PATH+="$HOME/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bin"
+export PATH
+
 # General
+
+export BAT_THEME="1337"
+alias cat='bat'
+alias rm='echo "rm is disabled, use trash instead."'
+alias calc='insect'
+
+# Brew
+
+alias upgrade='brew upgrade && brew cleanup --prune=1 -s'
+
+# Git
+
+alias lg='lazygit'
 
 function parse_git_branch() {
   git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p' | head -c 40
@@ -9,16 +31,10 @@ COLOR_USR=$'%F{#f7768e}'
 COLOR_DIR=$'%F{#81b29a}'
 COLOR_GIT=$'%F{#719cd6}'
 setopt PROMPT_SUBST
-export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
 
-export BAT_THEME="1337"
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.cargo/bin:$HOME/Library/Python/3.9/bin:/usr/local/opt/dart/libexec:$PATH"
+export PROMPT="${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ "
 
-alias upgrade='brew upgrade && brew cleanup --prune=1 -s'
-alias cat='bat'
-alias rm='echo "rm is disabled, use trash instead."'
-alias calc='insect'
-alias lg='lazygit'
+# SomaFM
 
 function fm() {
   if [ -n "$1" ]
@@ -55,7 +71,7 @@ export ZSH_TMUX_AUTOSTART=true
 
 # Node
 
-export NODE_PATH="/usr/local/lib/node_modules"
+export NODE_PATH='/usr/local/lib/node_modules'
 export NODE_OPTIONS=--max-old-space-size=4096
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -101,3 +117,5 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 source /Users/bronek/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+eval "$(rbenv init - zsh)"

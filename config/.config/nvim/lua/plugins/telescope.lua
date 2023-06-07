@@ -44,4 +44,19 @@ return {
       telescope.load_extension('fzf')
     end,
   },
+  {
+    'stevearc/dressing.nvim',
+    opts = {
+      input = {
+        min_width = { 60, 0.9 },
+      },
+      select = {
+        get_config = function(opts)
+          return {
+            telescope = require('telescope.themes').get_ivy(),
+          }
+        end,
+      },
+    },
+  },
 }
