@@ -26,6 +26,9 @@ return {
       },
       sidebars = { 'qf', 'help' },
       day_brightness = 0.3,
+      on_colors = function(colors)
+        colors.border = '#3b4561'
+      end
     },
     priority = 1000,
   },
