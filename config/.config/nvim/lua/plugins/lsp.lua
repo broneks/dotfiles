@@ -173,6 +173,7 @@ return {
       -- sql                      sql-language-server
       -- rust                     rust-analyzer
       -- ruby_ls                  ruby
+      -- pylsp                    python-lsp-server
 
       local servers = {
         'html',
@@ -186,6 +187,7 @@ return {
         'sqlls',
         'rust_analyzer',
         'ruby_ls',
+        'pylsp',
       }
 
       local handlers = {

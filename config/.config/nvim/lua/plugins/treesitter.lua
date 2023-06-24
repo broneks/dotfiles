@@ -15,6 +15,8 @@ return {
           'json',
           'markdown',
           'lua',
+          'ruby',
+          'python',
         },
         highlight = {
           enable = true,
