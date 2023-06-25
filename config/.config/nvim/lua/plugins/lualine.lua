@@ -237,6 +237,7 @@ return {
         denols = 'deno',
         clangd = 'c',
         ruby_ls = 'ruby',
+        pylsp = 'py',
       }
 
       -- ins_right {
