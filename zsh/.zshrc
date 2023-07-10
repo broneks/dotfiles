@@ -116,6 +116,4 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-source /Users/bronek/.docker/init-zsh.sh || true # Added by Docker Desktop
-
 eval "$(rbenv init - zsh)"
