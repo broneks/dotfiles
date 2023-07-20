@@ -1,10 +1,14 @@
+# Rootly
+
+export NGROK_ENDPOINT='b.rootly.ngrok.io'
+export R="$HOME/repos/rootly"
+
 # Path
 
 PATH+="$HOME/.yarn/bin"
 PATH+="$HOME/.config/yarn/global/node_modules/.bin"
 PATH+="$HOME/.cargo/bin"
 PATH+="$HOME/Library/Python/3.9/bin"
-PATH+="$HOME/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/bin"
 export PATH
 
 # General
