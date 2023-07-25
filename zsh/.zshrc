@@ -3,6 +3,9 @@
 export NGROK_ENDPOINT='b.rootly.ngrok.io'
 export R="$HOME/repos/rootly"
 
+alias erblint="bundle exec erblint --lint-all"
+alias stdlint="bundle exec standardrb --fix"
+
 # Path
 
 PATH+="$HOME/.yarn/bin"

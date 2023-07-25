@@ -172,7 +172,7 @@ return {
       -- yaml                     yaml-language-server
       -- sql                      sql-language-server
       -- rust                     rust-analyzer
-      -- ruby_ls                  ruby
+      -- ruby_ls, solargraph      ruby
       -- pylsp                    python-lsp-server
 
       local servers = {
@@ -188,6 +188,7 @@ return {
         'rust_analyzer',
         'ruby_ls',
         'pylsp',
+        'solargraph'
       }
 
       local handlers = {
