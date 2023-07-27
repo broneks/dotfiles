@@ -16,6 +16,7 @@ return {
       'graphql',
       'lua',
       'vue',
+      'ruby',
     },
     init = function()
       vim.g['prettier#autoformat_config_present'] = 1

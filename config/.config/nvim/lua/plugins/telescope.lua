@@ -35,7 +35,25 @@ return {
       pickers = {
         find_files = {
           theme = 'ivy',
-        }
+        },
+        live_grep = {
+          theme = 'ivy',
+        },
+        resume = {
+          theme = 'ivy',
+        },
+        buffers = {
+          theme = 'ivy',
+        },
+        colorscheme = {
+          theme = 'ivy',
+        },
+        help_tags = {
+          theme = 'ivy',
+        },
+        oldfiles = {
+          theme = 'ivy',
+        },
       },
     },
     init = function()
