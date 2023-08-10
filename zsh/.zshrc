@@ -5,6 +5,7 @@ export R="$HOME/repos/rootly"
 
 alias erblint="bundle exec erblint --lint-all"
 alias stdlint="bundle exec standardrb --fix"
+alias sshenv="heroku run bash --app rootly"
 
 # Path
 
