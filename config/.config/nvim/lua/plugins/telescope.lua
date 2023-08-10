@@ -4,6 +4,12 @@ return {
     build = 'make',
   },
   {
+    'princejoogie/dir-telescope.nvim',
+    dependencies = {
+      'nvim-telescope/telescope.nvim',
+    },
+  },
+  {
     'nvim-telescope/telescope.nvim',
     dependencies = {
       'nvim-lua/plenary.nvim',
@@ -60,10 +66,14 @@ return {
       local telescope = require('telescope')
 
       telescope.load_extension('fzf')
+      telescope.load_extension('dir')
     end,
   },
   {
     'stevearc/dressing.nvim',
+    dependencies = {
+      'nvim-telescope/telescope.nvim',
+    },
     opts = {
       input = {
         min_width = { 60, 0.9 },

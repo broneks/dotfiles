@@ -79,7 +79,9 @@ nnoremap('gb', ':G blame<cr>')
 
 -- Plugin: Telescope
 nnoremap('<leader>ff', ':Telescope find_files<cr>')
+nnoremap('<leader>fd', ':Telescope dir find_files<cr>')
 nnoremap('<leader>fg', ':Telescope live_grep<cr>')
+nnoremap('<leader>gd', ':Telescope dir live_grep<cr>')
 nnoremap('<leader>fr', ':Telescope resume<cr>')
 nnoremap('<leader>fb', ':Telescope buffers<cr>')
 nnoremap('<leader>fc', ':Telescope colorscheme<cr>')
