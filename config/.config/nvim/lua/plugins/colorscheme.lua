@@ -1,22 +1,24 @@
 local cmd = vim.cmd;
 
 function set_colorscheme()
-  cmd [[ colorscheme tokyonight ]]
+  cmd [[ colorscheme nightfox ]]
 end
 
 return {
   {
     'EdenEast/nightfox.nvim',
+    lazy = false,
+    priority = 1000,
     opts = {
       options = {
         transparent = true,
       },
     },
-    priority = 1000,
-    config = set_colorscheme,
   },
   {
     'folke/tokyonight.nvim',
+    lazy = false,
+    priority = 1000,
     opts = {
       transparent = true,
       terminal_colors = true,
@@ -30,6 +32,14 @@ return {
         colors.border = '#3b4561'
       end
     },
+  },
+  {
+    'Verf/deepwhite.nvim',
+    lazy = false,
     priority = 1000,
+    opts = {
+      low_blue_light = true,
+    },
+    config = set_colorscheme,
   },
 }
