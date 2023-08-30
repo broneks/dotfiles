@@ -87,6 +87,11 @@ g.loaded_ruby_provider = 0
 g.loaded_node_provider = 0
 g.loaded_perl_provider = 0
 
+-- Git blame virtual text
+g.gitblame_message_template = ' • <summary> • <author>'
+g.gitblame_delay = 1000
+g.gitblame_message_when_not_committed = ''
+
 -- no inline errors
 d.config({ virtual_text = false })
 
