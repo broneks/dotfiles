@@ -66,7 +66,8 @@ o.timeoutlen = 250
 o.shortmess:append('cI')
 
 -- Yank to clipboard
-o.clipboard:append('unnamedplus')
+-- you are retired, my old friend
+-- o.clipboard:append('unnamedplus')
 
 -- Leader
 vim.api.nvim_set_keymap('', '<space>', '<nop>', { noremap = true, silent = true })
