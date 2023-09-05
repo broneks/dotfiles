@@ -14,9 +14,9 @@ nnoremap('k', 'gk')
 
 -- Yank everything after cursor
 nnoremap('Y', 'y$')
-nnoremap('<leader>y', [["+y]])
-vnoremap('<leader>y', [["+y]])
-nnoremap('<leader>Y', [["+Y]], { noremap = false })
+-- nnoremap('<leader>y', [["+y]])
+-- vnoremap('<leader>y', [["+y]])
+-- nnoremap('<leader>Y', [["+Y]], { noremap = false })
 
 -- Line shifting
 nnoremap('<leader>j', ':m .+1<cr>==')
