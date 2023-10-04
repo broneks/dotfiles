@@ -1,7 +1,7 @@
 local cmd = vim.cmd;
 
 function set_colorscheme()
-  cmd [[ colorscheme nightfox ]]
+  cmd [[ colorscheme deepwhite ]]
 end
 
 return {
