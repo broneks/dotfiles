@@ -1,7 +1,7 @@
 local cmd = vim.cmd;
 
 function set_colorscheme()
-  cmd [[ colorscheme nightfox ]]
+  cmd [[ colorscheme tokyonight ]]
 end
 
 return {
@@ -30,7 +30,11 @@ return {
       day_brightness = 0.3,
       on_colors = function(colors)
         colors.border = '#3b4561'
-      end
+        colors.fg_gutter = '#71839b'
+      end,
+      on_highlights = function(highlights)
+        highlights.CursorLineNr.fg = '#e0af68'
+      end,
     },
   },
   {

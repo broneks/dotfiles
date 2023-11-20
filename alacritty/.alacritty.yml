@@ -1,7 +1,7 @@
 window:
   title: ''
   dynamic_title: false
-  opacity: 0.97
+  opacity: 1
   padding:
     x: 8
     y: 8
@@ -89,4 +89,4 @@ schemes:
     indexed_colors:
       - { index: 17, color: '#eb98c3' }
 
-colors: *duskfox
+colors: *tokyonight
