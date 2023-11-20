@@ -2,22 +2,17 @@ return {
   {
     'echasnovski/mini.comment',
     version = '*',
-    config = function()
-      require('mini.comment').setup()
-    end,
+    config = true,
+    'echasnovski/mini.surround',    
   },
-  -- {
-  --   'echasnovski/mini.pairs',
-  --   version = '*',
-  --   config = function()
-  --     require('mini.pairs').setup()
-  --   end,
-  -- },
   {
     'echasnovski/mini.surround',
     version = '*',
-    config = function()
-      require('mini.surround').setup()
-    end,
+    config = true,
+  },
+  {
+    'echasnovski/mini.trailspace',
+    version = '*',
+    config = true,
   },
 }

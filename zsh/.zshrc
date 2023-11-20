@@ -1,12 +1,3 @@
-# Rootly
-
-export NGROK_ENDPOINT='b.rootly.ngrok.io'
-export R="$HOME/repos/rootly"
-
-alias erblint="bundle exec erblint --lint-all"
-alias stdlint="bundle exec standardrb --fix"
-alias sshenv="heroku run bash --app rootly"
-
 # Path
 
 PATH+="$HOME/.yarn/bin"
@@ -85,6 +76,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Ruby
+
+# eval "$(rbenv init - zsh)"
+
 # Yarn
 
 alias y='yarn'
@@ -123,5 +118,3 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
-eval "$(rbenv init - zsh)"
