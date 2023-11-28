@@ -107,6 +107,20 @@ alias worker='docker-compose restart worker'
 
 alias chromedebug='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222'
 
+# Barley
+
+export APP="$HOME/repos/app-client"
+export API="$HOME/repos/api-hasura"
+
+alias app="vim $APP"
+alias api="vim $API"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bronekszulc/Documents/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bronekszulc/Documents/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/bronekszulc/Documents/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bronekszulc/Documents/google-cloud-sdk/completion.zsh.inc'; fi
+
 # ZSH
 
 export ZSH="$HOME/.oh-my-zsh"
