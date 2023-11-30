@@ -9,7 +9,7 @@ cmd 'autocmd! TextYankPost * lua vim.highlight.on_yank { on_visual = false }'
 cmd [[
   augroup fmt
     autocmd!
-    autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx undojoin | EslintFixAll
+    autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx EslintFixAll
     autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx undojoin | Neoformat
   augroup END
 ]]
