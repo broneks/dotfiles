@@ -3,7 +3,6 @@ return {
     'echasnovski/mini.comment',
     version = '*',
     config = true,
-    'echasnovski/mini.surround',
   },
   {
     'echasnovski/mini.surround',
