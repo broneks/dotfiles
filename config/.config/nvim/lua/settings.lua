@@ -95,6 +95,11 @@ g.gitblame_message_when_not_committed = ''
 -- no inline errors
 d.config({ virtual_text = false })
 
+-- formatter
+g.neoformat_try_node_exe = 1
+g.neoformat_enabled_javascript = {'prettier'}
+g.neoformat_enabled_typescript = {'prettier'}
+
 -- gutter signs
 local signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
 for type, icon in pairs(signs) do

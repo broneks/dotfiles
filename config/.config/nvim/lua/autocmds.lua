@@ -6,4 +6,4 @@ cmd 'au ColorScheme * hi Normal ctermbg=none guibg=none'
 cmd 'autocmd! TextYankPost * lua vim.highlight.on_yank { on_visual = false }'
 
 -- automagically format on save
--- cmd 'autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()'
+cmd 'autocmd BufWritePre *.js,*.ts Neoformat'
