@@ -19,7 +19,7 @@ return {
         entry_prefix = '  ',
         initial_mode = 'insert',
         selection_strategy = 'reset',
-        sorting_strategy = 'descending',
+        sorting_strategy = 'ascending',
         file_ignore_patterns = {'node_modules', '@types'},
         layout_strategy = 'vertical',
         vimgrep_arguments = {
@@ -37,6 +37,7 @@ return {
         borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
         color_devicons = true,
         set_env = { ['COLORTERM'] = 'truecolor' },
+        wrap_results = true,
       },
       pickers = {
         find_files = {
