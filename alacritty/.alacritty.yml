@@ -1,7 +1,7 @@
 window:
   title: ''
   dynamic_title: false
-  opacity: 0.97
+  opacity: 0.95
   padding:
     x: 8
     y: 8
