@@ -69,7 +69,7 @@ nnoremap('tt', ':TSJToggle<cr>')
 nnoremap('ts', ':TSJSplit<cr>')
 nnoremap('tj', ':TSJJoin<cr>')
 
--- Plugin: Nvim tree 
+-- Plugin: Nvim tree
 nnoremap('<C-x>', ':NvimTreeToggle<cr>')
 nnoremap([[<C-\>]], ':NvimTreeFindFile<cr>')
 
@@ -110,11 +110,10 @@ nnoremap('<leader>dk', [[<cmd>lua require'dap'.up()<cr>zz<cr>]])
 nnoremap('<leader>dj', [[<cmd>lua require'dap'.down()<cr>zz<cr>]])
 nnoremap('<leader>dr', [[<cmd>lua require'dap'.repl.toggle({}, 'vsplit')<CR><C-w>l<cr>]])
 
--- Plugin: Jest
-nnoremap('<leader>tf', [[<cmd>lua require'jester'.run_file()<cr>]])
-nnoremap('<leader>tb', [[<cmd>lua require'jester'.run()<cr>]])
-nnoremap('<leader>tr', [[<cmd>lua require'jester'.run_last()<cr>]])
-nnoremap('<leader>td', [[<cmd>lua require'jester'.debug()<cr>]])
+-- Plugin: Neotest
+nnoremap('<leader>tf', [[<cmd>lua require'neotest'.run.run(vim.fn.expand('%'))<cr>]])
+nnoremap('<leader>tb', [[<cmd>lua require'neotest'.run.run()<cr>]])
+nnoremap('<leader>td', [[<cmd>lua require'neotest'.run.run({strategy = 'dap'})<cr>]])
 
 -- Plugin: Persistence
 nnoremap('<leader>qs', [[<cmd>lua require('persistence').load()<cr>]]) -- restore the session for the current directory
