@@ -37,7 +37,8 @@ return {
         borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
         color_devicons = true,
         set_env = { ['COLORTERM'] = 'truecolor' },
-        wrap_results = true,
+        sorting_strategy = 'ascending',
+        path_display = { truncate = 2 }
       },
       pickers = {
         find_files = {
