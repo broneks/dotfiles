@@ -19,13 +19,11 @@ require('lazy').setup('plugins', {
     colorscheme = {
       'duskfox',
       'tokyonight',
-      'habamaz',
     },
   },
   checker = {
     enabled = true,
     frequency = 604800, -- once a week
-    -- frequency = 43200, -- twice a day
     notify = false,
   },
   change_detection = {

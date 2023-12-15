@@ -87,7 +87,7 @@ nnoremap('<leader>fb', ':Telescope buffers<cr>')
 nnoremap('<leader>fc', ':Telescope colorscheme<cr>')
 nnoremap('<leader>fh', ':Telescope help_tags<cr>')
 nnoremap('<leader>fe', ':Telescope oldfiles<cr>')
-nnoremap('<leader>ft', [[<cmd>lua require('ror.commands').list_commands()<cr>]]) 
+nnoremap('<leader>ft', [[<cmd>lua require('ror.commands').list_commands()<cr>]])
 
 -- Plugin: Debug
 nnoremap('<F5>', [[<cmd>lua require'dap'.continue()<cr>]])

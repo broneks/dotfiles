@@ -10,6 +10,7 @@ return {
     end,
   },
   {
+    -- autocomplete
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
     dependencies = {
