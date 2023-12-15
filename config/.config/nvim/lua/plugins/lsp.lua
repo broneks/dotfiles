@@ -2,36 +2,29 @@ return {
   {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v3.x',
+    lazy = true,
+    config = false,
+    init = function()
+      vim.g.lsp_zero_extend_cmp = 0
+      vim.g.lsp_zero_extend_lspconfig = 0
+    end,
+  },
+  {
+    'hrsh7th/nvim-cmp',
+    event = 'InsertEnter',
     dependencies = {
-      'neovim/nvim-lspconfig',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/nvim-cmp',
-      'L3MON4D3/LuaSnip',
+      {'L3MON4D3/LuaSnip'},
     },
     config = function()
       local lsp_zero = require('lsp-zero')
-
-      lsp_zero.setup_servers({
-        'html',
-        'cssls',
-        'cssmodules_ls',
-        'clangd',
-        'tsserver',
-        'eslint',
-        'jsonls',
-        'yamlls',
-        'sqlls',
-        'rust_analyzer',
-        'ruby_ls',
-        'pylsp',
-        'solargraph',
-      })
+      lsp_zero.extend_cmp()
 
       local cmp = require('cmp')
-      local cmp_action = require('lsp-zero').cmp_action()
+      local cmp_action = lsp_zero.cmp_action()
       local keyword_length = 5;
 
       cmp.setup({
+        formatting = lsp_zero.cmp_format(),
         snippet = {
           expand = function(args)
             require('luasnip').lsp_expand(args.body)
@@ -65,6 +58,18 @@ return {
           { name = 'npm', keyword_length = 3 },
         }),
       })
+    end
+  },
+  {
+    'neovim/nvim-lspconfig',
+    cmd = 'LspInfo',
+    event = {'BufReadPre', 'BufNewFile'},
+    dependencies = {
+      {'hrsh7th/cmp-nvim-lsp'},
+    },
+    config = function()
+      local lsp_zero = require('lsp-zero')
+      lsp_zero.extend_lspconfig()
 
       lsp_zero.on_attach(function(client, bufnr)
         lsp_zero.default_keymaps({buffer = bufnr})
@@ -76,6 +81,21 @@ return {
         vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', opts)
       end)
 
-    end,
-  },
+      lsp_zero.setup_servers({
+        'html',
+        'cssls',
+        'cssmodules_ls',
+        'clangd',
+        'tsserver',
+        'eslint',
+        'jsonls',
+        'yamlls',
+        'sqlls',
+        'rust_analyzer',
+        'ruby_ls',
+        'pylsp',
+        'solargraph',
+      })
+    end
+  }
 }
