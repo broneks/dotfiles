@@ -99,13 +99,6 @@ g.neoformat_try_node_exe = 1
 g.neoformat_enabled_javascript = {'prettier'}
 g.neoformat_enabled_typescript = {'prettier'}
 
--- gutter signs
-local signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
-for type, icon in pairs(signs) do
-  local hl = 'DiagnosticSign' .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
-
 -- Seek
 cmd 'command! -nargs=1 Seek noautocmd vimgrep /<args>/gj `git ls-files` | cw'
 
