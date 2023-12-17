@@ -168,7 +168,10 @@ return {
           end, opts)
 
           -- go to definition in vertical split
-          nnoremap('gf', ':vsplit<cr>gd')
+          nnoremap('gf', '<cmd>vsplit<cr><cmd>lua vim.lsp.buf.definition()<cr>')
+
+          -- bully the lsp
+          nnoremap('<space>lr', '<cmd>LspRestart<cr>')
         end,
       })
 
