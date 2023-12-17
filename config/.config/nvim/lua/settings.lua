@@ -1,6 +1,5 @@
 local o = vim.opt
 local g = vim.g
-local d = vim.diagnostic
 local cmd = vim.cmd
 local bg = require('./utils').bg
 local fg = require('./utils').fg
@@ -76,28 +75,9 @@ cmd 'syntax on'
 -- Filetype
 cmd 'filetype plugin on'
 
--- Tree
+-- Default Tree
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
-
--- Language providers
-g.loaded_python3_provider = 0
-g.loaded_ruby_provider = 0
-g.loaded_node_provider = 0
-g.loaded_perl_provider = 0
-
--- Git blame virtual text
-g.gitblame_message_template = ' • <summary> • <author> '
-g.gitblame_delay = 1000
-g.gitblame_message_when_not_committed = ''
-
--- no inline errors
-d.config({ virtual_text = false })
-
--- formatter
-g.neoformat_try_node_exe = 1
-g.neoformat_enabled_javascript = {'prettier'}
-g.neoformat_enabled_typescript = {'prettier'}
 
 -- Seek
 cmd 'command! -nargs=1 Seek noautocmd vimgrep /<args>/gj `git ls-files` | cw'

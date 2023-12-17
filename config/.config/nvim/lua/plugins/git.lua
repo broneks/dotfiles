@@ -3,8 +3,17 @@ return {
   'kdheepak/lazygit.nvim',
 
   -- git blame virtual text
-  'f-person/git-blame.nvim',
+  {
+    'f-person/git-blame.nvim',
+    config = function()
+      vim.g.gitblame_message_template = ' • <summary> • <author> '
+      vim.g.gitblame_delay = 1000
+      vim.g.gitblame_message_when_not_committed = ''
 
+      -- no inline errors
+      vim.diagnostic.config({ virtual_text = false })
+    end,
+  },
   {
     'lewis6991/gitsigns.nvim',
     lazy = false,

@@ -200,6 +200,8 @@ return {
           handlers = handlers[server] or {}
         }
       end
+
+      vim.g.loaded_node_provider = 0
     end,
   },
 }
