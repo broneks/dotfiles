@@ -54,14 +54,6 @@ return {
         vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
       end
 
-      -- diagnostics floating window
-      vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
-        group = vim.api.nvim_create_augroup('float_diagnostic_cursor', { clear = true }),
-        callback = function ()
-          vim.diagnostic.open_float(nil, {focus=false, scope='cursor'})
-        end
-      })
-
       -- diagnostics border
       vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335]]
       vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
