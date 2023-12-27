@@ -182,6 +182,9 @@ return {
         eslint = {
           ['window/showMessageRequest'] = function(_, result, params) return result end -- silence parse errors
         },
+        tsserver = {
+          ['window/showMessageRequest'] = function(_, result, params) return result end -- silence parse errors
+        },
       }
 
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
