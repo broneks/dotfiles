@@ -1,10 +1,27 @@
 local cmd = vim.cmd;
 
 function set_colorscheme()
-  cmd [[ colorscheme tokyonight ]]
+  cmd [[ colorscheme kanagawa ]]
 end
 
 return {
+  {
+    'rebelot/kanagawa.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true,
+      colors = {
+        theme = {
+          all = {
+            ui = {
+              bg_gutter = 'none'
+            }
+          }
+        }
+      }
+    },
+  },
   {
     'EdenEast/nightfox.nvim',
     lazy = false,
