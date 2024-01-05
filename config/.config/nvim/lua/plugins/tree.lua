@@ -16,7 +16,6 @@ return {
     dependencies = {
       'nvim-tree/nvim-web-devicons',
     },
-    version = 'nightly',
     cmd = { 'NvimTreeOpen', 'NvimTreeToggle' },
     opts = {
       on_attach = on_attach,
