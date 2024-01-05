@@ -1,9 +1,11 @@
 # Path
 
-PATH+="$HOME/.yarn/bin"
-PATH+="$HOME/.config/yarn/global/node_modules/.bin"
-PATH+="$HOME/.cargo/bin"
-PATH+="$HOME/Library/Python/3.9/bin"
+PATH="$HOME/.yarn/bin:$PATH"
+PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+PATH="$HOME/.cargo/bin:$PATH"
+PATH="$HOME/Library/Python/3.9/bin:$PATH"
+PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
 export PATH
 
 # General
