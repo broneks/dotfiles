@@ -113,9 +113,11 @@ alias chromedebug='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrom
 
 export APP="$HOME/repos/app-client"
 export API="$HOME/repos/api-hasura"
+export BFF="$HOME/repos/barley-bff"
 
 alias app="vim $APP"
 alias api="vim $API"
+alias bff="vim $BFF"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/bronekszulc/Documents/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bronekszulc/Documents/google-cloud-sdk/path.zsh.inc'; fi
