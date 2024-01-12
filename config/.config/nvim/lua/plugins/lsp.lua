@@ -20,7 +20,7 @@ return {
       ensure_installed = {
         'html',
         'cssls',
-        'tsserver',
+        -- 'tsserver',
         'eslint',
         'jsonls',
         'yamlls',
@@ -171,7 +171,7 @@ return {
       local servers = {
         'html',
         'cssls',
-        'tsserver',
+        -- 'tsserver',
         'eslint',
         'jsonls',
         'yamlls',
@@ -182,9 +182,9 @@ return {
         eslint = {
           ['window/showMessageRequest'] = function(_, result, params) return result end -- silence parse errors
         },
-        tsserver = {
-          ['window/showMessageRequest'] = function(_, result, params) return result end -- silence parse errors
-        },
+        -- tsserver = {
+        --   ['window/showMessageRequest'] = function(_, result, params) return result end -- silence parse errors
+        -- },
       }
 
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -199,4 +199,9 @@ return {
       vim.g.loaded_node_provider = 0
     end,
   },
+  {
+    'pmizio/typescript-tools.nvim',
+    dependencies = {'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig'},
+    opts = {},
+  }
 }
