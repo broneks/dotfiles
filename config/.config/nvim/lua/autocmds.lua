@@ -10,6 +10,6 @@ cmd [[
   augroup fmt
     autocmd!
     autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx EslintFixAll
-    autocmd BufWritePre * try | undojoin | Neoformat | catch /E790/ | Neoformat | endtry
+    autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx undojoin | Neoformat
   augroup END
 ]]
