@@ -10,9 +10,6 @@ return {
       vim.g.gitblame_message_template = ' • <summary> • <author> '
       vim.g.gitblame_delay = 1000
       vim.g.gitblame_message_when_not_committed = ''
-
-      -- no inline errors
-      vim.diagnostic.config({ virtual_text = false })
     end,
   },
   {

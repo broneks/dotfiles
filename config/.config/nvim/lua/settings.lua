@@ -69,6 +69,9 @@ o.clipboard:append('unnamedplus')
 -- Leader
 vim.api.nvim_set_keymap('', '<space>', '<nop>', { noremap = true, silent = true })
 
+-- Diagnostics
+vim.diagnostic.config({ virtual_text = false }) -- no inline errors
+
 -- Syntax
 cmd 'syntax on'
 
