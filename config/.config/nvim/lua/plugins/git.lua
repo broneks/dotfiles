@@ -4,6 +4,7 @@ return {
 
   -- git blame virtual text
   {
+    enabled = false,
     'f-person/git-blame.nvim',
     config = function()
       vim.g.gitblame_message_template = ' • <summary> • <author> '
