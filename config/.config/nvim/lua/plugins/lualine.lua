@@ -133,7 +133,7 @@ return {
       ins_left {
         'branch',
         icon = '',
-        color = { fg = colors.violet },
+        color = { fg = colors.yellow },
       }
 
       ins_left {
