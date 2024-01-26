@@ -57,7 +57,7 @@ hide_when_typing = true
 [window]
 decorations = "buttonless"
 dynamic_title = false
-opacity = 0.95
+opacity = 1
 title = ""
 
 [window.padding]
