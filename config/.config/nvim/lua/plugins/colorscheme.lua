@@ -10,7 +10,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      transparent = true,
+      -- transparent = true,
       colors = {
         theme = {
           all = {
@@ -28,7 +28,7 @@ return {
     priority = 1000,
     opts = {
       options = {
-        transparent = true,
+        -- transparent = true,
       },
     },
   },
@@ -37,7 +37,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      transparent = true,
+      -- transparent = true,
       terminal_colors = true,
       styles = {
         sidebars = 'transparent',

@@ -1,6 +1,6 @@
 local cmd = vim.cmd
 
-cmd 'autocmd ColorScheme * hi Normal ctermbg=none guibg=none'
+-- cmd 'autocmd ColorScheme * hi Normal ctermbg=none guibg=none'
 
 -- highlight yank for a brief second for visual feedback
 cmd 'autocmd! TextYankPost * lua vim.highlight.on_yank { on_visual = false }'
