@@ -17,7 +17,6 @@ vim.g.maplocalleader = ' '
 require('lazy').setup('plugins', {
   install = {
     colorscheme = {
-      'duskfox',
       'tokyonight',
     },
   },
