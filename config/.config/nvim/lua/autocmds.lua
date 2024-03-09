@@ -1,6 +1,11 @@
 local cmd = vim.cmd
 
--- cmd 'autocmd ColorScheme * hi Normal ctermbg=none guibg=none'
+-- get rid of border backgrounds
+cmd [[
+  augroup style
+    autocmd! ColorScheme * hi FloatBorder guifg=none guibg=none
+  augroup END
+]]
 
 -- highlight yank for a brief second for visual feedback
 cmd 'autocmd! TextYankPost * lua vim.highlight.on_yank { on_visual = false }'

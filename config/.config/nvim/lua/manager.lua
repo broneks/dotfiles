@@ -28,6 +28,9 @@ require('lazy').setup('plugins', {
   change_detection = {
     notify = false,
   },
+  ui = {
+    border = 'rounded',
+  },
   rtp = {
     disabled_plugins = {
       'gzip',
