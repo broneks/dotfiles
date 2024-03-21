@@ -179,6 +179,14 @@ return {
         'sqlls',
       }
 
+      local settings = {
+        eslint = {
+          codeActionsOnSave = {
+            enable = true,
+          },
+        },
+      }
+
       local handlers = {
         eslint = {
           ['window/showMessageRequest'] = function(_, result, params) return result end -- silence parse errors
@@ -193,7 +201,8 @@ return {
       for _, server in pairs(servers) do
         lspconfig[server].setup {
           capabilities = capabilities,
-          handlers = handlers[server] or {}
+          handlers = handlers[server] or {},
+          settings = settings[server] or {},
         }
       end
 
