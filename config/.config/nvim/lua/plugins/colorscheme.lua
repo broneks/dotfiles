@@ -1,7 +1,7 @@
 local cmd = vim.cmd;
 
 function set_colorscheme()
-  cmd [[ colorscheme tokyonight-day ]]
+  cmd [[ colorscheme deepwhite ]]
 end
 
 return {
@@ -43,6 +43,15 @@ return {
         highlights.CursorLineNr.fg = '#e0af68'
       end,
     },
+  },
+  {
+    'ribru17/bamboo.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('bamboo').setup()
+      require('bamboo').load()
+    end,
   },
   {
     'Verf/deepwhite.nvim',
