@@ -119,3 +119,6 @@ nnoremap('<leader>td', [[<cmd>lua require'neotest'.run.run({strategy = 'dap'})<c
 nnoremap('<leader>qs', [[<cmd>lua require('persistence').load()<cr>]]) -- restore the session for the current directory
 nnoremap('<leader>ql', [[<cmd>lua require('persistence').load({ last = true })<cr>]]) -- restore the last session
 nnoremap('<leader>qd', [[<cmd>lua require('persistence').stop()<cr>]]) -- stop Persistence => session won't be saved on exit
+
+-- Plugin: YankBank
+nnoremap('<leader>y', [[<cmd>YankBank<cr>]])
