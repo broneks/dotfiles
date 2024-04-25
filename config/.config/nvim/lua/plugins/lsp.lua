@@ -177,6 +177,7 @@ return {
         'jsonls',
         'yamlls',
         'sqlls',
+        'rust_analyzer'
       }
 
       local settings = {
