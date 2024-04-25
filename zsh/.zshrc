@@ -17,7 +17,6 @@ alias calc='insect'
 
 # Brew
 
-export HOMEBREW_NO_AUTO_UPDATE=1
 alias upgrade='brew upgrade && brew cleanup --prune=1 -s'
 
 # Git
