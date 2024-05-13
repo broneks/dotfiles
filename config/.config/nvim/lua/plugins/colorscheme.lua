@@ -1,7 +1,7 @@
 local cmd = vim.cmd;
 
 function set_colorscheme()
-  cmd [[ colorscheme tokyonight-day ]]
+  cmd [[ colorscheme kanagawa ]]
 end
 
 return {
