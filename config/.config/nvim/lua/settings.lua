@@ -24,7 +24,6 @@ o.signcolumn = 'yes'
 o.cmdheight = 1
 
 -- Text editing
-o.browsedir = 'current'
 o.expandtab = true
 o.tabstop = 2
 o.softtabstop = 2
