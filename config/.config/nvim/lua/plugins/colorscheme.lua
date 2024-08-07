@@ -1,7 +1,7 @@
 local cmd = vim.cmd;
 
 function set_colorscheme()
-  cmd [[ colorscheme kanagawa ]]
+  cmd [[ colorscheme cyberdream ]]
 end
 
 return {
@@ -10,7 +10,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      -- transparent = true,
+      transparent = true,
       colors = {
         theme = {
           all = {
@@ -61,4 +61,12 @@ return {
     },
     config = set_colorscheme,
   },
+  {
+    'scottmckendry/cyberdream.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true,
+    },
+  }
 }
