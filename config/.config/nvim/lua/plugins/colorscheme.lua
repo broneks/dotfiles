@@ -1,7 +1,7 @@
 local cmd = vim.cmd;
 
 function set_colorscheme()
-  cmd [[ colorscheme cyberdream ]]
+  cmd [[ colorscheme tokyonight ]]
 end
 
 return {
@@ -27,13 +27,13 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      -- transparent = true,
+      transparent = true,
       terminal_colors = true,
+      style = 'moon',
       styles = {
         sidebars = 'transparent',
         floats = 'transparent',
       },
-      sidebars = { 'qf', 'help' },
       day_brightness = 0.3,
       on_colors = function(colors)
         colors.border = '#3b4561'
@@ -68,5 +68,20 @@ return {
     opts = {
       transparent = true,
     },
-  }
+  },
+  {
+    'ray-x/aurora',
+    init = function()
+      vim.g.aurora_italic = 1
+      vim.g.aurora_transparent = 1
+      vim.g.aurora_bold = 1
+    end,
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    'NTBBloodbath/doom-one.nvim',
+    lazy = false,
+    priority = 1000,
+  },
 }
