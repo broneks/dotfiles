@@ -122,3 +122,6 @@ nnoremap('<leader>qd', [[<cmd>lua require('persistence').stop()<cr>]]) -- stop P
 
 -- Plugin: YankBank
 nnoremap('<leader>y', [[<cmd>YankBank<cr>]])
+
+-- Plugin: Neogen
+nnoremap('gcg', [[<cmd>lua require('neogen').generate()<cr>]])
