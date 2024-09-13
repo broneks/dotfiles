@@ -14,4 +14,9 @@ return {
     version = '*',
     config = true,
   },
+  {
+   'echasnovski/mini.ai',
+    version = '*',
+    config = true,
+  },
 }
