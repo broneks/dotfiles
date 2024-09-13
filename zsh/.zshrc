@@ -88,6 +88,11 @@ export NVM_DIR="$HOME/.nvm"
 alias y='yarn'
 alias ys='yarn start'
 
+# Npm
+
+alias start='npm run start'
+alias debug='npm run start:debug'
+
 # Docker
 
 alias dk='docker'
