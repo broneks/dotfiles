@@ -24,6 +24,8 @@
 	co = checkout
 [apply]
 	whitespace = nowarn
+[fetch]
+  prune = true
 [pull]
 	rebase = true
 [core]
