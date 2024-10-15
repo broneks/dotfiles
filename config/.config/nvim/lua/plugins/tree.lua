@@ -6,8 +6,6 @@ local function on_attach(bufnr)
   end
 
   api.config.mappings.default_on_attach(bufnr)
-
-  vim.keymap.set('n', '<C-s>', api.node.open.horizontal, opts('Open: Horizontal Split'))
 end
 
 return {

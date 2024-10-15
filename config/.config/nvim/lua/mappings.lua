@@ -72,6 +72,8 @@ nnoremap('tj', ':TSJJoin<cr>')
 -- Plugin: Nvim tree
 nnoremap('<C-x>', ':NvimTreeToggle<cr>')
 nnoremap([[<C-\>]], ':NvimTreeFindFile<cr>')
+nnoremap('<C-s>', [[<cmd>lua require('nvim-tree.api').node.open.horizontal()<cr>]])
+nnoremap('<BS>', [[<cmd>lua require('nvim-tree.api').node.navigate.parent_close()<cr>]])
 
 -- Plugin: Git
 nnoremap('<leader>gg', ':LazyGit<cr>')
