@@ -92,6 +92,10 @@ alias ys='yarn start'
 
 alias start='npm run start'
 alias debug='npm run start:debug'
+alias loco='npm run start:local'
+alias taco='npx tsc --noEmit'
+alias lint='npm run lint:fix'
+alias gen='npm run generate'
 
 # Docker
 
