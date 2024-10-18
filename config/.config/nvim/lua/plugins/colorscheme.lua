@@ -1,5 +1,5 @@
 function set_colorscheme()
-  vim.cmd.colorscheme 'tokyonight'
+  vim.cmd.colorscheme 'duskfox'
 end
 
 return {
