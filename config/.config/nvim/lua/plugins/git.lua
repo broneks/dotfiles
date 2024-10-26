@@ -1,6 +1,7 @@
 return {
   'tpope/vim-fugitive',
   'kdheepak/lazygit.nvim',
+  'sindrets/diffview.nvim',
 
   -- git blame virtual text
   {
