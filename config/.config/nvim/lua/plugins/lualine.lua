@@ -240,6 +240,7 @@ return {
         ruby_ls = 'ruby',
         solargraph = 'sg',
         pylsp = 'py',
+        gopls = 'go'
       }
 
       -- ins_right {

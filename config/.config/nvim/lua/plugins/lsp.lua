@@ -25,7 +25,7 @@ return {
         'eslint',
         'jsonls',
         'yamlls',
-        'sqlls',
+        'sqlls'
       },
       automatic_installation = true,
     },
@@ -177,7 +177,8 @@ return {
         'jsonls',
         'yamlls',
         'sqlls',
-        'rust_analyzer'
+        'rust_analyzer',
+        'gopls'
       }
 
       local settings = {
