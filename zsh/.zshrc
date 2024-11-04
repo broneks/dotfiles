@@ -129,6 +129,7 @@ export BFF="$HOME/repos/barley-bff"
 alias app="vim $APP"
 alias api="vim $API"
 alias bff="vim $BFF"
+alias ngrok_webhooks="ngrok http --url=moray-square-boar.ngrok-free.app http://localhost:8104"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/bronekszulc/Documents/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bronekszulc/Documents/google-cloud-sdk/path.zsh.inc'; fi
