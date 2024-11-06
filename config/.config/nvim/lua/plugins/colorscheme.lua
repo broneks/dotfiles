@@ -2,6 +2,10 @@ function set_colorscheme()
   vim.cmd.colorscheme 'duskfox'
 end
 
+function is_bg_dark()
+  return vim.o.background == 'dark'
+end
+
 return {
   {
     'folke/tokyonight.nvim',
@@ -9,7 +13,7 @@ return {
     priority = 1000,
     config = function()
       require('tokyonight').setup({
-        transparent = true,
+        transparent = is_bg_dark(),
         terminal_colors = true,
         style = 'moon',
         styles = {
@@ -33,7 +37,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      transparent = true,
+      transparent = is_bg_dark(),
       colors = {
         theme = {
           all = {
@@ -51,7 +55,7 @@ return {
     priority = 1000,
     opts = {
       options = {
-        transparent = true,
+        transparent = is_bg_dark(),
       },
     },
   },
@@ -68,7 +72,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      transparent = true,
+      transparent = is_bg_dark(),
     },
   },
 }
