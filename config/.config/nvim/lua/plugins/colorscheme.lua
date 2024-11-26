@@ -1,9 +1,16 @@
 function set_colorscheme()
-  vim.cmd.colorscheme 'duskfox'
+  vim.cmd.colorscheme 'deepwhite'
+  vim.opt.background = 'light'
 end
 
 function is_bg_dark()
+  local colorscheme = vim.g.colors_name
+
   return vim.o.background == 'dark'
+    or colorscheme == 'dawnfox'
+    or colorscheme == 'dayfox'
+    or colorscheme == 'dayfox-night'
+    or colorscheme == 'deepwhite'
 end
 
 return {
@@ -63,9 +70,7 @@ return {
     'Verf/deepwhite.nvim',
     lazy = false,
     priority = 1000,
-    opts = {
-      low_blue_light = true,
-    },
+    opts = true,
   },
   {
     'scottmckendry/cyberdream.nvim',
