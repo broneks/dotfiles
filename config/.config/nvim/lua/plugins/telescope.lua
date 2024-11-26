@@ -32,12 +32,12 @@ return {
           '--smart-case',
           '--hidden',
           '--glob=!.git/',
+          '--glob=!src/generated/',
         },
         border = {},
         borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
         color_devicons = true,
         set_env = { ['COLORTERM'] = 'truecolor' },
-        sorting_strategy = 'ascending',
         path_display = { truncate = 2 }
       },
       pickers = {
