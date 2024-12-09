@@ -1,6 +1,6 @@
 function set_colorscheme()
-  vim.cmd.colorscheme 'deepwhite'
-  vim.opt.background = 'light'
+  vim.cmd.colorscheme 'duskfox'
+  vim.opt.background = 'dark'
 end
 
 function is_bg_dark()
