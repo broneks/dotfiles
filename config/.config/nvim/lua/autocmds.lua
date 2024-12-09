@@ -19,6 +19,7 @@ cmd [[
   augroup END
 ]]
 
+-- go.nvim
 local format_sync_grp = vim.api.nvim_create_augroup("goimports", {})
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.go",
@@ -26,4 +27,16 @@ vim.api.nvim_create_autocmd("BufWritePre", {
    require('go.format').goimports()
   end,
   group = format_sync_grp,
+})
+
+-- git-conflict.nvim
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'GitConflictDetected',
+  callback = function()
+    vim.notify('Conflict detected in '..vim.fn.expand('<afile>'))
+    vim.keymap.set('n', 'cww', function()
+      engage.conflict_buster()
+      create_buffer_local_mappings()
+    end)
+  end
 })
