@@ -19,8 +19,8 @@ nnoremap('Y', 'y$')
 -- nnoremap('<leader>Y', [["+Y]], { noremap = false })
 
 -- Line shifting
-nnoremap('<leader>j', ':m .+1<cr>==')
-nnoremap('<leader>k', ':m .-2<cr>==')
+-- nnoremap('<leader>j', ':m .+1<cr>==')
+-- nnoremap('<leader>k', ':m .-2<cr>==')
 vnoremap('J', [[:m '>+1<cr>gv=gv]])
 vnoremap('K', [[:m '<-2<cr>gv=gv]])
 vnoremap('p', [["_dP]])
@@ -127,3 +127,7 @@ nnoremap('<leader>y', [[<cmd>YankBank<cr>]])
 
 -- Plugin: Neogen
 nnoremap('gcg', [[<cmd>lua require('neogen').generate()<cr>]])
+
+-- Plugin: Treewalker
+nnoremap('<leader>N', ':Treewalker Left<CR>')
+nnoremap('<leader>n', ':Treewalker Right<CR>')
