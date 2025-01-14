@@ -5,6 +5,7 @@ PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/Library/Python/3.9/bin:$PATH"
 PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+PATH="$HOME/.docker/bin:$PATH"
 PATH="$(go env GOPATH)/bin:$PATH"
 
 export PATH
@@ -105,16 +106,14 @@ alias dl='docker logs -f'
 alias dki='docker images'
 alias dks='docker service'
 alias dkrm='docker rm'
-alias dm='docker-machine'
-alias dmx='docker-machine ssh'
-alias dc='docker-compose'
-alias de='docker-compose exec'
+alias dc='docker compose'
+alias de='docker compose exec'
 alias dkps="docker ps --format '{{.Names}} --- {{.Status}}'"
-alias lf='docker-compose logs -f'
-alias up='docker-compose up -d'
-alias stop='docker-compose stop'
-alias ps='docker-compose ps'
-alias worker='docker-compose restart worker'
+alias lf='docker compose logs -f'
+alias up='docker compose up -d'
+alias stop='docker compose stop'
+alias ps='docker compose ps'
+alias worker='docker compose restart worker'
 
 # Chrome
 
