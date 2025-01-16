@@ -71,7 +71,7 @@ alias v='vim .'
 alias tn='tmux new'
 alias ta='tmux a'
 
-export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_AUTOSTART=false
 
 # Node
 

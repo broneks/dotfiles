@@ -6,5 +6,7 @@ logs
 
 !**/.config/nvim
 !**/.config/ghostty
+!**/.config/zellij
+!**/.config/aerospace
 **/.config/nvim/plugin
 **/.config/nvim/lazy-lock.json
