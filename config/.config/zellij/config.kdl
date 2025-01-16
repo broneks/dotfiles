@@ -396,7 +396,7 @@ default_mode "locked"
 // The folder in which Zellij will look for layouts
 // (Requires restart)
 //
-// layout_dir "/path/to/my/layout_dir"
+// layout_dir "$HOME/.config/zellij/layouts"
 
 // The folder in which Zellij will look for themes
 // (Requires restart)
@@ -422,5 +422,3 @@ default_mode "locked"
 // Default: true (if the host terminal supports it)
 //
 // support_kitty_keyboard_protocol false
-
-hide_session_name true
