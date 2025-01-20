@@ -1,6 +1,6 @@
 font-size = 15
 font-thicken = true
-background-opacity = 0.93
+background-opacity = 0.85
 
 macos-titlebar-style = hidden
 macos-option-as-alt = left
