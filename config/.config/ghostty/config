@@ -1,6 +1,9 @@
 font-size = 15
-font-thicken = true
+font-thicken = false
+font-thicken-strength = 1
 background-opacity = 0.85
+
+theme = dark:"Adwaita Dark",light:"flexoki-light"
 
 macos-titlebar-style = hidden
 macos-option-as-alt = left
@@ -9,5 +12,5 @@ window-decoration = false
 window-padding-x = 8
 window-padding-y = 8
 
-background = #1a1b26
-foreground = #a9b1d6
+# background = #1a1b26
+# foreground = #a9b1d6
