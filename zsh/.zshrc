@@ -130,12 +130,6 @@ alias api="vim $API"
 alias bff="vim $BFF"
 alias ngrok_webhooks="ngrok http --url=moray-square-boar.ngrok-free.app http://localhost:8104"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/bronekszulc/Documents/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bronekszulc/Documents/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/bronekszulc/Documents/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bronekszulc/Documents/google-cloud-sdk/completion.zsh.inc'; fi
-
 # ZSH
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -147,3 +141,9 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bronekszulc/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bronekszulc/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/bronekszulc/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bronekszulc/google-cloud-sdk/completion.zsh.inc'; fi
