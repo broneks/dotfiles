@@ -3,7 +3,8 @@ font-thicken = false
 font-thicken-strength = 1
 background-opacity = 0.85
 
-theme = dark:"Adwaita Dark",light:"flexoki-light"
+# theme = dark:"Adwaita Dark",light:"flexoki-light"
+theme = "Adwaita Dark"
 
 macos-titlebar-style = hidden
 macos-option-as-alt = left
