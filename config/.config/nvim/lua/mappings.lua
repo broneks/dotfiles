@@ -62,7 +62,7 @@ vnoremap('<leader>s', [[<esc>:lua require('spectre').open_visual()<cr>]])
 nnoremap('<leader>sp', [[viw:lua require('spectre').open_file_search()<cr>]])
 
 -- Plugin: Toggle bool
-nnoremap('<C-s>', [[<cmd>lua require'toggle-bool'.toggle_bool()<cr>]])
+nnoremap('<C-t>', [[<cmd>lua require'toggle-bool'.toggle_bool()<cr>]])
 
 -- Plugin: Treesj split join
 nnoremap('tt', ':TSJToggle<cr>')
