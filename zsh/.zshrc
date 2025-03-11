@@ -36,7 +36,7 @@ COLOR_DIR=$'%F{#81b29a}'
 COLOR_GIT=$'%F{#719cd6}'
 setopt PROMPT_SUBST
 
-export PROMPT="${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ "
+export PROMPT="${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ "
 
 # SomaFM
 
@@ -129,6 +129,8 @@ alias app="vim $APP"
 alias api="vim $API"
 alias bff="vim $BFF"
 alias ngrok_webhooks="ngrok http --url=moray-square-boar.ngrok-free.app http://localhost:8104"
+alias sql_proxy_dev="$HOME/cloud-sql-proxy barley-dev:us-central1:postgres -p 5433"
+alias sql_proxy_staging="$HOME/cloud-sql-proxy barley-staging:us-central1:postgres -p 5434"
 
 # ZSH
 
