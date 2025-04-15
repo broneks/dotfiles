@@ -1,5 +1,5 @@
 function set_colorscheme()
-  vim.cmd.colorscheme 'carbonfox'
+  vim.cmd.colorscheme 'tokyonight-storm'
   vim.opt.background = 'dark'
 end
 
