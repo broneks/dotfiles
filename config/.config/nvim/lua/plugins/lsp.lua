@@ -48,13 +48,6 @@ return {
       vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
       vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 
-      -- diagnostics signs
-      local signs = { Error = '󰅚 ', Warn = '󰀪 ', Hint = '󰌶 ', Info = ' ' }
-      for type, icon in pairs(signs) do
-        local hl = 'DiagnosticSign' .. type
-        vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-      end
-
       -- diagnostics border
       vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335]]
       vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]

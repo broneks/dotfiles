@@ -68,8 +68,17 @@ o.clipboard:append('unnamedplus')
 -- Leader
 vim.api.nvim_set_keymap('', '<space>', '<nop>', { noremap = true, silent = true })
 
--- Diagnostics
-vim.diagnostic.config({ virtual_text = false }) -- no inline errors
+vim.diagnostic.config({
+  virtual_text = false,
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = '󰅚 ',
+      [vim.diagnostic.severity.WARN] = '󰀪 ',
+      [vim.diagnostic.severity.HINT] = '󰌶 ',
+      [vim.diagnostic.severity.INFO] = ' ',
+    },
+  },
+})
 
 -- Syntax
 cmd 'syntax on'

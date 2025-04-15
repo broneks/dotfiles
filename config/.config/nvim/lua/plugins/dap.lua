@@ -53,12 +53,6 @@ return {
       --     webRoot = '${workspaceFolder}'
       --   }
       -- }
-
-      vim.fn.sign_define('DapBreakpoint', { texthl='DiagnosticSignWarn', numhl='DiagnosticSignWarn' })
-      vim.fn.sign_define('DapBreakpointCondition', { texthl='DiagnosticSignWarn', numhl='DiagnosticSignWarn' })
-      vim.fn.sign_define('DapBreakpointRejected', { texthl='DiagnosticSignError', numhl= 'DiagnosticSignError' })
-      vim.fn.sign_define('DapLogPoint', { texthl='DiagnosticSignWarn', numhl= 'DiagnosticSignWarn' })
-      vim.fn.sign_define('DapStopped', { texthl='DiagnosticSignHint', numhl= 'DiagnosticSignHint' })
     end,
   },
   {
