@@ -15,12 +15,11 @@ return {
   },
   {
     'lewis6991/gitsigns.nvim',
-    lazy = false,
     config = true,
   },
   {
     'akinsho/git-conflict.nvim',
-    version = "*",
+    version = '*',
     config = true,
   }
 }

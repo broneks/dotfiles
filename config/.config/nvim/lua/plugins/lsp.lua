@@ -6,9 +6,9 @@ return {
     opts = {
       ui = {
         icons = {
-            package_installed = '✓',
-            package_pending = '→',
-            package_uninstalled = '✗'
+          package_installed = '✓',
+          package_pending = '→',
+          package_uninstalled = '✗'
         },
         border = 'rounded',
       },
@@ -21,7 +21,7 @@ return {
       ensure_installed = {
         'html',
         'cssls',
-        -- 'tsserver',
+        'ts_ls',
         'eslint',
         'jsonls',
         'yamlls',
@@ -158,6 +158,18 @@ return {
 
           -- bully the lsp
           nnoremap('<space>lr', '<cmd>LspRestart<cr>')
+
+          vim.diagnostic.config({
+            virtual_text = false,
+            signs = {
+              text = {
+                [vim.diagnostic.severity.ERROR] = '󰅚 ',
+                [vim.diagnostic.severity.WARN] = '󰀪 ',
+                [vim.diagnostic.severity.HINT] = '󰌶 ',
+                [vim.diagnostic.severity.INFO] = ' ',
+              },
+            },
+          })
         end,
       })
 
@@ -165,7 +177,7 @@ return {
       local servers = {
         'html',
         'cssls',
-        -- 'tsserver',
+        'ts_ls',
         'eslint',
         'jsonls',
         'yamlls',
@@ -186,9 +198,9 @@ return {
         eslint = {
           ['window/showMessageRequest'] = function(_, result, params) return result end -- silence parse errors
         },
-        -- tsserver = {
-        --   ['window/showMessageRequest'] = function(_, result, params) return result end -- silence parse errors
-        -- },
+        ts_ls = {
+          ['window/showMessageRequest'] = function(_, result, params) return result end -- silence parse errors
+        },
       }
 
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -204,9 +216,9 @@ return {
       vim.g.loaded_node_provider = 0
     end,
   },
-  {
-    'pmizio/typescript-tools.nvim',
-    dependencies = {'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig'},
-    config = true,
-  }
+  -- {
+  --   'pmizio/typescript-tools.nvim',
+  --   dependencies = {'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig'},
+  --   config = true,
+  -- }
 }

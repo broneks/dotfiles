@@ -5,6 +5,8 @@ local bg = require('./utils').bg
 local fg = require('./utils').fg
 local fg_bg = require('./utils').fg_bg
 
+g.have_nerd_font = true
+
 o.encoding = 'utf8'
 o.termguicolors = true
 
@@ -67,18 +69,6 @@ o.clipboard:append('unnamedplus')
 
 -- Leader
 vim.api.nvim_set_keymap('', '<space>', '<nop>', { noremap = true, silent = true })
-
-vim.diagnostic.config({
-  virtual_text = false,
-  signs = {
-    text = {
-      [vim.diagnostic.severity.ERROR] = '󰅚 ',
-      [vim.diagnostic.severity.WARN] = '󰀪 ',
-      [vim.diagnostic.severity.HINT] = '󰌶 ',
-      [vim.diagnostic.severity.INFO] = ' ',
-    },
-  },
-})
 
 -- Syntax
 cmd 'syntax on'
