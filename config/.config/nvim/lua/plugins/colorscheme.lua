@@ -73,14 +73,6 @@ return {
     opts = true,
   },
   {
-    'scottmckendry/cyberdream.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {
-      transparent = is_bg_dark(),
-    },
-  },
-  {
     'BrunoCiccarino/nekonight',
     lazy = false,
     priority = 1000,
