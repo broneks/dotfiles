@@ -68,27 +68,15 @@ alias v='vim .'
 
 # Tmux
 
-alias tn='tmux new'
-alias ta='tmux a'
-
 export ZSH_TMUX_AUTOSTART=true
 
 # Node
 
 export NODE_PATH='/usr/local/lib/node_modules'
-export NODE_OPTIONS=
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Ruby
 
 # eval "$(rbenv init - zsh)"
-
-# Yarn
-
-alias y='yarn'
-alias ys='yarn start'
 
 # Npm
 
@@ -125,12 +113,17 @@ export APP="$HOME/repos/app-client"
 export API="$HOME/repos/api-hasura"
 export BFF="$HOME/repos/barley-bff"
 
-alias app="vim $APP"
-alias api="vim $API"
-alias bff="vim $BFF"
 alias ngrok_webhooks="ngrok http --url=moray-square-boar.ngrok-free.app http://localhost:8104"
 alias sql_proxy_dev="$HOME/cloud-sql-proxy barley-dev:us-central1:postgres -p 5433"
 alias sql_proxy_staging="$HOME/cloud-sql-proxy barley-staging:us-central1:postgres -p 5434"
+
+# Google Cloud
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bronekszulc/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bronekszulc/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/bronekszulc/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bronekszulc/google-cloud-sdk/completion.zsh.inc'; fi
 
 # ZSH
 
@@ -143,9 +136,3 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/bronekszulc/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bronekszulc/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/bronekszulc/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bronekszulc/google-cloud-sdk/completion.zsh.inc'; fi
