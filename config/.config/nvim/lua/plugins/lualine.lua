@@ -60,7 +60,7 @@ return {
           lualine_a = {},
           lualine_b = {},
           lualine_y = {},
-          lualine_z = {"require'lsp_status'.status()"},
+          lualine_z = { "require'lsp_status'.status()" },
           -- These will be filled later
           lualine_c = {},
           lualine_x = {},
@@ -91,7 +91,7 @@ return {
           -- return '▊'
           return ''
         end,
-        color = { fg = colors.blue }, -- Sets highlighting of component
+        color = { fg = colors.blue },      -- Sets highlighting of component
         padding = { left = 0, right = 1 }, -- We don't need space before this
       }
 
@@ -194,7 +194,7 @@ return {
       }
 
       ins_right {
-        'o:encoding', -- option component same as &encoding in viml
+        'o:encoding',       -- option component same as &encoding in viml
         fmt = string.upper, -- I'm not sure why it's upper case either ;)
         cond = conditions.hide_in_width,
         color = { fg = colors.fg },
@@ -225,8 +225,7 @@ return {
 
       local lsp_client_names = {
         cssls = 'css',
-        cssmodules_ls = 'css',
-        tsserver = 'js',
+        ts_ls = 'ts',
         ['typescript-tools'] = 'tools',
         eslint = 'lint',
         graphql = 'gql',
@@ -240,7 +239,8 @@ return {
         ruby_ls = 'ruby',
         solargraph = 'sg',
         pylsp = 'py',
-        gopls = 'go'
+        gopls = 'go',
+        lua_ls = 'lua',
       }
 
       -- ins_right {

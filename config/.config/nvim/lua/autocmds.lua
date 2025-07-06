@@ -10,19 +10,12 @@ cmd [[
 -- highlight yank for a brief second for visual feedback
 cmd 'autocmd! TextYankPost * lua vim.hl.on_yank { on_visual = false }'
 
-vim.api.nvim_create_autocmd('BufWritePre', {
-  pattern = '*',
-  callback = function(args)
-    require('conform').format({ bufnr = args.buf })
-  end,
-})
-
 -- go.nvim
 local format_sync_grp = vim.api.nvim_create_augroup('goimports', {})
 vim.api.nvim_create_autocmd('BufWritePre', {
   pattern = '*.go',
   callback = function()
-   require('go.format').goimports()
+    require('go.format').goimports()
   end,
   group = format_sync_grp,
 })
@@ -37,7 +30,7 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 vim.api.nvim_create_autocmd('User', {
   pattern = 'GitConflictDetected',
   callback = function()
-    vim.notify('Conflict detected in '..vim.fn.expand('<afile>'))
+    vim.notify('Conflict detected in ' .. vim.fn.expand('<afile>'))
     vim.keymap.set('n', 'cww', function()
       engage.conflict_buster()
       create_buffer_local_mappings()

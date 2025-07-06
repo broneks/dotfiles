@@ -19,6 +19,7 @@ return {
     event = 'BufReadPre',
     opts = {
       ensure_installed = {
+        'lua_ls',
         'html',
         'cssls',
         'ts_ls',
@@ -33,7 +34,7 @@ return {
   {
     'neovim/nvim-lspconfig',
     cmd = 'LspInfo',
-    event = {'BufReadPre', 'BufNewFile'},
+    event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
       'hrsh7th/nvim-cmp',
       'hrsh7th/cmp-nvim-lsp',
@@ -53,14 +54,14 @@ return {
       vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
 
       local border = {
-        {'╭', 'FloatBorder'},
-        {'─', 'FloatBorder'},
-        {'╮', 'FloatBorder'},
-        {'│', 'FloatBorder'},
-        {'╯', 'FloatBorder'},
-        {'─', 'FloatBorder'},
-        {'╰', 'FloatBorder'},
-        {'│', 'FloatBorder'},
+        { '╭', 'FloatBorder' },
+        { '─', 'FloatBorder' },
+        { '╮', 'FloatBorder' },
+        { '│', 'FloatBorder' },
+        { '╯', 'FloatBorder' },
+        { '─', 'FloatBorder' },
+        { '╰', 'FloatBorder' },
+        { '│', 'FloatBorder' },
       }
 
       local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
@@ -92,7 +93,7 @@ return {
         }),
         sources = cmp.config.sources({
           { name = 'nvim_lsp', keyword_length = 3 },
-          { name = 'luasnip', keyword_length = 3 },
+          { name = 'luasnip',  keyword_length = 3 },
         }, {
           { name = 'buffer' },
         })
@@ -175,6 +176,7 @@ return {
 
       -- lsp servers
       local servers = {
+        'lua_ls',
         'html',
         'cssls',
         'ts_ls',
