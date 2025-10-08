@@ -18,7 +18,7 @@
 [merge]
 	ff = no
 [user]
-	email = bronek@fastmail.fm
+	email = bronislaw.szulc@workleap.com
 	name = Bronek Szulc
 [alias]
 	co = checkout

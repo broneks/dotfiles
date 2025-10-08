@@ -7,6 +7,7 @@ PATH="$HOME/Library/Python/3.9/bin:$PATH"
 PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 PATH="$HOME/.docker/bin:$PATH"
 PATH="$(go env GOPATH)/bin:$PATH"
+PATH="$HOME/.dotnet/tools:$PATH"
 
 export PATH
 
@@ -112,6 +113,9 @@ alias chromedebug='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrom
 export APP="$HOME/repos/app-client"
 export API="$HOME/repos/api-hasura"
 export BFF="$HOME/repos/barley-bff"
+
+export APP_CLIENT_PATH="$HOME/repos/app-client/leap.yaml"
+export BARLEY_BFF_PATH="$HOME/repos/barley-bff/leap.yaml"
 
 alias ngrok_webhooks="ngrok http --url=moray-square-boar.ngrok-free.app http://localhost:8104"
 alias sql_proxy_dev="$HOME/cloud-sql-proxy barley-dev:us-central1:postgres -p 5433"
