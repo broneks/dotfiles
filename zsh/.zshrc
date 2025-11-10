@@ -123,12 +123,6 @@ alias sql_proxy_staging="$HOME/cloud-sql-proxy barley-staging:us-central1:postgr
 
 # Google Cloud
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/bronekszulc/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bronekszulc/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/bronekszulc/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bronekszulc/google-cloud-sdk/completion.zsh.inc'; fi
-
 # ZSH
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -140,3 +134,9 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bronislaw.szulc/Documents/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bronislaw.szulc/Documents/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/bronislaw.szulc/Documents/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bronislaw.szulc/Documents/google-cloud-sdk/completion.zsh.inc'; fi
