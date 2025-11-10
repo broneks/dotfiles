@@ -210,3 +210,14 @@ automatically-unhide-macos-hidden-apps = true
     down = 'volume down'
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
+
+[workspace-to-monitor-force-assignment]
+1 = ['secondary']
+2 = ['secondary']
+3 = ['secondary']
+4 = ['secondary']
+5 = ['secondary']
+6 = ['secondary']
+7 = ['secondary']
+8 = ['secondary']
+9 = ['secondary']
