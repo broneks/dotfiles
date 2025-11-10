@@ -41,7 +41,7 @@ return {
       'L3MON4D3/LuaSnip',
     },
     config = function()
-      local lspconfig = require('lspconfig')
+      local lspconfig = vim.lsp.config
 
       -- diagnostics
       vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
@@ -208,11 +208,15 @@ return {
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
       for _, server in pairs(servers) do
-        lspconfig[server].setup {
-          capabilities = capabilities,
-          handlers = handlers[server] or {},
-          settings = settings[server] or {},
-        }
+        if lspconfig[server] then
+          if lspconfig[server].setup then
+            lspconfig[server].setup {
+              capabilities = capabilities,
+              handlers = handlers[server] or {},
+              settings = settings[server] or {},
+            }
+          end
+        end
       end
 
       vim.g.loaded_node_provider = 0
