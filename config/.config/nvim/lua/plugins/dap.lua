@@ -1,10 +1,3 @@
-local js_langs = {
-  'typescript',
-  'javascript',
-  'typescriptreact',
-  'javascriptreact',
-}
-
 return {
   {
     'mxsdev/nvim-dap-vscode-js',
@@ -22,10 +15,11 @@ return {
       'nvim-neotest/nvim-nio',
     },
     config = function()
-       local dap = require('dap')
-       local dapui = require('dapui')
+      local dap = require('dap')
+      local dapui = require('dapui')
+      local dapvscode = require('dap-vscode-js')
 
-      require('dap-vscode-js').setup({
+      dapvscode.setup({
         node_path = 'node', -- Path of node executable. Defaults to $NODE_PATH, and then 'node'
         -- debugger_path = '(runtimedir)/site/pack/packer/opt/vscode-js-debug',
         -- debugger_path = '/Users/bronislaw.szulc/debugger/microsoft/vscode-js-debug',
@@ -37,7 +31,7 @@ return {
         -- log_console_level = vim.log.levels.ERROR -- Logging level for output to console. Set to false to disable console output.
       })
 
-      require('dap').adapters['pwa-node'] = {
+      dap.adapters['pwa-node'] = {
         type = 'server',
         host = 'localhost',
         port = '${port}',
@@ -47,8 +41,13 @@ return {
         },
       }
 
-      for _, language in ipairs(js_langs) do
-        require('dap').configurations[language] = {
+      for _, language in ipairs({
+        'typescript',
+        'javascript',
+        'typescriptreact',
+        'javascriptreact',
+      }) do
+        dap.configurations[language] = {
           {
             -- Node.js
             {
@@ -58,7 +57,6 @@ return {
               program = '${file}',
               cwd = '${workspaceFolder}',
               outDir = 'dist',
-              -- sourceMaps = true,
             },
             -- Jest
             {
@@ -160,21 +158,21 @@ return {
         }
       })
 
-       dap.listeners.before.attach.dapui_config = function()
+      dap.listeners.before.attach.dapui_config = function()
         dapui.open()
-       end
+      end
 
-       dap.listeners.before.launch.dapui_config = function()
+      dap.listeners.before.launch.dapui_config = function()
         dapui.open()
-       end
+      end
 
-       dap.listeners.before.event_terminated.dapui_config = function()
+      dap.listeners.before.event_terminated.dapui_config = function()
         dapui.close()
-       end
+      end
 
-       dap.listeners.before.event_exited.dapui_config = function()
+      dap.listeners.before.event_exited.dapui_config = function()
         dapui.close()
-       end
+      end
     end,
     keys = {
       {
@@ -183,10 +181,8 @@ return {
           require('dap').run({
               type = 'pwa-node',
               request = 'attach',
-              name = 'Attach',
+              name = 'Node Debugger',
               cwd = vim.fn.getcwd(),
-              outDir = 'dist',
-              -- sourceMaps = true,
           })
         end,
       },
