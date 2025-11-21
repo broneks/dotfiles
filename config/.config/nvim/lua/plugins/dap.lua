@@ -6,10 +6,6 @@ return {
         'microsoft/vscode-js-debug',
         build = 'npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out'
       },
-      {
-        'Joakker/lua-json5',
-        build = './install.sh',
-      },
       'rcarriga/nvim-dap-ui',
       'nvim-neotest/nvim-nio',
     },
