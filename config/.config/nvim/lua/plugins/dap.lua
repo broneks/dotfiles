@@ -41,6 +41,9 @@ return {
         },
       }
 
+      vim.cmd("hi DapBreakpointColor guifg=#fa4847")
+      vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DapBreakpointColor", linehl = "", numhl = "" })
+
       dap_ui.setup()
 
       dap.listeners.before.attach.dapui_config = function()
