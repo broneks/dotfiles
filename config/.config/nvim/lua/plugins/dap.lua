@@ -131,6 +131,16 @@ return {
         -- log_console_level = vim.log.levels.ERROR -- Logging level for output to console. Set to false to disable console output.
       })
 
+      require('dap').adapters['pwa-node'] = {
+        type = 'server',
+        host = '127.0.0.1',
+        port = '${port}',
+        executable = {
+          command = 'node',
+          args = { vim.fn.resolve(vim.fn.stdpath('data') .. '/lazy/vscode-js-debug/out/src/vsDebugServer.js'), '${port}' },
+        },
+      }
+
       for _, language in ipairs(js_langs) do
         require('dap').configurations[language] = {
           {
@@ -146,7 +156,6 @@ return {
             {
               type = 'pwa-node',
               request = 'attach',
-              address = '127.0.0.1',
               name = 'Attach',
               processId = require('dap.utils').pick_process,
               cwd = '${workspaceFolder}',
@@ -170,11 +179,6 @@ return {
                 internalConsoleOptions = 'neverOpen',
               }
             },
-            {
-              name = '----- launch.json configs -----',
-              type = '',
-              request = 'launch',
-            },
           }
         }
       end
@@ -183,15 +187,14 @@ return {
       {
         '<leader>da',
         function()
-          if vim.fn.filereadable('.vscode/launch.json') then
-            local dap_vscode = require('dap.ext.vscode')
-            dap_vscode.load_launchjs(nil, {
-              ['pwa-node'] = js_langs,
-            })
-          end
-          require('dap').continue()
+          require('dap').run({
+              type = 'pwa-node',
+              request = 'attach',
+              name = 'Attach',
+              cwd = vim.fn.getcwd(),
+              sourceMaps = true,
+          })
         end,
-        desc = 'Run with Args'
       },
     }
   }
