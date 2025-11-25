@@ -1,18 +1,13 @@
 return {
   {
-    'nvim-telescope/telescope-fzf-native.nvim',
-    build = 'make',
-  },
-  {
-    'princejoogie/dir-telescope.nvim',
-    dependencies = {
-      'nvim-telescope/telescope.nvim',
-    },
-  },
-  {
     'nvim-telescope/telescope.nvim',
     dependencies = {
       'nvim-lua/plenary.nvim',
+      {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        build = 'make',
+      },
+      'princejoogie/dir-telescope.nvim',
     },
     opts = {
       defaults = {
@@ -40,6 +35,7 @@ return {
         set_env = { ['COLORTERM'] = 'truecolor' },
         path_display = { truncate = 2 }
       },
+      extensions_list = { 'fzf', 'dir' },
       pickers = {
         find_files = {
           theme = 'ivy',
@@ -64,12 +60,6 @@ return {
         },
       },
     },
-    init = function()
-      local telescope = require('telescope')
-
-      telescope.load_extension('fzf')
-      telescope.load_extension('dir')
-    end,
   },
   {
     'stevearc/dressing.nvim',
@@ -81,7 +71,7 @@ return {
         min_width = { 60, 0.9 },
       },
       select = {
-        get_config = function(opts)
+        get_config = function()
           return {
             telescope = require('telescope.themes').get_ivy(),
           }
