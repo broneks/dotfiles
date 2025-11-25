@@ -1,44 +1,16 @@
 return {
   {
-    'williamboman/mason.nvim',
-    cmd = 'Mason',
-    event = 'BufReadPre',
-    opts = {
-      ui = {
-        icons = {
-          package_installed = '✓',
-          package_pending = '→',
-          package_uninstalled = '✗'
-        },
-        border = 'rounded',
-      },
-    },
-  },
-  {
-    'williamboman/mason-lspconfig.nvim',
-    event = 'BufReadPre',
-    opts = {
-      ensure_installed = {
-        'lua_ls',
-        'html',
-        'cssls',
-        'ts_ls',
-        'eslint',
-        'jsonls',
-        'yamlls',
-        'sqlls'
-      },
-      automatic_installation = true,
-    },
-  },
-  {
     'neovim/nvim-lspconfig',
     cmd = 'LspInfo',
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
       'hrsh7th/nvim-cmp',
       'hrsh7th/cmp-nvim-lsp',
-      'L3MON4D3/LuaSnip',
+   {
+        "L3MON4D3/LuaSnip",
+        version = "v2.*",
+        build = "make install_jsregexp"
+      }
     },
     config = function()
       local lspconfig = vim.lsp.config
@@ -221,6 +193,27 @@ return {
 
       vim.g.loaded_node_provider = 0
     end,
+  },
+  {
+    'williamboman/mason-lspconfig.nvim',
+    dependencies = {
+      { 'mason-org/mason.nvim', opts = {} },
+      'neovim/nvim-lspconfig',
+    },
+    event = 'BufReadPre',
+    opts = {
+      ensure_installed = {
+        'lua_ls',
+        'html',
+        'cssls',
+        'ts_ls',
+        'eslint',
+        'jsonls',
+        'yamlls',
+        'sqlls'
+      },
+      automatic_installation = true,
+    },
   },
   -- {
   --   'pmizio/typescript-tools.nvim',

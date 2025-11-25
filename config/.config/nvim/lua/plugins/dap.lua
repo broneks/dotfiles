@@ -10,8 +10,10 @@ return {
     config = function()
       local dap = require('dap')
       local dap_ui = require('dapui')
+      local mason = require('mason')
       local mason_dap = require('mason-nvim-dap')
 
+      mason.setup()
       mason_dap.setup({
         automatic_installation = true,
         ensure_installed = { 'js-debug-adapter' },
