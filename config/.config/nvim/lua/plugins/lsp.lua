@@ -210,7 +210,8 @@ return {
         'eslint',
         'jsonls',
         'yamlls',
-        'sqlls'
+        'sqlls',
+        'gopls'
       },
       automatic_installation = true,
     },
