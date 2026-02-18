@@ -13,8 +13,6 @@ return {
       }
     },
     config = function()
-      local lspconfig = vim.lsp.config
-
       -- diagnostics
       vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
       vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
@@ -131,19 +129,19 @@ return {
 
           -- bully the lsp
           nnoremap('<space>lr', '<cmd>LspRestart<cr>')
-
-          vim.diagnostic.config({
-            virtual_text = false,
-            signs = {
-              text = {
-                [vim.diagnostic.severity.ERROR] = '󰅚 ',
-                [vim.diagnostic.severity.WARN] = '󰀪 ',
-                [vim.diagnostic.severity.HINT] = '󰌶 ',
-                [vim.diagnostic.severity.INFO] = ' ',
-              },
-            },
-          })
         end,
+      })
+
+      vim.diagnostic.config({
+        virtual_text = false,
+        signs = {
+          text = {
+            [vim.diagnostic.severity.ERROR] = '󰅚 ',
+            [vim.diagnostic.severity.WARN] = '󰀪 ',
+            [vim.diagnostic.severity.HINT] = '󰌶 ',
+            [vim.diagnostic.severity.INFO] = ' ',
+          },
+        },
       })
 
       -- lsp servers
@@ -166,6 +164,13 @@ return {
             enable = true,
           },
         },
+        lua_ls = {
+          Lua = {
+            hint = {
+              enable = false
+            },
+          },
+        },
       }
 
       local handlers = {
@@ -180,16 +185,14 @@ return {
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
       for _, server in pairs(servers) do
-        if lspconfig[server] then
-          if lspconfig[server].setup then
-            lspconfig[server].setup {
-              capabilities = capabilities,
-              handlers = handlers[server] or {},
-              settings = settings[server] or {},
-            }
-          end
-        end
+        vim.lsp.config(server, {
+          capabilities = capabilities,
+          handlers = handlers[server] or {},
+          settings = settings[server] or {},
+        })
       end
+
+      vim.lsp.enable(servers)
 
       vim.g.loaded_node_provider = 0
     end,

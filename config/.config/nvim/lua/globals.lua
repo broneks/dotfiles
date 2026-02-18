@@ -27,7 +27,7 @@ local keymapper = function(mode, lhs, rhs, override_opts, bufnr)
     end
 
     -- extend the default options with user's overrides
-    vim.tbl_extend('keep', override_opts, opts)
+    opts = vim.tbl_extend('force', opts, override_opts)
   end
 
   -- set a buffer-local mapping
