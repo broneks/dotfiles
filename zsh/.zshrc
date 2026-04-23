@@ -110,12 +110,12 @@ alias chromedebug='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrom
 
 # Barley
 
-export APP="$HOME/repos/app-client"
-export API="$HOME/repos/api-hasura"
-export BFF="$HOME/repos/barley-bff"
+export API="$HOME/repos/wl-cmp-api"
+export BFF="$HOME/repos/wl-cmp-bff"
+export APP="$HOME/repos/wl-cmp-app"
 
-export APP_CLIENT_PATH="$HOME/repos/app-client/leap.yaml"
-export BARLEY_BFF_PATH="$HOME/repos/barley-bff/leap.yaml"
+export BARLEY_BFF_PATH="$HOME/repos/wl-cmp-bff/leap.yaml"
+export APP_CLIENT_PATH="$HOME/repos/wl-cmp-app/leap.yaml"
 
 alias ngrok_webhooks="ngrok http --url=moray-square-boar.ngrok-free.app http://localhost:8104"
 alias sql_proxy_dev="$HOME/cloud-sql-proxy barley-dev:us-central1:postgres -p 5433"
