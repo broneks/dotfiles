@@ -29,6 +29,25 @@ return {
         },
       }
 
+      dap.configurations.typescript = {
+        {
+          type = 'pwa-node',
+          request = 'attach',
+          name = 'Attach local',
+          port = 9229,
+          sourceMaps = true,
+          restart = true,
+          smartStep = true,
+          skipFiles = { '<node_internals>/**', 'node_modules/**' },
+          resolveSourceMapLocations = { '**', '!**/node_modules/**' },
+          sourceMapPathOverrides = {
+            ['/src/*'] = '/Users/bronislaw.szulc/repos/barley-bff/src/*',
+          },
+        },
+      }
+
+      dap.configurations.javascript = dap.configurations.typescript
+
       vim.cmd("hi DapBreakpointColor guifg=#fa4847")
       vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DapBreakpointColor", linehl = "", numhl = "" })
 
