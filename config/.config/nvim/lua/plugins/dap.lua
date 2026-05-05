@@ -29,27 +29,55 @@ return {
         },
       }
 
+      local bff_root = '/Users/bronislaw.szulc/repos/wl-cmp-bff'
+
       dap.configurations.typescript = {
         {
           type = 'pwa-node',
           request = 'attach',
-          name = 'Attach local',
+          name = 'Attach BFF (leap, port 9229)',
+          address = 'localhost',
           port = 9229,
+          cwd = bff_root,
           sourceMaps = true,
           restart = true,
           smartStep = true,
-          skipFiles = { '<node_internals>/**', 'node_modules/**' },
-          resolveSourceMapLocations = { '**', '!**/node_modules/**' },
+          trace = true,
+          outFiles = { bff_root .. '/dist/**/*.js' },
+          skipFiles = { '<node_internals>/**', '**/node_modules/**' },
+          -- Leave resolveSourceMapLocations unset so Node v22's
+          -- --enable-source-maps surfaces don't get filtered out.
+          -- BFF tsconfig has `sourceRoot: "/"`, so map sources resolve to
+          -- `/main.ts`, `/comp-review/...`. Two patterns for safety:
+          -- one for the leading-slash form, one bare.
           sourceMapPathOverrides = {
-            ['/src/*'] = '/Users/bronislaw.szulc/repos/barley-bff/src/*',
+            ['/*'] = bff_root .. '/src/*',
+            ['*'] = bff_root .. '/src/*',
           },
+        },
+        {
+          type = 'pwa-node',
+          request = 'attach',
+          name = 'Attach by process id',
+          processId = require('dap.utils').pick_process,
+          cwd = '${workspaceFolder}',
         },
       }
 
       dap.configurations.javascript = dap.configurations.typescript
 
       vim.cmd("hi DapBreakpointColor guifg=#fa4847")
-      vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DapBreakpointColor", linehl = "", numhl = "" })
+      vim.cmd("hi DapBreakpointRejectedColor guifg=#888888")
+      vim.cmd("hi DapLogPointColor guifg=#61afef")
+      vim.cmd("hi DapStoppedColor guifg=#98c379")
+
+      local bug = "\u{f188}"
+
+      vim.fn.sign_define("DapBreakpoint",          { text = bug,  texthl = "DapBreakpointColor",         linehl = "", numhl = "" })
+      vim.fn.sign_define("DapBreakpointCondition", { text = bug,  texthl = "DapBreakpointColor",         linehl = "", numhl = "" })
+      vim.fn.sign_define("DapBreakpointRejected", { text = bug,  texthl = "DapBreakpointRejectedColor", linehl = "", numhl = "" })
+      vim.fn.sign_define("DapLogPoint",           { text = "\u{f12a3}", texthl = "DapLogPointColor",    linehl = "", numhl = "" })
+      vim.fn.sign_define("DapStopped",            { text = "▶",  texthl = "DapStoppedColor",            linehl = "", numhl = "" })
 
       dap_ui.setup()
 
