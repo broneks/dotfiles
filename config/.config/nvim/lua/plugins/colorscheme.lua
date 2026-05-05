@@ -1,5 +1,5 @@
 function set_colorscheme()
-  vim.cmd.colorscheme 'tokyonight-storm'
+  vim.cmd.colorscheme 'duskfox'
   vim.opt.background = 'dark'
 end
 
@@ -60,11 +60,11 @@ return {
     'EdenEast/nightfox.nvim',
     lazy = false,
     priority = 1000,
-    opts = {
-      options = {
-        transparent = is_bg_dark(),
-      },
-    },
+    -- opts = {
+    --   options = {
+    --     transparent = is_bg_dark(),
+    --   },
+    -- },
   },
   {
     'Verf/deepwhite.nvim',

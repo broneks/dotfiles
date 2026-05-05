@@ -13,6 +13,8 @@ unbind C-c
 set -g prefix2 C-q
 bind C-q send-prefix -2
 
+set-window-option -g automatic-rename on
+
 set-option -sa terminal-overrides ",xterm*:Tc,alacritty*:Tc,tmux*:Tc"
 set -g default-terminal "screen-256color"
 
