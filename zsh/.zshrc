@@ -64,6 +64,7 @@ export VIMCON="$HOME/.config/nvim"
 export EDITOR='nvim'
 export VISUAL="$EDITOR"
 
+alias lvim='NVIM_APPNAME=lazyvim nvim'
 alias vim='nvim'
 alias v='vim .'
 
