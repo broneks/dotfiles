@@ -159,11 +159,6 @@ return {
       }
 
       local settings = {
-        eslint = {
-          codeActionsOnSave = {
-            enable = true,
-          },
-        },
         lua_ls = {
           Lua = {
             hint = {

@@ -1,3 +1,31 @@
+local rename_subscribed = false
+
+local function subscribe_to_rename()
+  if rename_subscribed then return end
+  rename_subscribed = true
+
+  local api = require('nvim-tree.api')
+  local Event = api.events.Event
+
+  api.events.subscribe(Event.NodeRenamed, function(data)
+    local clients = vim.lsp.get_clients({ name = 'ts_ls' })
+    for _, client in ipairs(clients) do
+      client:request('workspace/willRenameFiles', {
+        files = {
+          {
+            oldUri = vim.uri_from_fname(data.old_name),
+            newUri = vim.uri_from_fname(data.new_name),
+          },
+        },
+      }, function(_, result)
+        if result then
+          vim.lsp.util.apply_workspace_edit(result, client.offset_encoding)
+        end
+      end)
+    end
+  end)
+end
+
 local function on_attach(bufnr)
   local api = require('nvim-tree.api')
 
@@ -6,6 +34,7 @@ local function on_attach(bufnr)
   end
 
   api.config.mappings.default_on_attach(bufnr)
+  subscribe_to_rename()
 end
 
 return {
