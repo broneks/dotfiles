@@ -8,6 +8,7 @@ PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 PATH="$HOME/.docker/bin:$PATH"
 PATH="$(go env GOPATH)/bin:$PATH"
 PATH="$HOME/.dotnet/tools:$PATH"
+PATH="$HOME/Library/pnpm/bin:$PATH"
 
 export PATH
 
@@ -121,6 +122,7 @@ export APP_CLIENT_PATH="$HOME/repos/wl-cmp-app/leap.yaml"
 alias ngrok_webhooks="ngrok http --url=moray-square-boar.ngrok-free.app http://localhost:8104"
 alias sql_proxy_dev="$HOME/cloud-sql-proxy barley-dev:us-central1:postgres -p 5433"
 alias sql_proxy_staging="$HOME/cloud-sql-proxy barley-staging:us-central1:postgres -p 5434"
+alias sql_proxy_prod="$HOME/cloud-sql-proxy barley-prod:us-central1:postgres -p 5435"
 
 # Google Cloud
 
@@ -142,3 +144,6 @@ if [ -f '/Users/bronislaw.szulc/Documents/google-cloud-sdk/path.zsh.inc' ]; then
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/bronislaw.szulc/Documents/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bronislaw.szulc/Documents/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="$HOME/.local/bin:$PATH"
+
+# Added by get-aspire-cli.sh
+export PATH="$HOME/.aspire/bin:$PATH"

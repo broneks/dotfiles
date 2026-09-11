@@ -155,7 +155,9 @@ return {
         'yamlls',
         'sqlls',
         'rust_analyzer',
-        'gopls'
+        'gopls',
+        'oxlint',
+        'oxfmt'
       }
 
       local settings = {
