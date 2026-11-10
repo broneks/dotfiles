@@ -156,11 +156,12 @@ return {
         'sqlls',
         'rust_analyzer',
         'gopls',
-        'oxlint',
       }
 
-      if vim.fn.executable('oxfmt') == 1 then
-        table.insert(servers, 'oxfmt')
+      for _, bin in ipairs({ 'oxlint', 'oxfmt' }) do
+        if vim.fn.executable(bin) == 1 then
+          table.insert(servers, bin)
+        end
       end
 
       local settings = {

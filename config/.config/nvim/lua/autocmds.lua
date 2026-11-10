@@ -23,7 +23,9 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = { "*.ts", "*.tsx" },
   callback = function(args)
-    vim.cmd("LspOxlintFixAll")
+    if vim.fn.exists(":LspOxlintFixAll") == 2 then
+      vim.cmd("LspOxlintFixAll")
+    end
     vim.lsp.buf.format({ bufnr = args.buf, filter = function(c) return c.name == "oxfmt" end })
   end,
 })
