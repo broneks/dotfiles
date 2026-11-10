@@ -147,3 +147,10 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Added by get-aspire-cli.sh
 export PATH="$HOME/.aspire/bin:$PATH"
+
+# peon-ping quick controls
+alias peon="bash /Users/bronislaw.szulc/.claude/hooks/peon-ping/peon.sh"
+[ -f /Users/bronislaw.szulc/.claude/hooks/peon-ping/completions.bash ] && source /Users/bronislaw.szulc/.claude/hooks/peon-ping/completions.bash
+
+# Added by the Postman CLI installer
+export PATH='/Users/bronislaw.szulc/.local/bin':"$PATH"

@@ -157,8 +157,11 @@ return {
         'rust_analyzer',
         'gopls',
         'oxlint',
-        'oxfmt'
       }
+
+      if vim.fn.executable('oxfmt') == 1 then
+        table.insert(servers, 'oxfmt')
+      end
 
       local settings = {
         lua_ls = {

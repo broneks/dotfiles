@@ -29,19 +29,19 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 
-vim.api.nvim_create_autocmd('BufWritePre', {
-  pattern = '*',
-  callback = function(args)
-    require('conform').format({ bufnr = args.buf })
-  end,
-})
-
--- vim.api.nvim_create_autocmd("BufWritePre", {
---   pattern = { "*.ts", "*.tsx" },
+-- vim.api.nvim_create_autocmd('BufWritePre', {
+--   pattern = '*',
 --   callback = function(args)
---     vim.lsp.buf.format({ bufnr = args.buf, filter = function(c) return c.name == "oxfmt" end })
+--     require('conform').format({ bufnr = args.buf })
 --   end,
 -- })
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.ts", "*.tsx" },
+  callback = function(args)
+    vim.lsp.buf.format({ bufnr = args.buf, filter = function(c) return c.name == "oxfmt" end })
+  end,
+})
 
 -- go.nvim
 local format_sync_grp = vim.api.nvim_create_augroup('goimports', {})
